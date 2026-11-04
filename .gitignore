@@ -45,3 +45,6 @@ backup_*/
 
 # Distant Horizons LOD cache (large binary, hosted externally)
 DistantHorizons.sqlite
+
+# SFTP private key (written by devenv pull)
+.ssh/

@@ -52,6 +52,15 @@ hostname = os.environ.get("SFTP_HOST", "")
 port = int(os.environ.get("SFTP_PORT", "2022"))
 username = os.environ.get("SFTP_USERNAME", "")
 password = os.environ.get("SFTP_PASSWORD", "")
+# Key auth preferred: devenv pull writes the key to .ssh/tba_sftp_ed25519 (override with SFTP_KEY_FILE).
+sftp_key_file = os.environ.get("SFTP_KEY_FILE") or os.path.join(os.path.dirname(os.path.abspath(__file__)), ".ssh", "tba_sftp_ed25519")
+
+
+def sftp_auth_kwargs():
+    """Use the SSH key if present, else fall back to the password."""
+    if os.path.isfile(sftp_key_file):
+        return {"key_filename": sftp_key_file, "look_for_keys": False, "allow_agent": False}
+    return {"password": password}
 
 # Bloom.host Pterodactyl API settings
 PTERODACTYL_API_URL = os.environ.get("PTERODACTYL_API_URL", "https://mc.bloom.host")
@@ -184,13 +193,13 @@ def progress_callback(tracker):
 
 def check_credentials():
     """Check if credentials are configured"""
-    if not hostname or not username or not password:
+    if not hostname or not username or not (password or os.path.isfile(sftp_key_file)):
         console.print("[red]Error: SFTP credentials not configured![/red]")
         console.print("[yellow]Please create a .env file with:[/yellow]")
         console.print("  SFTP_HOST=your-server.bloom.host")
         console.print("  SFTP_PORT=2022")
         console.print("  SFTP_USERNAME=your-username")
-        console.print("  SFTP_PASSWORD=your-password")
+        console.print("  SFTP_PASSWORD=your-password   (or an SSH key at .ssh/tba_sftp_ed25519 via devenv pull)")
         console.print("  PTERODACTYL_API_KEY=your-api-key")
         console.print("  PTERODACTYL_SERVER_ID=your-server-id")
         return False
@@ -212,7 +221,7 @@ def upload_file(local_path, remote_path):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         console.print("[green]Connected![/green]")
 
         sftp = ssh.open_sftp()
@@ -258,7 +267,7 @@ def upload_directory(local_dir, remote_dir):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         console.print("[green]Connected![/green]")
 
         sftp = ssh.open_sftp()
@@ -606,7 +615,7 @@ def delete_world_folders():
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         console.print("[green]Connected![/green]")
 
         sftp = ssh.open_sftp()
@@ -667,7 +676,7 @@ def get_server_properties():
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         sftp = ssh.open_sftp()
 
         with sftp.open("/server.properties", "r") as f:
@@ -700,7 +709,7 @@ def update_server_properties(updates):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         sftp = ssh.open_sftp()
 
         # Read current file
@@ -1076,7 +1085,7 @@ def update_modpack_info(version, production=False, variant="linux"):
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
         try:
-            ssh.connect(hostname, port=port, username=username, password=password)
+            ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
             sftp = ssh.open_sftp()
 
             # 1. Upload modpack-info.json
@@ -1168,7 +1177,7 @@ def verify_mods(version, production=True):
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
         try:
-            ssh.connect(hostname, port=port, username=username, password=password)
+            ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
             sftp = ssh.open_sftp()
             server_files = sftp.listdir('/mods')
             sftp.close()
@@ -1376,7 +1385,7 @@ def world_download(backup_existing=True, auto_confirm=False):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         console.print("[green]Connected![/green]")
         sftp = ssh.open_sftp()
     except Exception as e:
@@ -1647,7 +1656,7 @@ def world_upload(auto_confirm=False):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         console.print("[green]Connected![/green]")
         sftp = ssh.open_sftp()
     except Exception as e:
@@ -1771,7 +1780,7 @@ def list_remote_files():
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(hostname, port=port, username=username, password=password)
+        ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
         console.print("[green]Connected![/green]\n")
 
         sftp = ssh.open_sftp()
@@ -1975,7 +1984,7 @@ def get_sftp_connection():
 
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(hostname, port=port, username=username, password=password)
+    ssh.connect(hostname, port=port, username=username, **sftp_auth_kwargs())
     sftp = ssh.open_sftp()
     return ssh, sftp
 
