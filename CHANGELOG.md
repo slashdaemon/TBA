@@ -3,7 +3,68 @@
 All notable changes to TBA will be documented in this file.
 
 
-## [1.0.8] - Unreleased (draft)
+## [2.0.0] - Unreleased (in testing)
+
+**TBA moves to NeoForge 1.21.1 and adds Create.** Create has no Fabric build for 1.21.1, so the
+whole pack is ported. The current world is converted in place: builds, inventories and ender chests
+carry over. Players need a fresh instance (Fabric instances can't update across loaders).
+**Allocate 8 GB of RAM** to the instance; 4 GB runs out of memory while loading block models.
+
+### Added
+- **Create** 6.0.10 and **Create: Copycats+** (also the new home for every ReFramed frame).
+- **Woodworks** (+ Blueprint): wood-variant bookshelves, ladders and boards used by converted builds.
+- **SlashLoot** (our mod) replaces Lootr: per-player loot on plain vanilla chests, barrels and minecarts.
+- **Serene Seasons** replaces Fabric Seasons; **LPChatPrefix** replaces Styled Chat (LuckPerms prefixes).
+
+### Replaced with the NeoForge build of the same mod
+Most of the pack: every mod whose project ships NeoForge 1.21.1 (see `scripts/port-to-neoforge.py`).
+Where the NeoForge build lives in a different project: Farmer's Delight, Balm, FerriteCore,
+Traveler's Backpack, Friends & Foes, Adorn, Beautify, Flan, Chunky, WTHIT, Sit, More Delight,
+Stack to Nearby Chests, wind chimes, Falling Leaves, Presence Footsteps, Visuality, Status Effect
+Bars, Stable Cam, FastQuit, Language Reload.
+
+### Removed (no NeoForge build, or only through a Fabric-compatibility layer)
+- Gameplay/building: Axiom, Litematica, ReFramed (converted), Clutter, Verdant Vibes, Connectible
+  Chains, NiftyCarts, ItemSwapper, Mouse Wheelie (Mouse Tweaks + Client Sort cover it), Accurate
+  Block Placement, Paginated Advancements, Fabric Seasons Extras/Delight compat, Ledger, Styled Chat,
+  Essential Permissions, Gamemode Unrestrictor, Voice Chat Interaction, Do a Barrel Roll, VinURL.
+- Client: Atmosfera (AmbientSounds stays), Better Mount HUD, Debugify, Eating Animation, More Chat
+  History, OptiGUI, Skyboxify, Bettergrassify, Camera Utils, Enhanced Block Entities, Replay Mod,
+  Flashback, Cool Rain, Mod Menu (NeoForge has a mods screen), Krypton.
+- Fabric libraries: Fabric API, Fabric Language Kotlin, Cardinal Components, Trinkets, MaLiLib,
+  Polymer, Text Placeholder API, Cicada.
+- Our own **CoreCurriculum**, **SceneCraft** and **SynthCraft** return as NeoForge ports in later
+  releases (CoreCurriculum titles and stats sync are paused until then).
+
+### World conversion (`TBA2/tools/remap.py`, details in TBA2 `docs/remap.md`)
+- 795 ReFramed frames → Copycats+ with the exact same shape and material.
+- ~1,500 Excessive Building blocks removed in 4.0 (the NeoForge line) → Woodworks bookshelves and
+  ladders, Copycats+ vertical stairs/slabs/stairs in the same material, nearest equivalents.
+- Clutter and Verdant Vibes pieces → nearest equivalents; their natural Nether ores → basalt/blackstone.
+- ~4,000 Lootr containers (chests, barrels, pots, minecarts, suspicious sand/gravel) → vanilla with
+  their loot tables kept, served per player by SlashLoot.
+- Items in containers and player inventories from removed mods → their replacements.
+- Verified on a full copy of the production world: every block, block entity, entity and item
+  resolves in the 2.0.0 pack (0 unknown ids).
+
+### Pins and fixes
+- Sodium 0.6.13 + Iris 1.8.12 (stable; Iris for Sodium 0.8 is beta on 1.21.1), Sodium Extra 0.6.0,
+  Reese's Sodium Options 1.8.0-beta.4.
+- Arts & Crafts 1.5.3 (newer releases break Reintegrated: Arts and Crafts and change block ids).
+- WaterFrames 2.1.23 + WaterMedia 2.1.37, client-only (WaterMedia 3 clashes with StreamCraft's
+  bundled libraries on NeoForge).
+- StreamCraft Live 0.33.0 NeoForge, per-platform files registered in `scripts/build-variants.py`.
+- CurseForge export swaps in CurseForge entries from `scripts/cf-sources/` for 8 mods whose
+  CurseForge files block third-party downloads (they ship from Modrinth in the `.mrpack`).
+
+### Known gaps
+- No block logger yet: GriefLogger is parked until StreamCraft relocates its bundled protobuf (the two
+  clash on NeoForge). The website's ledger dashboard stops updating until then.
+- WorldEdit is out: it runs out of memory indexing the Diagonal Blocks variants.
+
+**Mod count:** 180 (1.0.7: 192).
+
+## [1.0.8] - Never released (superseded by 2.0.0)
 
 ### Updated
 - **StreamCraft Live** 0.8.25 → 0.33.0 (CurseForge, per-platform files registered in `scripts/build-variants.py`).
