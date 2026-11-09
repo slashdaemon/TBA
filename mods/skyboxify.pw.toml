@@ -1,0 +1,13 @@
+name = "Skyboxify"
+filename = "optiboxes-1.4+mc1.21.1-9eba186.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "f45cd6c44b50f752c113348c12aa9e42405d6c63"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6875738
+project-id = 1301799

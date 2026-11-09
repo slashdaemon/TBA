@@ -1,0 +1,13 @@
+name = "Mello"
+filename = "Mello 0.641.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/EJ1dyMxD/versions/ZPvmUpma/Mello%200.641.zip"
+hash-format = "sha512"
+hash = "18c3e2927d282d8db6bdb51d8be977a9ccca1512cb483a471e5d2335d940f78d7cc7b2460df2039e893a1a64b53c8797f0977906556eef62bd5c1561a6e5a397"
+
+[update]
+[update.modrinth]
+mod-id = "EJ1dyMxD"
+version = "ZPvmUpma"

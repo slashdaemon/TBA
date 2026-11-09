@@ -3,6 +3,50 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [1.0.8] - Unreleased (draft)
+
+### Updated
+- **StreamCraft Live** 0.8.25 → 0.33.0 (CurseForge, per-platform files registered in `scripts/build-variants.py`).
+- **Simple Voice Chat** 2.6.6 → 2.6.27 (Flashback refuses to load with voicechat API < 2.6.24).
+- **Sound Physics Remastered** 1.4.10 → 1.5.2 (Simple Voice Chat 2.6.27 refuses anything older).
+- **Complementary Reimagined** r5.6.1 (bundled zip) → r5.9.3 (CurseForge), matching Euphoria Patches.
+
+### Added — client-side mods (from TBS-client 2.1.0, 1.21.1 builds)
+- Performance/fixes: Sodium Extra, Reese's Sodium Options, More Culling, Remove Reloading Screen, FastQuit, Language Reload, Debugify, Sodium Shadowy Path Blocks.
+- Visuals: LambDynamicLights, Better Clouds, BetterGrassify, Windy, Polytone, Skyboxify, OptiGUI, Euphoria Patches.
+- Audio: Atmosfera.
+- HUD/UI/controls: Better Mount HUD, More Chat History, Mouse Tweaks, Client Sort, Picture Mode, Controlify.
+- Recording: Flashback.
+- All marked `side = "client"`.
+
+### Added — resource packs (on by default) and shaders
+- Resource packs: Os' Colorful Grasses (Tall), Motschen's Better Leaves, Mushrooms Reforged, Pumpkins Reforged, SPBR, Unobtrusive Weather, Armory Reforged, Health Bars Reforged. Invisible Armor Model is included but off by default.
+- Shaders: Complementary Unbound, Alpha Piscium, Mello, I Like Vanilla, ARTShade, Miniature, Modern PSX. BSL stays the default.
+
+### Defaults
+- Picture Mode opens on **F8** (default M collides with the StreamCraft mic key).
+- New pack-managed `config/streamcraft/config.properties`: same `api_url`/`proximity_range` as production, plus `voice_enabled=false` (StreamCraft 0.33 ships its own voice, on by default; TBA keeps Simple Voice Chat). `license.json` is not shipped.
+
+### Build
+- `.packwizignore` now excludes `.ssh/` and key files. The SFTP key added for `server-config.py` on 2026-11-03 was otherwise packed into exports (caught before any release; 1.0.7 does not contain it).
+
+### Version pins (Sodium stays on 0.6.13 / Iris 1.8.8, Fabric Loader 0.18.3)
+- Sodium Extra 0.6.0, Reese's Sodium Options 1.8.0-beta.4, More Culling 1.0.8, Client Sort 2.2.2, Windy 1.1.1. Newer builds require Sodium 0.8.x and/or Fabric Loader ≥ 0.19.
+
+### Modrinth-only (CF export overrides)
+- Flashback (not on CurseForge).
+- Sodium Extra, Reese's Sodium Options, More Culling, Client Sort, Windy (on CurseForge, but pinned to older versions only selectable via Modrinth).
+- Os' Colorful Grasses, Armory Reforged (1.21.1 build only on Modrinth), Unobtrusive Weather, SPBR, Mello, Modern PSX (not found on CurseForge).
+- Alpha Piscium, I Like Vanilla (on CurseForge but third-party downloads disabled).
+
+### Not included
+- **Create**: no Fabric build exists for MC 1.21.1 (Create Fabric stops at 1.20.1).
+- From TBS-client 2.1.0: Locator Heads, FOVU, Flashback Extras (no 1.21.1 build); Mickey Joe's Flowers, Overlays, Theone's Eating Animation Pack (no 1.21.1 build). Dynamic FPS stays out, as in TBS.
+
+### Notes
+- Mod count: 216 total (+24 from 1.0.7).
+
+
 ## [1.0.7] - 2026-05-22
 
 ### Removed

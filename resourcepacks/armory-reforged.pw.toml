@@ -1,0 +1,13 @@
+name = "Armory Reforged"
+filename = "Armory Reforged v1.1.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/mDGCr1vC/versions/93uYpPy2/Armory%20Reforged%20v1.1.zip"
+hash-format = "sha512"
+hash = "159c1838e7a9a78c4de2c67e9fc2f91bdbcc6bb40715489add446b4428549801621172a931f8b7aba13cb054affb357c323f277777ee2fb1628ea29beb4d612c"
+
+[update]
+[update.modrinth]
+mod-id = "mDGCr1vC"
+version = "93uYpPy2"

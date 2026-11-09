@@ -1,0 +1,13 @@
+name = "SPBR"
+filename = "SPBR_Legacy-261030.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/aNcOVoD7/versions/nrXIQFze/SPBR_Legacy-261030.zip"
+hash-format = "sha512"
+hash = "904f2d846709854a0c3283bdfab01e9c40cfa60e5c1ac048bcb3ea31ced29a14be6a9ebd6e3b93df94785a2681ea336738367e9de486312a9698df4f58f91dc8"
+
+[update]
+[update.modrinth]
+mod-id = "aNcOVoD7"
+version = "nrXIQFze"

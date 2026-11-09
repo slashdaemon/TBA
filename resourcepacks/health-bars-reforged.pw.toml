@@ -1,0 +1,13 @@
+name = "Health Bars Reforged "
+filename = "Health Bars Reforged v1.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "6d5bebcb4900affe54bf42b6cd2dafeb9473c54e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8273274
+project-id = 1225686

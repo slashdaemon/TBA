@@ -1,0 +1,13 @@
+name = "ARTShade"
+filename = "ARTShade V0.4B.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "22c88dbbbedf522ede84194e6f75d679f8fdc787"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8831635
+project-id = 1517489

@@ -1,0 +1,13 @@
+name = "Mushrooms Reforged"
+filename = "Mushrooms Reforged v1.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "67d4bdbeb12882e7f1b5612aaaba9525b6fbece5"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8369505
+project-id = 1560822

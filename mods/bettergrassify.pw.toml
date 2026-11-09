@@ -1,0 +1,13 @@
+name = "BetterGrassify"
+filename = "BetterGrassify-1.8.7+fabric.1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "fdb23efa7d9787b2931204989c22012a077323e3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8262607
+project-id = 1026394

@@ -1,0 +1,13 @@
+name = "Invisible Armor Model"
+filename = "Invisible Armor Model - 34.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "4e229a8fb1e9f555652fd2f79483ead0223d53e8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5424692
+project-id = 546854

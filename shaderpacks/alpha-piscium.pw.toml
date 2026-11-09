@@ -1,0 +1,13 @@
+name = "Alpha Piscium"
+filename = "Alpha Piscium v1.10.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/bvDpxd8c/versions/tB8N3ghY/Alpha%20Piscium%20v1.10.0.zip"
+hash-format = "sha512"
+hash = "5cdaeccf12b5e422873c018fc0a8ced24f01ca8fb396925a21046befb2359838858f245aa9fcad5e46e733087c5a0b7f437ee4e407bfb10cf20a8c5a95aba156"
+
+[update]
+[update.modrinth]
+mod-id = "bvDpxd8c"
+version = "tB8N3ghY"

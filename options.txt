@@ -48,7 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["fabric","seasons:seasonal_lush_caves","excessive_building:vanilla_retextures","itemswapper:default"]
+resourcePacks:["fabric","seasons:seasonal_lush_caves","excessive_building:vanilla_retextures","itemswapper:default","file/Os' Colorful Grasses (Tall).zip","file/Better-Leaves-9.6.zip","file/Mushrooms Reforged v1.1.zip","file/Pumpkins Reforged v1.0.zip","file/SPBR_Legacy-261030.zip","file/§9⛈ §bUnobtrusive Weather §8[v2.0].zip","file/Armory Reforged v1.1.zip","file/Health Bars Reforged v1.1.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -249,3 +249,4 @@ modelPart_right_sleeve:true
 modelPart_left_pants_leg:true
 modelPart_right_pants_leg:true
 modelPart_hat:true
+key_key.picturemode.open:key.keyboard.f8

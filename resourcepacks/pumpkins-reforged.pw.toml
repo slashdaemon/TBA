@@ -1,0 +1,13 @@
+name = "Pumpkins Reforged"
+filename = "Pumpkins Reforged v1.0.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "ffb09fa8c78f1c34302146fc3f8bb233a34e59f0"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8272623
+project-id = 1579641
