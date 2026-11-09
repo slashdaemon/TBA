@@ -1,13 +1,13 @@
 name = "StreamCraft Live"
-filename = "streamcraft-pc-0.33.0-mc1.21.1-cf.jar"
+filename = "streamcraft-pc-0.33.0-mc1.21.1-neoforge-cf.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "46ecb6b729aaaa897eb3bc5b3b687cd25b044747"
+hash = "4fbf6f367eb694afb430d95540c3e17c93346785"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9445720
+file-id = 9445871
 project-id = 1451729

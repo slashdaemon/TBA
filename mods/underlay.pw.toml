@@ -1,13 +1,13 @@
 name = "Underlay"
-filename = "underlay-0.9.9-fabric-mc1.21.jar"
+filename = "underlay-1.0.5-neoforge-mc1.21.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "fb4a3dc37b070cb9fc4ceeb34d2a3abc69a47d76"
+hash = "c17597fddaace75943beb62ccf9cf07e3ad0532a"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7316152
+file-id = 8956338
 project-id = 1263531

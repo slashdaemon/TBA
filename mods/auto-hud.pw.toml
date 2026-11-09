@@ -1,13 +1,13 @@
 name = "Auto HUD"
-filename = "autohud-8.11+1.21.1-fabric.jar"
-side = "both"
+filename = "autohud-8.13+1.21.1-neoforge.jar"
+side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "94a0c7b00b2ccb324e7b3abb0a1df660e79aedce"
+hash = "410c795cf4888249cf2b71becb64add0bc8c856e"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7418638
+file-id = 9011389
 project-id = 623806

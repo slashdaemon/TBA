@@ -1,13 +1,13 @@
 name = "ImmediatelyFast"
-filename = "ImmediatelyFast-Fabric-1.6.10+1.21.1.jar"
-side = "both"
+filename = "ImmediatelyFast-NeoForge-1.6.15+1.21.1.jar"
+side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "ff2be016b12128fc0cd875a21a307d681edde817"
+hash = "f991166f7c82b493481c876e3c83c9fac4159671"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7537793
+file-id = 9165518
 project-id = 686911

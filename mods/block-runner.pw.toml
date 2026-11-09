@@ -1,13 +1,13 @@
 name = "Block Runner"
-filename = "BlockRunner-v21.1.2-1.21.1-Fabric.jar"
+filename = "BlockRunner-v21.1.2-1.21.1-NeoForge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "69e239c520765691a78ccbbd80ae003c735b974f"
+hash = "ca0bef3916a20315f2444b4deeb976e5c7ae041d"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6215038
+file-id = 6215039
 project-id = 442842

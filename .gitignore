@@ -48,3 +48,4 @@ DistantHorizons.sqlite
 
 # SFTP private key (written by devenv pull)
 .ssh/
+scripts/.fabric-mods-backup/

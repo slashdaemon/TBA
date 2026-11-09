@@ -1,13 +1,13 @@
 name = "CameraOverhaul"
-filename = "CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar"
-side = "both"
+filename = "CameraOverhaul-v2.1.2-neoforge+mc[1.21-1.21.1].jar"
+side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "8098d60dbaf790de2967699aca7df98edfa8e016"
+hash = "bffa09a609a1c59efe976e00e8c83dd484fc7ba8"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7364622
+file-id = 8979489
 project-id = 423602

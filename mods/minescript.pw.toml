@@ -1,13 +1,13 @@
 name = "Minescript"
-filename = "minescript-fabric-1.21.1-4.0.jar"
+filename = "minescript-neoforge-1.21.1-4.0.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "65e4d167b2499827d5c65ca1348ec60535dda991"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/KcpXWngB/versions/l71kqsDA/minescript-neoforge-1.21.1-4.0.jar"
+hash-format = "sha512"
+hash = "6055837f2b5222c42b75f85eb3731b5fbe5acf96f166586b49d15909626a78c4ebdbe8a69f7322721dd070441da19bef81f11c8f9ae1abe1cffbca2382e675e5"
 
 [update]
-[update.curseforge]
-file-id = 5757403
-project-id = 657474
+[update.modrinth]
+mod-id = "KcpXWngB"
+version = "l71kqsDA"

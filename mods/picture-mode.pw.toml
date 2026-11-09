@@ -1,13 +1,13 @@
 name = "Picture Mode"
-filename = "picturemode-fabric-1.1.7+1.21.1.jar"
+filename = "picturemode-neoforge-1.1.7+1.21.1.jar"
 side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "4f1849f60a173e24660bec94fa310c14ce92224e"
+hash = "59ca891703245e1572c4de132dcca193d0a8cc2f"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8889603
+file-id = 8889604
 project-id = 1461755

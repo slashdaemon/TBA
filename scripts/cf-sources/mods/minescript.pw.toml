@@ -1,0 +1,13 @@
+name = "Minescript"
+filename = "minescript-neoforge-1.21.1-4.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f0c5ec901166f54f17f6ddf8c6814bd7d5274a6e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5757408
+project-id = 657474

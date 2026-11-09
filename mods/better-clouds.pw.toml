@@ -1,13 +1,13 @@
 name = "Better Clouds"
-filename = "better-clouds-1.13.11+1.21.1-fabric.jar"
+filename = "better-clouds-1.13.11+1.21.1-neoforge.jar"
 side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "5550fb04a96e733d6016792088ff7c9526d1ea15"
+hash = "949fa76046ac2303c05f9fdcda782eb22e4d3683"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9005655
+file-id = 9005637
 project-id = 1285973

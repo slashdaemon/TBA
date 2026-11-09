@@ -1,0 +1,13 @@
+name = "wind chimes"
+filename = "windchimes-neoforge-1.2.0+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/I6BSgJNV/versions/T3ESeOzH/windchimes-neoforge-1.2.0%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "24479973b3489a9803f0e74749d5aeaec84115adc513a66f674742b41f697a741468bfbdc5d4b5992b2700c9d5a2b14d70a1e4f145f135edbeeffb59e07aa579"
+
+[update]
+[update.modrinth]
+mod-id = "I6BSgJNV"
+version = "T3ESeOzH"

@@ -1,13 +1,13 @@
-name = "Flan (Fabric)"
-filename = "flan-1.21.1-1.12.4-fabric.jar"
+name = "Flan"
+filename = "flan-1.21.1-1.12.8-neoforge.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "bf1f6264057fabf7ef7edcb34c3d4f5003d49c74"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/Si383TIH/versions/Z6X7Mj4L/flan-1.21.1-1.12.8-neoforge.jar"
+hash-format = "sha512"
+hash = "1b423a976eba232acb69cd3111a2b1c079ff0b96ccb326968d88439027d9205074370fa8e48602f2ed8dd9afecb7940b259f6afd67b2fcba9c24c1523a700095"
 
 [update]
-[update.curseforge]
-file-id = 7244017
-project-id = 404578
+[update.modrinth]
+mod-id = "Si383TIH"
+version = "Z6X7Mj4L"

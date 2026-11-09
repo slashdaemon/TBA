@@ -1,13 +1,13 @@
 name = "Subtle Effects"
-filename = "SubtleEffects-fabric-1.21.1-1.13.2-hotfix.1.jar"
-side = "both"
+filename = "SubtleEffects-neoforge-1.21.1-1.15.1.jar"
+side = "client"
 
 [download]
-hash-format = "sha1"
-hash = "dbe6c9433ca5e976bbb8ed7f13f32c422ab271e3"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/4q8UOK1d/versions/ReUDmzrA/SubtleEffects-neoforge-1.21.1-1.15.1.jar"
+hash-format = "sha512"
+hash = "4bc61c3cb3df0d774f623eb9177c0ec3d74617c044d3a80a5b564094d2b14c9ebc98b79893a01bb5461d92141787bb814dd869101a293a840dade027bd0a56a1"
 
 [update]
-[update.curseforge]
-file-id = 7287388
-project-id = 1023913
+[update.modrinth]
+mod-id = "4q8UOK1d"
+version = "ReUDmzrA"

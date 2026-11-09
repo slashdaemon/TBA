@@ -1,13 +1,13 @@
 name = "Windy"
-filename = "windy-1.1.1+1.21-fabric.jar"
+filename = "windy-1.1.1+1.21-neoforge.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/EwYg6C78/versions/UmOYxb9o/windy-1.1.1%2B1.21-fabric.jar"
+url = "https://cdn.modrinth.com/data/EwYg6C78/versions/xcBfBf8H/windy-1.1.1%2B1.21-neoforge.jar"
 hash-format = "sha512"
-hash = "ef9fff183e7edb773f20f9f78a74fa4b1bcd94598d977b6dac75e22b2c4b90115e0296694b6d0445106395c9c9c3f6141e125bf1de0a4edec0c37c9c0f4e3df7"
+hash = "01e3aacc6dd41e837943454a3a8d60717d8958832e3053e329de6dd44c65c958111f579918683da4887b0cca9677398b42edf9d2660f0ad566752ddf80977f29"
 
 [update]
 [update.modrinth]
 mod-id = "EwYg6C78"
-version = "UmOYxb9o"
+version = "xcBfBf8H"

@@ -1,13 +1,13 @@
 name = "Excessive Building"
-filename = "[1.21] Excessive Building-fabric-3.3.10.jar"
+filename = "neoforge-excessive_building-1.21.1-4.0.4.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "6c393c220e0e492f565aa03496b90010aed5ac7c"
+hash = "105db21b43278aee0092c7d0a4e5f5376d9e0500"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6075987
+file-id = 8869600
 project-id = 845097

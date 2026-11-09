@@ -1,13 +1,13 @@
 name = "Even More Instruments!"
-filename = "evenmoreinstruments-fabric-1.21-1.21.1-6.1.4.jar"
+filename = "evenmoreinstruments-neoforge-1.21-1.21.1-6.1.4.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "5ecb2d85c066840be2533bcf08454f501545708e"
+hash = "2f933ab292514beefd4a3f60c200c8094632165e"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6414989
+file-id = 6832707
 project-id = 898118

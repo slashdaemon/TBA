@@ -1,13 +1,13 @@
 name = "AmbientSounds 6"
-filename = "AmbientSounds_FABRIC_v6.3.1_mc1.21.1.jar"
-side = "both"
+filename = "AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar"
+side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "bfd9c4e3da734283331c0f3a7720f27525904a3d"
+hash = "9762244f9c116c85a6af3469da686650ed455bb1"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7226594
+file-id = 9254776
 project-id = 254284

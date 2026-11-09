@@ -1,0 +1,229 @@
+DROP accurate-block-placement-reborn: Fabric-only
+DROP atmosfera: Fabric-only (AmbientSounds stays)
+DROP axiomtool: Fabric-only (WorldEdit covers building tools)
+DROP better-mount-hud: Fabric-only
+DROP camera-utils: only an unofficial NeoForge port
+DROP cardinal-components-api: Fabric library
+DROP cicada: Fabric library
+DROP clutter: Fabric-only; placed blocks remapped
+DROP connectiblechains: Fabric-only
+DROP core-curriculum: our mod; NeoForge port later
+DROP debugify: Fabric-only
+DROP eating-animation-fabric: Fabric-only
+DROP enhanced-block-entities: only an unofficial NeoForge port
+DROP essential-permissions: Fabric-only (NeoForge permission API + LuckPerms)
+DROP fabric-api: Fabric library
+DROP fabric-language-kotlin: Fabric library (Kotlin for Forge comes in as a dependency)
+DROP fabric-seasons-delight-compat: Fabric Seasons add-on (Serene Seasons replaces it)
+DROP fabric-seasons-extras: Fabric Seasons add-on (Serene Seasons replaces it)
+DROP flashback: only an unofficial NeoForge port
+DROP gamemode-unrestrictor: Fabric-only
+DROP itemswapper: Fabric-only
+DROP konkrete-fabric: library (pulled back in only if a NeoForge mod needs it)
+DROP krypton: Fabric-only
+DROP litematica: Fabric-only
+DROP luckperms-placeholders: Fabric-only
+DROP malilib: Fabric library
+DROP modmenu: NeoForge has a built-in mods screen
+DROP morechathistory: Fabric-only
+DROP mouse-wheelie: Fabric-only (Mouse Tweaks + Client Sort cover it)
+DROP niftycarts: Fabric-only
+DROP optigui: Fabric-only
+DROP paginated-advancements: Fabric-only
+DROP polymer: Fabric library
+DROP reframed: converted to Create: Copycats+
+DROP replay-mod-fabric-and-forge: no NeoForge build
+DROP scenecraft: our mod; NeoForge port later
+DROP skyboxify: Fabric-only
+DROP synthcraft-live: our mod; NeoForge port later
+DROP text-placeholder-api: Fabric library
+DROP trinkets: Fabric library
+DROP verdantvibes-unofficial-port: Fabric-only; placed plants remapped
+DROP voice-chat-interaction: Fabric-only
+OK   actually-harvest <- cf:1076278 -> actually-harvest.pw.toml
+OK   advanced-backups <- cf:876284 -> advanced-backups.pw.toml
+OK   ambientsounds <- cf:254284 -> ambientsounds.pw.toml, creativecore.pw.toml
+OK   amendments <- cf:896746 -> amendments.pw.toml, selene.pw.toml
+OK   appleskin <- cf:248787 -> appleskin.pw.toml
+OK   architectury-api <- cf:419699 -> architectury-api.pw.toml
+OK   armor-statues <- cf:682566 -> armor-statues.pw.toml, puzzles-lib.pw.toml
+OK   artsandcrafts <- cf:1034791 -> artsandcrafts.pw.toml, jinxedlib.pw.toml
+OK   athena <- cf:841890 -> athena.pw.toml
+OK   auto-hud <- cf:623806 -> auto-hud.pw.toml
+OK   badoptimizations <- cf:949555 -> badoptimizations.pw.toml
+OK   badpackets <- cf:615134 -> badpackets.pw.toml
+OK   balm-fabric <- cf:balm -> balm.pw.toml
+OK   better-climbing <- cf:655619 -> better-climbing.pw.toml
+OK   better-clouds <- cf:1285973 -> better-clouds.pw.toml, yacl.pw.toml
+OK   better-third-person <- cf:435044 -> better-third-person.pw.toml
+OK   betterf3 <- cf:401648 -> betterf3.pw.toml, cloth-config.pw.toml
+OK   bettergrassify <- cf:1026394 -> bettergrassify.pw.toml, forgified-fabric-api.pw.toml
+OK   block-runner <- cf:442842 -> block-runner.pw.toml
+OK   bluemap <- cf:406463 -> bluemap.pw.toml
+OK   blur-fabric <- cf:393563 -> blur-fabric.pw.toml, midnightlib.pw.toml
+OK   bridging-mod <- cf:533942 -> bridging-mod.pw.toml
+OK   c2me <- cf:533097 -> c2me.pw.toml
+OK   cameraoverhaul <- cf:423602 -> cameraoverhaul.pw.toml
+OK   camerapture <- cf:1051342 -> camerapture.pw.toml
+OK   carry-on <- cf:274259 -> carry-on.pw.toml
+OK   chipped <- cf:456956 -> chipped.pw.toml, resourceful-lib.pw.toml
+OK   cloth-config <- cf:348521 -> (nothing new)
+OK   clumps <- cf:256717 -> clumps.pw.toml
+OK   connectivity <- cf:470193 -> connectivity.pw.toml, cupboard.pw.toml
+OK   continuity <- cf:531351 -> continuity.pw.toml
+OK   controlify <- cf:835847 -> controlify.pw.toml
+OK   controlling <- cf:250398 -> controlling.pw.toml, searchables.pw.toml
+OK   cool-rain <- cf:1196599 -> cool-rain.pw.toml
+OK   crash-assistant <- cf:1154099 -> crash-assistant.pw.toml
+OK   craterlib <- cf:867099 -> craterlib.pw.toml
+OK   creativecore <- cf:257814 -> (nothing new)
+OK   cubes-without-borders <- cf:975120 -> cubes-without-borders.pw.toml
+OK   cupboard <- cf:326652 -> (nothing new)
+OK   diagonal-fences <- cf:458048 -> diagonal-fences.pw.toml
+OK   diagonal-walls <- cf:969422 -> diagonal-walls.pw.toml
+OK   diagonal-windows <- cf:891328 -> diagonal-windows.pw.toml
+OK   distant-horizons <- cf:508933 -> distant-horizons.pw.toml
+OK   do-a-barrel-roll <- cf:663658 -> do-a-barrel-roll.pw.toml
+OK   dusty-decorations <- cf:843344 -> dusty-decorations.pw.toml, geckolib.pw.toml
+OK   easy-magic <- cf:456239 -> easy-magic.pw.toml
+OK   effortless <- cf:676885 -> effortless.pw.toml
+OK   enchanted-vertical-slabs <- cf:559148 -> enchanted-vertical-slabs.pw.toml
+OK   entity-model-features <- cf:844662 -> entity-model-features.pw.toml, entity-texture-features-fabric.pw.toml
+OK   entity-texture-features-fabric <- cf:568563 -> (nothing new)
+OK   entityculling <- cf:448233 -> entityculling.pw.toml
+OK   euphoria-patches <- cf:915902 -> euphoria-patches.pw.toml
+OK   even-more-instruments <- cf:898118 -> even-more-instruments.pw.toml, genshin-instruments.pw.toml
+OK   excessive-building <- cf:845097 -> excessive-building.pw.toml, runiclib.pw.toml
+OK   fabric-seasons <- cf:serene-seasons -> glitchcore.pw.toml, serene-seasons.pw.toml
+OK   falling-tree <- cf:349559 -> falling-tree.pw.toml
+OK   farmers-delight-refabricated <- cf:farmers-delight -> farmers-delight.pw.toml
+OK   fast-item-frames <- cf:1210171 -> fast-item-frames.pw.toml
+OK   fetzis-asian-decoration <- cf:678856 -> fetzis-asian-decoration.pw.toml
+OK   first-person-model <- cf:333287 -> first-person-model.pw.toml, not-enough-animations.pw.toml
+OK   forge-config-api-port <- cf:547434 -> forge-config-api-port.pw.toml
+OK   framework <- cf:549225 -> framework.pw.toml
+OK   friends-and-foes <- cf:friends-and-foes-forge -> friends-and-foes-forge.pw.toml
+OK   fzzy-config <- cf:1005914 -> fzzy-config.pw.toml, kotlin-for-forge.pw.toml
+OK   geckolib <- cf:388172 -> (nothing new)
+OK   genshin-instruments <- cf:848761 -> (nothing new)
+OK   handcrafted <- cf:538214 -> handcrafted.pw.toml
+OK   illager-invasion <- cf:891324 -> illager-invasion.pw.toml
+OK   immediatelyfast <- cf:686911 -> immediatelyfast.pw.toml
+OK   immersive-aircraft <- cf:666014 -> immersive-aircraft.pw.toml
+OK   immersive-paintings <- cf:639584 -> immersive-paintings.pw.toml
+OK   inventory-particles <- cf:1339689 -> inventory-particles.pw.toml, mossylib.pw.toml
+OK   invmove <- cf:581854 -> invmove.pw.toml
+OK   irisshaders <- cf:455508 -> irisshaders.pw.toml, sodium.pw.toml
+OK   jinxedlib <- cf:1203401 -> (nothing new)
+OK   journeymap <- cf:32274 -> journeymap.pw.toml
+OK   joy-of-painting <- cf:350727 -> joy-of-painting.pw.toml
+OK   lambdynamiclights <- cf:393442 -> lambdynamiclights.pw.toml
+OK   leaves-be-gone <- cf:686435 -> leaves-be-gone.pw.toml
+OK   ledger <- cf:grieflogger -> grieflogger.pw.toml, supermartijn642s-config-lib.pw.toml
+OK   lets-do-bakery-farm-charm-compat <- cf:1038130 -> lets-do-bakery-farm-charm-compat.pw.toml, lets-do-farm-charm.pw.toml
+OK   lets-do-beachparty <- cf:858691 -> curios.pw.toml, lets-do-beachparty.pw.toml
+OK   lets-do-brewery-farm-charm-compat <- cf:1038106 -> lets-do-brewery-farm-charm-compat.pw.toml
+OK   lets-do-farm-charm <- cf:1038103 -> (nothing new)
+OK   lets-do-meadow <- cf:821483 -> lets-do-meadow.pw.toml
+OK   lets-do-vinery <- cf:704465 -> lets-do-vinery.pw.toml
+OK   lithium <- cf:360438 -> lithium.pw.toml
+OK   lithostitched <- cf:936015 -> lithostitched.pw.toml
+OK   little-joys <- cf:1235950 -> little-joys.pw.toml
+OK   lootr-fabric <- cf:slashloot -> slashloot.pw.toml
+OK   luckperms <- cf:431733 -> luckperms.pw.toml
+OK   macaws-bridges <- cf:351725 -> macaws-bridges.pw.toml
+OK   macaws-doors <- cf:378646 -> macaws-doors.pw.toml
+OK   macaws-fences-and-walls <- cf:453925 -> macaws-fences-and-walls.pw.toml
+OK   macaws-furniture <- cf:359540 -> macaws-furniture.pw.toml
+OK   macaws-holidays <- cf:930232 -> macaws-holidays.pw.toml
+OK   macaws-lights-and-lamps <- cf:502372 -> macaws-lights-and-lamps.pw.toml
+OK   macaws-paintings <- cf:438116 -> macaws-paintings.pw.toml
+OK   macaws-paths-and-pavings <- cf:629153 -> macaws-paths-and-pavings.pw.toml
+OK   macaws-roofs <- cf:352039 -> macaws-roofs.pw.toml
+OK   macaws-trapdoors <- cf:400933 -> macaws-trapdoors.pw.toml
+OK   macaws-windows <- cf:363569 -> macaws-windows.pw.toml
+OK   midnightlib <- cf:488090 -> (nothing new)
+OK   mighty-mail <- cf:902986 -> mighty-mail.pw.toml
+OK   minescript <- cf:657474 -> minescript.pw.toml
+OK   modernfix <- cf:790626 -> modernfix.pw.toml
+OK   mossylib <- cf:1399257 -> (nothing new)
+OK   mouse-tweaks <- cf:60089 -> mouse-tweaks.pw.toml
+OK   mru <- cf:669659 -> mru.pw.toml
+OK   naturally-trimmed <- cf:1005441 -> naturally-trimmed.pw.toml
+OK   nords-leaf-me-alone <- cf:1287189 -> nords-leaf-me-alone.pw.toml
+OK   not-enough-animations <- cf:433760 -> (nothing new)
+OK   owo-lib <- cf:532610 -> owo-lib.pw.toml
+OK   particle-rain <- cf:421897 -> particle-rain.pw.toml
+OK   picture-mode <- cf:1461755 -> picture-mode.pw.toml
+OK   playeranimator <- cf:658587 -> playeranimator.pw.toml
+OK   polytone <- cf:958094 -> polytone.pw.toml
+OK   puzzles-lib <- cf:495476 -> (nothing new)
+OK   reintegrated-arts-and-crafts <- cf:1205707 -> reintegrated-arts-and-crafts.pw.toml
+OK   resourceful-lib <- cf:570073 -> (nothing new)
+OK   roughly-enough-items <- cf:310111 -> roughly-enough-items.pw.toml
+OK   rrls <- cf:833233 -> rrls.pw.toml
+OK   sawmill <- cf:964817 -> sawmill.pw.toml
+OK   searchables <- cf:858542 -> (nothing new)
+OK   selene <- cf:499980 -> (nothing new)
+OK   simple-discord-rpc <- cf:411816 -> simple-discord-rpc.pw.toml
+OK   simple-voice-chat <- cf:416089 -> simple-voice-chat.pw.toml
+OK   sit-fabric <- cf:sit -> sit.pw.toml
+OK   skin-layers-3d <- cf:521480 -> skin-layers-3d.pw.toml
+OK   smooth-swapping <- cf:513689 -> smooth-swapping.pw.toml
+OK   sodium <- cf:394468 -> (nothing new)
+OK   sodium-shadowy-path-blocks <- cf:556408 -> sodium-shadowy-path-blocks.pw.toml
+OK   sooty-chimneys <- cf:634005 -> sooty-chimneys.pw.toml
+OK   sound <- cf:925889 -> sound.pw.toml
+OK   sound-physics-remastered <- cf:535489 -> sound-physics-remastered.pw.toml
+OK   spark <- cf:361579 -> spark.pw.toml
+OK   storage-drawers <- cf:223852 -> storage-drawers.pw.toml
+OK   streamcraft-live <- cf:1451729 -> streamcraft-live.pw.toml
+OK   subtle-effects <- cf:1023913 -> subtle-effects.pw.toml
+OK   supplementaries <- cf:412082 -> supplementaries.pw.toml
+OK   trade-cycling <- cf:570431 -> trade-cycling.pw.toml
+OK   travelers-backpack-fabric <- cf:travelers-backpack -> travelers-backpack.pw.toml
+OK   trimmable-tools <- cf:834329 -> trimmable-tools.pw.toml
+OK   underlay <- cf:1263531 -> underlay.pw.toml
+OK   universal-bone-meal <- cf:594013 -> universal-bone-meal.pw.toml
+OK   vinurl <- cf:1326616 -> sinytra-connector.pw.toml, vinurl.pw.toml
+OK   waterframes <- cf:834607 file 8056721 -> waterframes.pw.toml, watermedia-binaries.pw.toml, watermedia.pw.toml, watervision.pw.toml
+OK   watermedia <- cf:869524 file 7281929 -> watermedia-platform-extension.pw.toml
+OK   watermedia-yt-plugin <- cf:1395870 -> (nothing new)
+OK   watervision <- cf:1167473 -> (nothing new)
+OK   yacl <- cf:667299 -> (nothing new)
+OK   +create <- cf:create -> create.pw.toml
+OK   +copycats <- cf:copycats -> copycats.pw.toml
+OK   +woodworks <- cf:woodworks -> blueprint.pw.toml, woodworks.pw.toml
+OK   +worldedit <- cf:worldedit -> worldedit.pw.toml
+OK   adorn <- mr:adorn -> adorn.pw.toml
+OK   beautify-refabricated <- mr:beautify -> beautify.pw.toml
+OK   better-sleep <- mr:C7yTiELM -> better-sleep.pw.toml
+OK   chunky-pregenerator <- mr:chunky -> chunky.pw.toml
+    guard: restored cloth-config.pw.toml after mr install K0AkAin6
+OK   clientsort <- mr:K0AkAin6 -> clientsort.pw.toml
+OK   falling-leaves-fabric <- mr:fallingleavesforge -> fallingleavesforge.pw.toml
+OK   fastquit <- mr:fastquit-forge -> fastquit-forge.pw.toml
+OK   ferritecore-fabric <- mr:ferrite-core -> ferrite-core.pw.toml
+OK   flan <- mr:flan -> flan.pw.toml
+OK   language-reload <- mr:neo-language-reload -> neo-language-reload.pw.toml
+    guard: restored farmers-delight.pw.toml after mr install more-delight
+OK   more-delight-fabric <- mr:more-delight -> delight-lib.pw.toml, more-delight.pw.toml
+    guard: restored cloth-config.pw.toml after mr install 51shyZVL
+OK   moreculling <- mr:51shyZVL -> moreculling.pw.toml
+OK   presence-footsteps <- mr:pf-neoforge -> pf-neoforge.pw.toml
+    guard: restored sodium.pw.toml after mr install Bh37bMuy
+OK   reeses-sodium-options <- mr:Bh37bMuy -> reeses-sodium-options.pw.toml
+    guard: restored sodium.pw.toml after mr install PtjYWJkn
+OK   sodium-extra <- mr:PtjYWJkn -> sodium-extra.pw.toml
+    guard: restored forgified-fabric-api.pw.toml after mr install stable-cam
+OK   stable-cam <- mr:stable-cam -> connector.pw.toml, stable-cam.pw.toml
+OK   stack-to-nearby-chests <- mr:stack-to-nearby-chests-neoforge -> stack-to-nearby-chests-neoforge.pw.toml
+OK   status-effect-bars <- mr:status-effect-bars-reforged -> status-effect-bars-reforged.pw.toml, stylish-effects.pw.toml
+    guard: restored luckperms.pw.toml after mr install re-lpchatprefix
+OK   styled-chat <- mr:re-lpchatprefix -> matthiesen-core.pw.toml, re-lpchatprefix.pw.toml
+OK   visuality <- mr:visuality-forge -> visuality-forge.pw.toml
+OK   windchime-unofficial-continued <- mr:windchime -> windchime.pw.toml
+    guard: restored yacl.pw.toml after mr install EwYg6C78
+OK   windy <- mr:EwYg6C78 -> windy.pw.toml
+    guard: restored badpackets.pw.toml after mr install wthit
+OK   wthit <- mr:wthit -> wthit.pw.toml

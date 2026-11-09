@@ -1,13 +1,13 @@
 name = "Little Joys"
-filename = "littlejoys-fabric-1.21.1-21.1.9.jar"
+filename = "littlejoys-neoforge-1.21.1-21.1.18.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "7f35fdc34fe92a69b030798ee591c55ea925a8cc"
+hash = "d56811199b8078be9b7ff619a097b8b193a3b1c6"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6778686
+file-id = 8837353
 project-id = 1235950

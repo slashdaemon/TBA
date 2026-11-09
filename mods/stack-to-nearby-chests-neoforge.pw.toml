@@ -1,0 +1,13 @@
+name = "Stack to Nearby Chests [NeoForge]"
+filename = "stack-to-nearby-chests-neoforge-mc1.21.1-0.5.10.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/KdaRmz70/versions/bqxI4v8L/stack-to-nearby-chests-neoforge-mc1.21.1-0.5.10.jar"
+hash-format = "sha512"
+hash = "1a67029a40821e3dd63aeaee75368d7a598050b6554da2ec777905f18329f0a8491eed9a7e4ae71f90830f8f463fb81bc7b4b3546041461ed1138fc36792ab65"
+
+[update]
+[update.modrinth]
+mod-id = "KdaRmz70"
+version = "bqxI4v8L"

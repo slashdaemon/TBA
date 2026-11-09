@@ -1,0 +1,13 @@
+name = "Matthiesen Core"
+filename = "matthiesen-core-neoforge-2.0.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/sqEZOmQo/versions/HHRNDGQH/matthiesen-core-neoforge-2.0.1.jar"
+hash-format = "sha512"
+hash = "da9e71698b879a03f714760dd73955a7c947c0d6d51af1d18eea811d0903d86f12eb8b092d6e1d59867ad7508e7e94ecabd6a435a9ce678f66f244fed01f38c1"
+
+[update]
+[update.modrinth]
+mod-id = "sqEZOmQo"
+version = "HHRNDGQH"

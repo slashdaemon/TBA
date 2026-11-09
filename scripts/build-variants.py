@@ -137,6 +137,29 @@ STREAMCRAFT_REGISTRY: dict[str, dict[str, StreamCraftFile]] = {
             cf_file_id=9445724,
         ),
     },
+    # TBA 2.0.0+ runs NeoForge 1.21.1.
+    "0.33.0+mc1.21.1-neoforge": {
+        "windows": StreamCraftFile(
+            filename="streamcraft-pc-0.33.0-mc1.21.1-neoforge-cf.jar",
+            sha1="4fbf6f367eb694afb430d95540c3e17c93346785",
+            cf_file_id=9445871,
+        ),
+        "linux": StreamCraftFile(
+            filename="streamcraft-linux-x64-0.33.0-mc1.21.1-neoforge-cf.jar",
+            sha1="727970610a4f553a3b2a13e1b0a89045f761c0cd",
+            cf_file_id=9445875,
+        ),
+        "macos-arm64": StreamCraftFile(
+            filename="streamcraft-mac-arm64-0.33.0-mc1.21.1-neoforge-cf.jar",
+            sha1="a2cf47f26c17856f9f2eafa07288c13ff7047b4f",
+            cf_file_id=9445872,
+        ),
+        "macos-x86_64": StreamCraftFile(
+            filename="streamcraft-mac-x64-0.33.0-mc1.21.1-neoforge-cf.jar",
+            sha1="088f3d49e0fe81950be8f6c769015ee22f1782a5",
+            cf_file_id=9445874,
+        ),
+    },
 }
 
 
@@ -204,6 +227,37 @@ def run(cmd: list[str]) -> None:
         raise RuntimeError(f"Command failed: {' '.join(cmd)}")
 
 
+# CurseForge swap layer (same mechanism as TBS-client's scripts/publish.py).
+# Some CurseForge files block third-party downloads, so the canonical pack (and the .mrpack)
+# uses the identical Modrinth file. For the CurseForge export, every .pw.toml under
+# scripts/cf-sources/ (mirroring the pack layout) is copied over its canonical counterpart, so
+# the CF zip references CurseForge in manifest.json instead of bundling an override jar
+# (CurseForge rejects override jars of CF-hosted projects). Canonical files are restored after.
+CF_SOURCES = REPO_ROOT / "scripts" / "cf-sources"
+
+
+def curseforge_export_with_swaps() -> None:
+    swaps = [p for p in CF_SOURCES.rglob("*.pw.toml")] if CF_SOURCES.exists() else []
+    saved = {}
+    for src in swaps:
+        dst = REPO_ROOT / src.relative_to(CF_SOURCES)
+        saved[dst] = dst.read_bytes() if dst.exists() else None
+        shutil.copyfile(src, dst)
+    try:
+        if swaps:
+            print(f"  (swapped in {len(swaps)} CurseForge entries)")
+            run([str(PACKWIZ), "refresh"])
+        run([str(PACKWIZ), "curseforge", "export"])
+    finally:
+        for dst, data in saved.items():
+            if data is None:
+                dst.unlink(missing_ok=True)
+            else:
+                dst.write_bytes(data)
+        if swaps:
+            run([str(PACKWIZ), "refresh"])
+
+
 def build_one(platform: str, pack_version: str, sc_version: str) -> None:
     if platform not in STREAMCRAFT_REGISTRY[sc_version]:
         raise RuntimeError(
@@ -218,7 +272,7 @@ def build_one(platform: str, pack_version: str, sc_version: str) -> None:
     write_streamcraft_toml(sc_file)
     run([str(PACKWIZ), "refresh"])
     run([str(PACKWIZ), "modrinth", "export"])
-    run([str(PACKWIZ), "curseforge", "export"])
+    curseforge_export_with_swaps()
 
     # Packwiz writes <pack-name>-<version>.{mrpack,zip} to repo root.
     src_mrpack = REPO_ROOT / f"TBA-{pack_version}.mrpack"

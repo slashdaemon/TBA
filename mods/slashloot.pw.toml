@@ -1,0 +1,13 @@
+name = "SlashLoot"
+filename = "slashloot-0.5.3-mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a36ae42ff0458c868faebc6b6ea98e9edb2babf2"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9398768
+project-id = 1552991

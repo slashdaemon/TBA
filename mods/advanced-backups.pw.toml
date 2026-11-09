@@ -1,13 +1,13 @@
 name = "Advanced Backups"
-filename = "AdvancedBackups-fabric-1.21-3.7.1.jar"
+filename = "AdvancedBackups-spigot-1.21-3.7.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "a599f0c79ace2598a700475c3ac2c7fc2c59d0c2"
+hash = "84f202e97b31e395190e963b16d7e60765d61f2f"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6148229
+file-id = 6148237
 project-id = 876284

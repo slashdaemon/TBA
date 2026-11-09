@@ -1,13 +1,13 @@
 name = "Armor Statues"
-filename = "ArmorStatues-v21.1.0-1.21.1-Fabric.jar"
+filename = "ArmorStatues-v21.1.0-1.21.1-NeoForge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "1afab31be284195f8925b4689bb2a7540ec9c782"
+hash = "ea74e8434f23b618d3298afda8cad1ccb76f0a94"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 5732768
+file-id = 5732769
 project-id = 682566
