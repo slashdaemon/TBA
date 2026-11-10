@@ -14,23 +14,31 @@ carry over. Players need a fresh instance (Fabric instances can't update across 
 - **Create** 6.0.10 and **Create: Copycats+** (also the new home for every ReFramed frame).
 - **Woodworks** (+ Blueprint): wood-variant bookshelves, ladders and boards used by converted builds.
 - **SlashLoot** (our mod) replaces Lootr: per-player loot on plain vanilla chests, barrels and minecarts.
-- **Serene Seasons** replaces Fabric Seasons; **LPChatPrefix** replaces Styled Chat (LuckPerms prefixes).
+- **Serene Seasons** replaces Fabric Seasons.
+- **Effortless Building** replaces Effortless Structure (its fork, whose single jar crashes the
+  NeoForge client on the first tick).
 
 ### Replaced with the NeoForge build of the same mod
 Most of the pack: every mod whose project ships NeoForge 1.21.1 (see `scripts/port-to-neoforge.py`).
 Where the NeoForge build lives in a different project: Farmer's Delight, Balm, FerriteCore,
 Traveler's Backpack, Friends & Foes, Adorn, Beautify, Flan, Chunky, WTHIT, Sit, More Delight,
 Stack to Nearby Chests, wind chimes, Falling Leaves, Presence Footsteps, Visuality, Status Effect
-Bars, Stable Cam, FastQuit, Language Reload.
+Bars, FastQuit, Language Reload.
 
 ### Removed (no NeoForge build, or only through a Fabric-compatibility layer)
 - Gameplay/building: Axiom, Litematica, ReFramed (converted), Clutter, Verdant Vibes, Connectible
   Chains, NiftyCarts, ItemSwapper, Mouse Wheelie (Mouse Tweaks + Client Sort cover it), Accurate
   Block Placement, Paginated Advancements, Fabric Seasons Extras/Delight compat, Ledger, Styled Chat,
-  Essential Permissions, Gamemode Unrestrictor, Voice Chat Interaction, Do a Barrel Roll, VinURL.
+  Essential Permissions, Gamemode Unrestrictor, Voice Chat Interaction, Do a Barrel Roll, VinURL,
+  Stable Cam (its NeoForge listing is a Fabric jar).
+- **LuckPerms**: its last NeoForge 1.21.1 build sets players up only after the server sends the
+  command list, so any mod that checks permissions there kicks every player on join ("Invalid player
+  data"). Production LuckPerms held no groups or prefixes; operator levels cover permissions.
+- **Simple Voice Chat**: StreamCraft covers voice.
 - Client: Atmosfera (AmbientSounds stays), Better Mount HUD, Debugify, Eating Animation, More Chat
   History, OptiGUI, Skyboxify, Bettergrassify, Camera Utils, Enhanced Block Entities, Replay Mod,
-  Flashback, Cool Rain, Mod Menu (NeoForge has a mods screen), Krypton.
+  Flashback, Cool Rain, Mod Menu (NeoForge has a mods screen), Krypton, Continuity (its NeoForge
+  build needs the Fabric compatibility layer), Remove Reloading Screen (crashes Controlify on start).
 - Fabric libraries: Fabric API, Fabric Language Kotlin, Cardinal Components, Trinkets, MaLiLib,
   Polymer, Text Placeholder API, Cicada.
 - Our own **CoreCurriculum**, **SceneCraft** and **SynthCraft** return as NeoForge ports in later
@@ -43,13 +51,17 @@ Bars, Stable Cam, FastQuit, Language Reload.
 - Clutter and Verdant Vibes pieces → nearest equivalents; their natural Nether ores → basalt/blackstone.
 - ~4,000 Lootr containers (chests, barrels, pots, minecarts, suspicious sand/gravel) → vanilla with
   their loot tables kept, served per player by SlashLoot.
-- Items in containers and player inventories from removed mods → their replacements.
+- Items in containers and player inventories from removed mods → their replacements; armor trims in
+  Clutter's silver and onyx → iron and netherite (an unknown trim material makes the item vanish).
 - Verified on a full copy of the production world: every block, block entity, entity and item
-  resolves in the 2.0.0 pack (0 unknown ids).
+  resolves in the 2.0.0 pack (0 unknown ids), and so does every trim material, trim pattern,
+  enchantment, banner pattern and painting referenced by items and entities.
 
 ### Pins and fixes
-- Sodium 0.6.13 + Iris 1.8.12 (stable; Iris for Sodium 0.8 is beta on 1.21.1), Sodium Extra 0.6.0,
-  Reese's Sodium Options 1.8.0-beta.4.
+- Sodium 0.8.13 + Iris 1.8.14, Sodium Extra 0.9.5, Reese's Sodium Options 2.2.4 (Supplementaries and
+  More Culling require Sodium 0.8 on 1.21.1).
+- Advanced Backups: the NeoForge file (CurseForge's newest 1.21.1 file is the Spigot plugin).
+- Chunky is server-only (Distant Horizons hooks it on the client, where it never starts).
 - Arts & Crafts 1.5.3 (newer releases break Reintegrated: Arts and Crafts and change block ids).
 - WaterFrames 2.1.23 + WaterMedia 2.1.37, client-only (WaterMedia 3 clashes with StreamCraft's
   bundled libraries on NeoForge).
@@ -61,8 +73,10 @@ Bars, Stable Cam, FastQuit, Language Reload.
 - No block logger yet: GriefLogger is parked until StreamCraft relocates its bundled protobuf (the two
   clash on NeoForge). The website's ledger dashboard stops updating until then.
 - WorldEdit is out: it runs out of memory indexing the Diagonal Blocks variants.
+- No chat prefixes or titles: LuckPerms is out (see Removed) and CoreCurriculum titles return with
+  its NeoForge port.
 
-**Mod count:** 180 (1.0.7: 192).
+**Mod count:** 174 (1.0.7: 192).
 
 ## [1.0.8] - Never released (superseded by 2.0.0)
 

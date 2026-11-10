@@ -38,7 +38,6 @@ EQUIVALENT = {
     "more-delight-fabric": ("mr", "more-delight"),
     "presence-footsteps": ("mr", "pf-neoforge"),
     "sit-fabric": ("cf", "sit"),
-    "stable-cam": ("mr", "stable-cam"),
     "stack-to-nearby-chests": ("mr", "stack-to-nearby-chests-neoforge"),
     "status-effect-bars": ("mr", "status-effect-bars-reforged"),
     "travelers-backpack-fabric": ("cf", "travelers-backpack"),
@@ -47,7 +46,8 @@ EQUIVALENT = {
     "wthit": ("mr", "wthit"),
     "fabric-seasons": ("cf", "serene-seasons"),
     "ledger": ("cf", "grieflogger"),
-    "styled-chat": ("mr", "re-lpchatprefix"),
+    # Effortless Structure's universal jar NPEs on the NeoForge client tick; use the maintained original
+    "effortless": ("cf", "302113"),
 }
 
 # no NeoForge build and no equivalent we want (reason recorded in the log / CHANGELOG)
@@ -57,7 +57,7 @@ DROP = {
     "polymer": "Fabric library", "text-placeholder-api": "Fabric library", "cicada": "Fabric library",
     "konkrete-fabric": "library (pulled back in only if a NeoForge mod needs it)",
     "modmenu": "NeoForge has a built-in mods screen",
-    "luckperms-placeholders": "Fabric-only", "essential-permissions": "Fabric-only (NeoForge permission API + LuckPerms)",
+    "luckperms-placeholders": "Fabric-only", "essential-permissions": "Fabric-only (NeoForge permission API, op levels)",
     "gamemode-unrestrictor": "Fabric-only", "voice-chat-interaction": "Fabric-only",
     "fabric-seasons-extras": "Fabric Seasons add-on (Serene Seasons replaces it)",
     "fabric-seasons-delight-compat": "Fabric Seasons add-on (Serene Seasons replaces it)",
@@ -72,13 +72,28 @@ DROP = {
     "replay-mod-fabric-and-forge": "no NeoForge build", "flashback": "only an unofficial NeoForge port",
     "core-curriculum": "our mod; NeoForge port later", "scenecraft": "our mod; NeoForge port later",
     "synthcraft-live": "our mod; NeoForge port later",
+    "stable-cam": "Fabric-only (the 'NeoForge' listing is a Fabric jar)",
+    "continuity": "NeoForge build is a Sinytra Connector port (needs connector + fabric_api)",
+    "rrls": "crashes Controlify init on NeoForge (config fetched before ready)",
+    # LuckPerms NeoForge 5.4.140 (last 1.21.1 build) initialises players on PlayerLoggedInEvent, after the
+    # command tree is sent; any mod checking PermissionAPI in a command requirement (Voice Chat, Balm) then
+    # throws -> "Invalid player data" on join. Prod LuckPerms held no data, so ops levels cover permissions.
+    "luckperms": "LuckPerms NeoForge 1.21.1 kicks players on join (see note above)",
+    "styled-chat": "Fabric-only; LuckPerms prefix mod dropped with LuckPerms",
+    "simple-voice-chat": "owner: StreamCraft covers voice",
 }
 
 ADD = [("cf", "create"), ("cf", "copycats"), ("cf", "woodworks")]  # WorldEdit deferred: OOMs on Diagonal Blocks state map
 
 # version pins carried from the proof of concept
-PINS = {"waterframes": ("cf", "834607", "8056721"), "watermedia": ("cf", "869524", "7281929")}
-CLIENT_ONLY = {"watermedia", "watermedia-platform-extension"}
+PINS = {"waterframes": ("cf", "834607", "8056721"), "watermedia": ("cf", "869524", "7281929"),
+        # CF's newest 1.21.1 file is the Spigot plugin; this is the NeoForge 1.21/1.21.1 jar
+        "advanced-backups": ("cf", "876284", "6148234")}
+# Sodium 0.8.x line: Supplementaries/More Culling refuse Sodium < 0.8; Iris 1.8.14, Reese's 2.x, Sodium Extra 0.9 follow it
+CLIENT_ONLY = {"watermedia", "watermedia-platform-extension", "sodium", "irisshaders",
+               "reeses-sodium-options", "sodium-extra"}
+# Distant Horizons hooks Chunky on the client when it is present, and Chunky only initialises on servers
+SERVER_ONLY = {"chunky", "advanced-backups"}
 
 
 def run(args):
@@ -162,6 +177,11 @@ def main() -> int:
         p = MODS / f"{name}.pw.toml"
         if p.exists():
             p.write_text(re.sub(r'^side = "\w+"', 'side = "client"', p.read_text(encoding="utf-8"), count=1, flags=re.M), encoding="utf-8")
+
+    for name in SERVER_ONLY:
+        p = MODS / f"{name}.pw.toml"
+        if p.exists():
+            p.write_text(re.sub(r'^side = "\w+"', 'side = "server"', p.read_text(encoding="utf-8"), count=1, flags=re.M), encoding="utf-8")
 
     subprocess.run([PW, "refresh"], cwd=ROOT, capture_output=True)
     LOG.write_text("\n".join(log) + "\n", encoding="utf-8")

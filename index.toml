@@ -516,7 +516,7 @@ metafile = true
 
 [[files]]
 file = "mods/advanced-backups.pw.toml"
-hash = "fb7a8b30c5b02f3f03b7677d95dee9db0e9735c9c601c7736b0c043d5a0634bd"
+hash = "10a5a64cd94e500e7414a974c39ec7c71390013015ae5370d6d315bc9f942592"
 metafile = true
 
 [[files]]
@@ -571,7 +571,7 @@ metafile = true
 
 [[files]]
 file = "mods/balm.pw.toml"
-hash = "9aee12cd43dcf471f23d1dc7da556fbaadf3831fe6f699925a9d79915376b6a9"
+hash = "e026ed289b4581cbe935dc9d23c5a4847844058e7608dfb490b500ba991201b2"
 metafile = true
 
 [[files]]
@@ -656,7 +656,7 @@ metafile = true
 
 [[files]]
 file = "mods/chunky.pw.toml"
-hash = "33ea8d2b8449ccb0e6e6a456db71e44c53980a5e38e93a9eecc7257029510889"
+hash = "68cc51e721e993a8b7a2cbaf45369933b22b07a9c82327ab14757ee10684aa81"
 metafile = true
 
 [[files]]
@@ -677,11 +677,6 @@ metafile = true
 [[files]]
 file = "mods/connectivity.pw.toml"
 hash = "2a41749411745cc6e3500f715914b4e7728c9f4eb57b67e0692c8685f279ebb1"
-metafile = true
-
-[[files]]
-file = "mods/continuity.pw.toml"
-hash = "4099d70bb7e8bfd3b1e526a7eb151090e7b652f51942d7d927d8910d853a93fe"
 metafile = true
 
 [[files]]
@@ -770,8 +765,8 @@ hash = "22495f861856161c8b4778e52100a8145506a7f67b657f5ea2437310f794bb3a"
 metafile = true
 
 [[files]]
-file = "mods/effortless.pw.toml"
-hash = "11679903810776914b0ae4b6d24f6fa2a3cb43e122f621890c8c00ad4a743f35"
+file = "mods/effortless-building.pw.toml"
+hash = "f178041b025b0c1940f13f87faea1c13ea485199eed6658188e03f205837d4bd"
 metafile = true
 
 [[files]]
@@ -926,7 +921,7 @@ metafile = true
 
 [[files]]
 file = "mods/irisshaders.pw.toml"
-hash = "e34877bf9d74d3f71c69fdd47ce509fa473fadcdf88f87f79754a522cfa1c60b"
+hash = "bc0ed43619af3b5e453ccb36412d72aef8d066594946a927155d2fbd440e4b40"
 metafile = true
 
 [[files]]
@@ -1002,16 +997,6 @@ metafile = true
 [[files]]
 file = "mods/little-joys.pw.toml"
 hash = "320fa88fa71a91c09f9215f4300a939e7f9b2e0ad6c29178ed71bf8d967e83a2"
-metafile = true
-
-[[files]]
-file = "mods/lpchatprefix.pw.toml"
-hash = "740ec6106321bb96252ad3c659122634bb2350889084dced0473e4b31bebc6e7"
-metafile = true
-
-[[files]]
-file = "mods/luckperms.pw.toml"
-hash = "a361c2aaa5dc3a5e4740e8a21c05d8dc44bcfb0791419e4aa43fd7acb399a46f"
 metafile = true
 
 [[files]]
@@ -1176,7 +1161,7 @@ metafile = true
 
 [[files]]
 file = "mods/reeses-sodium-options.pw.toml"
-hash = "73a55eea621f7f6db374ad6a12fce24fda8d7948b04b10462ccc38f7d077af80"
+hash = "2fcf790ca5966fdf1353f5b49c5b8f288a572e036100e31d30f4d8da549c7ffa"
 metafile = true
 
 [[files]]
@@ -1192,11 +1177,6 @@ metafile = true
 [[files]]
 file = "mods/roughly-enough-items.pw.toml"
 hash = "24d74f3c1a59258fb4296b917c60801127181f1263fcca080b38c812f478756f"
-metafile = true
-
-[[files]]
-file = "mods/rrls.pw.toml"
-hash = "bd76a56a76a09ab8380b14177b4cb0dcb0a8c2d24b90175453e0bea7890d3c4a"
 metafile = true
 
 [[files]]
@@ -1230,11 +1210,6 @@ hash = "d404de58c0ccc04a52a9b8d9540b355ee7a77c9c88c58ab1b4ffbf07d0357e7c"
 metafile = true
 
 [[files]]
-file = "mods/simple-voice-chat.pw.toml"
-hash = "6a10ed0a5d21c91c0ff90b6b9b083a4f5bfc430bf37db4ac9941db5af2bb1475"
-metafile = true
-
-[[files]]
 file = "mods/sit.pw.toml"
 hash = "f1030305cfefdf2852048135ea6d3c03090c0af522b0846c9b17e1cd0310ba7e"
 metafile = true
@@ -1256,7 +1231,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium-extra.pw.toml"
-hash = "a1fb713df668ed21dda0602e99cb23b991c8faff841e130d7aae46258c3d6a45"
+hash = "b9d2d9c361ac465b572b7f010fc4ef1f91ef168fbc8d2591317e951aa569ee29"
 metafile = true
 
 [[files]]
@@ -1266,7 +1241,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "f3c75c6d415e4d68307d972ed30ced99ba05968c7ff85301154a60fc42eeed95"
+hash = "3fc6fd4a464740bd6cfe89571517cfda837dbad69f0218ef1159b527b1be45d6"
 metafile = true
 
 [[files]]
@@ -1287,11 +1262,6 @@ metafile = true
 [[files]]
 file = "mods/spark.pw.toml"
 hash = "3978e88dcc1e854188871d74648bac5f1815a631508120f19d7a310e6106f91f"
-metafile = true
-
-[[files]]
-file = "mods/stable-cam.pw.toml"
-hash = "d93f583e2b3a06c3981409839ebe208fbe8b7617d4b07b2c32bae1c4944aed11"
 metafile = true
 
 [[files]]
