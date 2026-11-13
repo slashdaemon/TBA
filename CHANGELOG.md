@@ -3,7 +3,7 @@
 All notable changes to TBA will be documented in this file.
 
 
-## [2.0.0] - Unreleased (in testing)
+## [2.0.0] - 2026-11-13
 
 **TBA moves to NeoForge 1.21.1 and adds Create.** Create has no Fabric build for 1.21.1, so the
 whole pack is ported. The current world is converted in place: builds, inventories and ender chests

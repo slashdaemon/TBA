@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v1.0.7
+# TBA (TheBlock.Academy) v2.0.0
 
-A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
+A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**192 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**174 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -15,34 +15,28 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Lithium** - Game logic optimizations (~50% tick improvement)
 - **FerriteCore** - Memory usage reduction (~45% RAM savings)
 - **ModernFix** - Faster loading, dynamic resource management
-- **Krypton** - Network stack optimization
 - **Iris Shaders** - OptiFine shader compatibility
 - **Distant Horizons** - LOD rendering for extended view distances
 - **C2ME** - Multi-core chunk generation
 - **ImmediatelyFast** - Immediate mode rendering optimization
 - **BadOptimizations** - Micro-optimizations for various game systems
 - **Clumps** - XP orb merging to reduce entity lag
-- **Enhanced Block Entities** - Faster block entity rendering
 
 ### Building Tools
-- **Axiom** - All-in-one building/editing tool with real-time previews, terraforming, sculpting (Right-Shift for Editor Mode)
-- **Litematica** - Schematic mod for displaying build guides/holograms
-- **Effortless Structure** - Mirrors, arrays, build modes, block randomizer
+- **Effortless Building** - Mirrors, arrays, build modes, block randomizer
 
 ### Cinematics & Recording
-- **ReplayMod** - Timeline-based recording with keyframed cameras and video export (requires FFmpeg)
 - **Better Third Person** - Independent camera rotation, 360° orbit, enhanced third-person controls
-- **Stable Cam** - Stable camera perspective mode for smooth cinematic recordings
 - **First-person Model** - See your own body in first person
 - **Not Enough Animations** - Player animations for eating, map holding, etc.
 - **Camera Overhaul** - Tilting and swaying camera effects
-- **Camera Utils** - Freecam, third-person distance, and camera controls
 - **3D Skin Layers** - Renders skin layers with depth
-- **Eating Animation** - Visible eating and drinking actions
 - **AutoHUD** - Auto-hiding HUD for cleaner gameplay
 - **Even More Instruments** - Keyboard, violin, guitar, saxophone with MIDI support
 
 ### Building & Decoration
+- **Create: Copycats+** - Copycat stairs, slabs, beams and more that take any block's look (converted ReFramed builds live here)
+- **Woodworks** - Bookshelves, ladders, boards and chests in every wood type
 - **Chipped** - 11,000+ decorative block variants with connected textures
 - **Handcrafted** - 250+ furniture pieces (fantasy, steampunk, medieval styles)
 - **Macaw's Suite** - Doors, Windows, Bridges, Roofs, Fences, Trapdoors, Furniture, Lights
@@ -50,39 +44,35 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Adorn** - Furniture (chairs, sofas, tables, shelves, kitchen blocks)
 - **Supplementaries** - Jars, signs, clocks, pulleys, cages, and 100+ decorative/utility items
 - **Amendments** - Supplementaries companion (wall lanterns, skull candles, ceiling pots)
-- **Connectible Chains** - Decorative chain links between fences and walls
 - **Underlay** - Place carpets and blocks under chests, beds, stairs
 - **Arts & Crafts** - Dyeable decorated pots, chalk, terracotta shingles, soapstone
-- **ReFramed** - Copy any block's appearance onto stairs, slabs, fences, and more
 - **Armor Statues** - Pose and customize armor stands with a book interface
 - **Little Joys** - Small ambient details (clovers, rocks, fallen leaves, butterflies)
 - **WindChime** - Decorative wind chimes (bamboo, glass, amethyst, copper, and more)
 - **Diagonal Walls** - Walls connect diagonally
 - **Falling Leaves** - Leaf particles fall from trees
-- **Beautify Refabricated** - Decorative blocks (ropes, blinds, trellises)
+- **Beautify** - Decorative blocks (ropes, blinds, trellises)
 - **Sooty Chimneys** - Chimneys with realistic smoke particle effects
-- **Clutter** - Small decorative objects for detailed builds
 - **Fetzi's Asian Decoration** - Asian-themed decor blocks
 - **Dusty Decorations** - Aged and weathered block variants
-- **NiftyCarts** - Decorative market and farm carts
 - **Diagonal Windows** - Angled window placements
 - **Diagonal Fences** - Fences connect diagonally
-- **Continuity** - Connected textures (glass, bookshelves, etc.)
 
 ### Content
-- **Farmer's Delight Refabricated** - Cooking and farming expansion
+- **Create** - Mechanical contraptions, trains, kinetics and automation
+- **Farmer's Delight** - Cooking and farming expansion
 - **More Delight** - Additional foods and recipes for Farmer's Delight
 - **Storage Drawers** - Compact item storage system
 - **Traveler's Backpack** - Wearable backpacks with fluid storage and tool slots
 - **Universal Sawmill** - Sawmill workstation with Carpenter villager
 - **[Let's Do] Bakery** - Pastries, cakes, and baking stations (includes Farm & Charm)
 - **[Let's Do] Vinery** - Vineyard and wine themed content
-- **Fabric Seasons** - Four seasons with visual and gameplay changes (currently locked to Winter)
+- **Serene Seasons** - Four seasons with visual and gameplay changes
 - **Joy of Painting** - Paint custom pictures on canvases and display them like vanilla paintings
 - **Camerapture** - Take in-game photos and hang them as pictures
 - **WaterFrames** - Display images and videos from URLs on in-game frames and projectors
 - **Immersive Paintings** - Upload custom images as paintings in any size
-- **Lootr** - Per-player loot in chests, barrels, and minecarts (no stealing!)
+- **SlashLoot** - Per-player loot in vanilla chests, barrels, and minecarts (no stealing!)
 - **[Let's Do] Brewery** - Brewing equipment and alcoholic drinks
 - **[Let's Do] Meadow** - Alpine cottage aesthetic and content
 - **[Let's Do] Beach Party** - Beach furniture and decorations
@@ -90,7 +80,6 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Illager Invasion** - New illager types and boss encounters
 - **Naturally Trimmed** - Mobs spawn wearing armor trims
 - **Trimmable Tools** - Apply armor trims to tools
-- **Do A Barrel Roll** - Enhanced elytra flight control
 - **Immersive Aircraft** - Craftable biplanes, airships, and gyrodyne helicopters
 
 ### Web Map
@@ -101,12 +90,9 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **JourneyMap** - Full-featured world map with browser viewing and waypoints
 - **WTHIT** - Block/entity tooltips (what am I looking at?)
 - **AppleSkin** - Food/hunger visualization
-- **Mouse Wheelie** - Enhanced inventory scrolling, sorting, and refilling
+- **Mouse Tweaks** + **Client Sort** - Inventory scrolling, dragging and sorting
 - **Controlling** - Searchable keybinds with conflict detection
-- **ItemSwapper** - Quick item palette for swapping similar blocks
-- **Gamemode Unrestrictor** - Use F3+F4 gamemode menu even when cheats are disabled
 - **InvMove** - Move while inventory is open
-- **Mod Menu** - Browse and configure mods from the title screen
 - **Carry On** - Pick up and carry blocks, chests, and entities
 - **Sit** - Right-click stairs and slabs to sit
 - **Actually Harvest** - Right-click crops to harvest and replant
@@ -119,7 +105,6 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Crash Assistant** - Helpful GUI after crashes
 - **Leaf Me Alone** - Ride through leaves
 - **Leaves Be Gone** - Quick leaf decay
-- **Paginated Advancements** - Better advancement screen
 - **Stack to Nearby Chests** - Terraria-style deposit into chests
 - **Status Effect Bars** - Duration bars on effect icons
 - **Mighty Mail** - In-game mailbox system for sending items and letters between players
@@ -135,7 +120,6 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Presence Footsteps** - Material-aware footstep sounds
 - **Visuality** - Additional ambient particles
 - **Particle Rain** - Enhanced rain and snow particle effects
-- **Cool Rain** - Material-specific rain sounds
 - **Sounds** - 170+ UI and interaction sounds
 - **Blur+** - GUI background blur effect
 - **Inventory Particles** - Item pickup particle effects
@@ -143,17 +127,11 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Fast Item Frames** - Item frame rendering optimization
 
 ### Multiplayer
-- **Simple Voice Chat** - Proximity-based voice communication
-- **Voice Chat Interaction** - Nearby sounds play through voice chat proximity
-- **StreamCraft Live** - Real-time video conferencing (webcam, screen share, voice) rendered on in-world blocks via LiveKit WebRTC
-- **SynthCraft** - AI-powered music generation — describe genre, mood, and lyrics to create original songs; listen privately or broadcast server-wide
-- **SceneCraft** - Automatic cinematic highlight reels — records gameplay, detects highlights, generates camera paths, and exports MP4 clips
+- **StreamCraft Live** - Real-time video conferencing and proximity voice (webcam, screen share, voice) rendered on in-world blocks via LiveKit WebRTC
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
 - **Connectivity** - Improved connection stability and error handling
-- **LuckPerms** - Advanced permissions system (server-side)
-- **Essential Permissions** - Adds permission nodes to vanilla commands for LuckPerms integration (server-side)
 - **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
 
 ### Discord Integration
@@ -183,7 +161,8 @@ The modpack comes pre-configured with sensible defaults:
 1. Download [Prism Launcher](https://prismlauncher.org/)
 2. Get the latest `.mrpack` from [Releases](https://github.com/slashdaemon/TBA/releases)
 3. In Prism: **Add Instance** → **Import** → Select the `.mrpack`
-4. Allocate 4-6GB RAM (Edit Instance → Settings → Memory)
+4. Allocate **8 GB** RAM (Edit Instance → Settings → Memory); 4 GB runs out of memory while loading
+   block models. Coming from 1.x? Make a **new** instance: a Fabric instance can't update to NeoForge.
 5. **Get whitelisted:** Use `/register <your-minecraft-username>` in our Discord
 6. Connect to the server!
 
@@ -324,13 +303,17 @@ The Discord ↔ Minecraft bridge no longer lives in the modpack as of v1.0.7. Th
 
 The modpack has two exports for different purposes:
 
-| Export | Format | For | Mod Count |
-|--------|--------|-----|-----------|
-| `TBA-X.Y.Z.zip` | CurseForge | CurseForge App users | 123 mods |
-| `TBA-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 126 mods |
+| Export | Format | For |
+|--------|--------|-----|
+| `TBA-X.Y.Z[-platform].zip` | CurseForge | CurseForge App users |
+| `TBA-X.Y.Z[-platform].mrpack` | Modrinth | Prism Launcher + Server |
+
+Each comes in four platform variants (Windows = no suffix, `-linux`, `-macos-arm64`, `-macos-x86_64`)
+because StreamCraft ships per-platform native libraries. The server uses `-linux`.
 
 **Server-only mods** (included in `.mrpack`, excluded from `.zip`):
-- **Better Sleep** - Sleep voting for multiplayer nights
+- **Advanced Backups** - Scheduled on-server backups
+- **Chunky** - Chunk pre-generation
 
 These run on the server only — players don't need them installed.
 
@@ -340,22 +323,22 @@ These run on the server only — players don't need them installed.
 
 | Side | Mods |
 |------|------|
-| **Client-only** | Better Third Person |
-| **Server-only** | Better Sleep |
-| **Both** | Most mods |
+| **Client-only** | Sodium, Iris and other rendering/visual/audio/UI mods (49) |
+| **Server-only** | Advanced Backups, Chunky |
+| **Both** | Everything else |
 
-### Not Available for 1.21.1
-- **Create** - NeoForge only (no Fabric port)
-- **Iron Chests** - Not yet updated
-- **Decorative Blocks** - Stuck at 1.20.4
-- **Effective** - Removed due to crash with REI (Veil/ImGui conflict)
+### Left behind in the move to NeoForge (2.0.0)
+Mods with no NeoForge 1.21.1 build (Axiom, Litematica, ReFramed, Clutter, Ledger, Replay Mod and
+others), LuckPerms (its last 1.21.1 NeoForge build kicks players on join) and Simple Voice Chat
+(StreamCraft covers voice). WorldEdit is out for now (runs out of memory on Diagonal Blocks).
+CoreCurriculum, SceneCraft and SynthCraft return as NeoForge ports. Full list in [CHANGELOG.md](CHANGELOG.md).
 
 ## Requirements
 
 - **Minecraft:** 1.21.1
-- **Mod Loader:** Fabric 0.18.3+
+- **Mod Loader:** NeoForge 21.1.265
 - **Java:** 21 (required for 1.20.5+)
-- **RAM:** 4GB minimum, 6GB recommended, 8GB for shaders
+- **RAM:** 8GB
 
 ## Contributing
 
