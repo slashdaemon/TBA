@@ -1346,7 +1346,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "16be1d64da22555163d36a6e7d69e1f101d2d303c16e9e2d3a8f19615abdac53"
+hash = "e84bde80393d1f698a80e853cd5746e98404e318352a2119a1e674db9e9e07de"
 
 [[files]]
 file = "resourcepacks/armory-reforged.pw.toml"

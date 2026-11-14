@@ -135,6 +135,16 @@ makes every entry a store reference in each store's own export:
   Linux/macOS as additional files. GitHub releases carry all 8.
 - Repo files that must not ship go in `.packwizignore` (packwiz exports untracked files too).
 
+## Default Keybinds (`options.txt`)
+
+`options.txt` sets **every** registered binding explicitly. A binding it leaves out falls back to
+the mod's default, which can take a key the pack already assigned; on NeoForge only one binding
+gets the press (2.0.0: StreamCraft's mic lost M to JourneyMap). The build gate fails on any key
+bound twice outside `ALLOWED_SHARED_KEYS` in `audit-artifacts.py`. **After adding or removing a
+client mod**, launch the pack once and run
+`py -3 scripts/check-keybinds.py "<instance>/minecraft/options.txt"`: it lists bindings missing
+from the pack, conflicts in the effective map, and stale entries.
+
 ## Files to Update When Releasing
 
 | File | Update |

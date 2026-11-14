@@ -9,12 +9,14 @@ Fails when an artifact would be rejected or is wrong to ship:
   - .mrpack download URLs outside Modrinth's allowed hosts.
   - root-level override files or top-level folders outside the allowlists (stray junk).
   - anything that looks like a secret (.ssh, ed25519 keys, .env, .pem).
+  - a key bound to two actions in the shipped options.txt (outside ALLOWED_SHARED_KEYS).
+    scripts/check-keybinds.py covers what this can't see: mod defaults missing from options.txt.
 
 Usage: py -3 scripts/audit-artifacts.py dist/TBA-2.0.1.mrpack dist/TBA-2.0.1.zip ...
 """
 from __future__ import annotations
 
-import fnmatch, json, sys, zipfile
+import fnmatch, json, re, sys, zipfile
 from collections import Counter
 from urllib.parse import urlparse
 
@@ -32,7 +34,44 @@ ALLOWED_OVERRIDES = {
         "mighty_mail-neoforge-*.jar": "Mighty Mail (MrCrayfish), CurseForge-only, MIT",
     },
 }
-MODRINTH_HOSTS = {"cdn.modrinth.com", "github.com", "raw.githubusercontent.com", "gitlab.com"}
+# Keys deliberately shared by several bindings: each works in a different context (a modifier
+# key, a specific screen, or only while piloting). Any other key bound twice in the shipped
+# options.txt fails the gate: on NeoForge only one binding receives the press.
+ALLOWED_SHARED_KEYS = {
+    "key.keyboard.left.alt": {"key_create.keyinfo.alt_modifier", "key_create.keyinfo.toolmenu",
+                              "key_create.keyinfo.toolbelt", "key_key.effortlessbuilding.open_radial_menu",
+                              "key_key.immersive_aircraft.free_look", "key_keyinfo.copycats.fill_copycat"},
+    "key.keyboard.left.control": {"key_create.keyinfo.ctrl_modifier", "key_key.sprint"},
+    "key.keyboard.left.shift": {"key_create.keyinfo.shift_modifier", "key_key.sneak"},
+    "key.keyboard.w": {"key_key.ponder.ponder", "key_key.forward"},           # Ponder: tooltip hover
+    "key.mouse.middle": {"key_key.clientsort.op.sort", "key_key.pickItem"},     # sort: inventory screen
+    "key.keyboard.k": {"key_key.journeymap.create_waypoint", "key_key.journeymap.fullscreen_create_waypoint"},
+    "key.keyboard.left.bracket": {"key_genshinstrument.keymaps.transpose_down_modifier",
+                                  "key_key.journeymap.minimap_type"},       # transpose: instrument screen
+    "key.keyboard.right.bracket": {"key_genshinstrument.keymaps.transpose_up_modifier",
+                                   "key_evenmoreinstruments.keymaps.instrument_type_modifier"},
+    "key.keyboard.grave.accent": {"key_evenmoreinstruments.keymaps.record",
+                                  "key_key.immersive_aircraft.mouse_control"},  # piloting only
+}
+
+
+def keybinds(options_text: str) -> dict[str, str]:
+    return {m.group(1): m.group(2) for m in re.finditer(r"^(key_[^:\s]+):(\S+)\s*$", options_text, re.M)}
+
+
+def keybind_conflicts(binds: dict[str, str]) -> list[str]:
+    by_key: dict[str, set[str]] = {}
+    for name, key in binds.items():
+        if key != "key.keyboard.unknown":
+            by_key.setdefault(key, set()).add(name)
+    out = []
+    for key, names in sorted(by_key.items()):
+        if len(names) > 1 and not names <= ALLOWED_SHARED_KEYS.get(key, set()):
+            out.append(f"{key} bound to {', '.join(sorted(names))}")
+    return out
+
+
+MODRINTH_HOSTS ={"cdn.modrinth.com", "github.com", "raw.githubusercontent.com", "gitlab.com"}
 ROOT_FILES = {"options.txt", "servers.dat"}
 TOP_DIRS = {"mods", "resourcepacks", "shaderpacks", "config", "defaultconfigs", "journeymap", "minescript"}
 CONTENT_DIRS = {"mods", "resourcepacks", "shaderpacks"}
@@ -55,6 +94,10 @@ def audit(path: str) -> list[str]:
                     problems.append(f"download host not allowed on Modrinth: {f['path']} <- {u}")
     else:
         links = len(json.loads(z.read("manifest.json"))["files"])
+
+    for opts in [n for n in z.namelist() if n.endswith("overrides/options.txt")]:
+        for c in keybind_conflicts(keybinds(z.read(opts).decode("utf-8", "replace"))):
+            problems.append(f"keybind conflict in {opts}: {c}")
 
     for n in z.namelist():
         low = "/" + n.lower()

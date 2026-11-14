@@ -14,6 +14,16 @@ bundling the files, which also makes the Modrinth/Prism download far smaller.
   so they cannot ship in the Modrinth pack. NeoForge 1.21.1 covers what they were added for.
 - Leftover Simple Voice Chat client config (the mod itself left in 2.0.0; StreamCraft covers voice).
 
+### Keybinds
+- **M toggles the StreamCraft mic again.** The default keybinds predated StreamCraft's keys, so
+  JourneyMap took M and `'` on NeoForge. Every binding is now set explicitly, with no key shared
+  by two actions that can fire together:
+  - StreamCraft: mic **M**, menu **'**, tablet picker **;**
+  - JourneyMap minimap toggle **L**, minimap preset **\\**
+  - Iris shader selection **F6**, Picture Mode **F7**, Immersive Aircraft boost **H**
+  - Presence Footsteps settings: unbound (open it from the Mods screen)
+- Removed 76 bindings left over from mods that are no longer in the pack.
+
 ### Packaging
 - Modrinth (.mrpack): every mod, resource pack and shader is a Modrinth link, StreamCraft
   included (per-OS file). Only Framework and Mighty Mail (CurseForge-only, LGPL/MIT) are bundled.
