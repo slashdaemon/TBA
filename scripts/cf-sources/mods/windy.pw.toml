@@ -1,0 +1,13 @@
+name = "Windy"
+filename = "windy-neoforge-1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "4c7643fdb3ebf2677aba86f782bcd26213ce26e1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8462197
+project-id = 1616097

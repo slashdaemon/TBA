@@ -37,18 +37,23 @@ PLATFORMS = ["windows", "linux", "macos-arm64", "macos-x86_64"]
 
 @dataclass(frozen=True)
 class StreamCraftFile:
-    """A registered StreamCraft artifact. Exactly one of cf_file_id / mr_url
-    must be set — selects CurseForge metadata mode vs direct URL mode."""
+    """A registered StreamCraft artifact: the CurseForge file (cf_file_id) and/or the same file
+    on Modrinth (mr_url + mr_filename + mr_sha512). The .zip always uses the CurseForge file; the
+    .mrpack uses the Modrinth URL when registered (a CurseForge file would be bundled as an
+    override jar, which Modrinth's review rejects)."""
     filename: str
     sha1: str
     cf_file_id: int | None = None
     mr_url: str | None = None
+    mr_filename: str | None = None
+    mr_sha512: str | None = None
 
     def __post_init__(self) -> None:
-        if (self.cf_file_id is None) == (self.mr_url is None):
-            raise ValueError(
-                f"StreamCraftFile {self.filename}: exactly one of cf_file_id or mr_url must be set"
-            )
+        if self.cf_file_id is None and self.mr_url is None:
+            raise ValueError(f"StreamCraftFile {self.filename}: set cf_file_id and/or mr_url")
+
+
+MR_SC_BASE = "https://cdn.modrinth.com/data/UUUunIAe/versions"
 
 
 # Registry of StreamCraft files per version + platform.
@@ -138,26 +143,39 @@ STREAMCRAFT_REGISTRY: dict[str, dict[str, StreamCraftFile]] = {
         ),
     },
     # TBA 2.0.0+ runs NeoForge 1.21.1.
+    # Modrinth version cD7cUqAn holds byte-identical copies (same sha1) of the CurseForge files.
     "0.33.0+mc1.21.1-neoforge": {
         "windows": StreamCraftFile(
             filename="streamcraft-pc-0.33.0-mc1.21.1-neoforge-cf.jar",
             sha1="4fbf6f367eb694afb430d95540c3e17c93346785",
             cf_file_id=9445871,
+            mr_url=f"{MR_SC_BASE}/cD7cUqAn/streamcraft-pc-0.33.0%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-pc-0.33.0+mc1.21.1-neoforge.jar",
+            mr_sha512="03135afe2139047d4aa3769cfe65e0b124a0092b4c885eb59bf81805a18ddf296affc1d90ad4a8831fc49aa55636cc0f9435eadf2fc29d85b2eaf5d3f83ba0ab",
         ),
         "linux": StreamCraftFile(
             filename="streamcraft-linux-x64-0.33.0-mc1.21.1-neoforge-cf.jar",
             sha1="727970610a4f553a3b2a13e1b0a89045f761c0cd",
             cf_file_id=9445875,
+            mr_url=f"{MR_SC_BASE}/cD7cUqAn/streamcraft-linux-x64-0.33.0%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-linux-x64-0.33.0+mc1.21.1-neoforge.jar",
+            mr_sha512="75abb72edfc037d22cfc7dc947ff11f315225ceab3ff401d4af7d0c6490ec9e31ba5556ebc95bf29fd33a59740cf3734b325e858a3345dae3d573c1d04a2df76",
         ),
         "macos-arm64": StreamCraftFile(
             filename="streamcraft-mac-arm64-0.33.0-mc1.21.1-neoforge-cf.jar",
             sha1="a2cf47f26c17856f9f2eafa07288c13ff7047b4f",
             cf_file_id=9445872,
+            mr_url=f"{MR_SC_BASE}/cD7cUqAn/streamcraft-mac-arm64-0.33.0%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-mac-arm64-0.33.0+mc1.21.1-neoforge.jar",
+            mr_sha512="484b270e7386febb540e5aac57593a07d4986feadbddbc4649b35025027669bca6147ed74d8411a20f801b28ca0da02e4b2b0207056b0573387f228132e5d39f",
         ),
         "macos-x86_64": StreamCraftFile(
             filename="streamcraft-mac-x64-0.33.0-mc1.21.1-neoforge-cf.jar",
             sha1="088f3d49e0fe81950be8f6c769015ee22f1782a5",
             cf_file_id=9445874,
+            mr_url=f"{MR_SC_BASE}/cD7cUqAn/streamcraft-mac-x64-0.33.0%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-mac-x64-0.33.0+mc1.21.1-neoforge.jar",
+            mr_sha512="be6af31149a3b845c8e10518a3dba3aa9321b2fb5f9fd1bcb85e83489d7c2091d5bf0bd12ac9b2a3d4ec43a938dfe36243f3af93691b2a1767f9029e11811196",
         ),
     },
 }
@@ -189,8 +207,20 @@ def read_current_streamcraft_version() -> str:
     )
 
 
-def write_streamcraft_toml(file: StreamCraftFile) -> None:
-    if file.cf_file_id is not None:
+def write_streamcraft_toml(file: StreamCraftFile, store: str = "curseforge") -> None:
+    """store="curseforge": CurseForge metadata (the .zip, and the canonical pack).
+    store="modrinth": the Modrinth URL when registered, else falls back to CurseForge."""
+    if store == "modrinth" and file.mr_url is not None and file.mr_sha512 is not None:
+        body = f'''name = "StreamCraft Live"
+filename = "{file.mr_filename or file.filename}"
+side = "both"
+
+[download]
+url = "{file.mr_url}"
+hash-format = "sha512"
+hash = "{file.mr_sha512}"
+'''
+    elif file.cf_file_id is not None:
         body = f'''name = "StreamCraft Live"
 filename = "{file.filename}"
 side = "both"
@@ -227,35 +257,73 @@ def run(cmd: list[str]) -> None:
         raise RuntimeError(f"Command failed: {' '.join(cmd)}")
 
 
-# CurseForge swap layer (same mechanism as TBS-client's scripts/publish.py).
-# Some CurseForge files block third-party downloads, so the canonical pack (and the .mrpack)
-# uses the identical Modrinth file. For the CurseForge export, every .pw.toml under
-# scripts/cf-sources/ (mirroring the pack layout) is copied over its canonical counterpart, so
-# the CF zip references CurseForge in manifest.json instead of bundling an override jar
-# (CurseForge rejects override jars of CF-hosted projects). Canonical files are restored after.
+# Per-store source layers (same mechanism as TBS-client's scripts/publish.py).
+# The canonical pack is CurseForge-first. Each store's export overlays its own layer, mirroring
+# the pack layout, so every entry is a store reference instead of a bundled file:
+#   scripts/cf-sources/  hand-made CurseForge entries for the few Modrinth-canonical files
+#   scripts/mr-sources/  Modrinth entries for every CurseForge file, generated by
+#                        scripts/sync-mr-sources.py (must be current; checked before building)
+# CurseForge rejects bundled jars of CurseForge-hosted projects; Modrinth rejects bundled files
+# that are on Modrinth or that we have no right to redistribute. Entries in *_EXCLUDED are left
+# out of that store's export: files on neither store whose licence forbids redistribution.
 CF_SOURCES = REPO_ROOT / "scripts" / "cf-sources"
+MR_SOURCES = REPO_ROOT / "scripts" / "mr-sources"
+CF_EXCLUDED = {
+    "resourcepacks/unobtrusive-weather.pw.toml": "Modrinth-only, All Rights Reserved",
+    "shaderpacks/mello.pw.toml": "Modrinth-only, All Rights Reserved",
+}
+MR_EXCLUDED: dict[str, str] = {}
+LAYERS = {
+    "curseforge": (CF_SOURCES, CF_EXCLUDED),
+    "modrinth": (MR_SOURCES, MR_EXCLUDED),
+}
 
 
-def curseforge_export_with_swaps() -> None:
-    swaps = [p for p in CF_SOURCES.rglob("*.pw.toml")] if CF_SOURCES.exists() else []
-    saved = {}
-    for src in swaps:
-        dst = REPO_ROOT / src.relative_to(CF_SOURCES)
-        saved[dst] = dst.read_bytes() if dst.exists() else None
-        shutil.copyfile(src, dst)
+def check_layers() -> None:
+    """Fail before touching the pack: orphan swaps, unknown exclusions, stale Modrinth layer."""
+    problems = []
+    for store, (src_dir, excluded) in LAYERS.items():
+        for src in sorted(src_dir.rglob("*.pw.toml")) if src_dir.exists() else []:
+            rel = src.relative_to(src_dir).as_posix()
+            if not (REPO_ROOT / rel).exists():
+                problems.append(f"orphan {store} swap {src.relative_to(REPO_ROOT).as_posix()} "
+                                f"(no canonical {rel}): delete it or restore the entry")
+        for rel in excluded:
+            if not (REPO_ROOT / rel).exists():
+                problems.append(f"{store} exclusion {rel} has no canonical entry")
+    r = subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "sync-mr-sources.py"), "--check"],
+                       cwd=REPO_ROOT, capture_output=True, text=True)
+    if r.returncode != 0:
+        problems.append("Modrinth layer out of date (run: py -3 scripts/sync-mr-sources.py):\n      "
+                        + r.stdout.strip().replace("\n", "\n      "))
+    if problems:
+        raise SystemExit("ERR: store layer problem(s):\n  " + "\n  ".join(problems))
+
+
+def export_for_store(store: str) -> None:
+    """Overlay the store's layer, export, then restore the canonical pack (even on failure)."""
+    src_dir, excluded = LAYERS[store]
+    saved: dict[Path, bytes | None] = {}
     try:
-        if swaps:
-            print(f"  (swapped in {len(swaps)} CurseForge entries)")
-            run([str(PACKWIZ), "refresh"])
-        run([str(PACKWIZ), "curseforge", "export"])
+        for rel in excluded:
+            canon = REPO_ROOT / rel
+            saved[canon] = canon.read_bytes()
+            canon.unlink()
+        swaps = sorted(src_dir.rglob("*.pw.toml")) if src_dir.exists() else []
+        for src in swaps:
+            canon = REPO_ROOT / src.relative_to(src_dir)
+            if canon in saved:
+                continue
+            saved[canon] = canon.read_bytes()
+            shutil.copyfile(src, canon)
+        print(f"  ({store}: {len(swaps)} swapped, {len(excluded)} excluded)")
+        run([str(PACKWIZ), "refresh"])
+        run([str(PACKWIZ), store, "export"])
     finally:
-        for dst, data in saved.items():
-            if data is None:
-                dst.unlink(missing_ok=True)
-            else:
-                dst.write_bytes(data)
-        if swaps:
-            run([str(PACKWIZ), "refresh"])
+        for canon, data in saved.items():
+            if data is not None:
+                canon.write_bytes(data)
+        run([str(PACKWIZ), "refresh"])
 
 
 def build_one(platform: str, pack_version: str, sc_version: str) -> None:
@@ -269,10 +337,10 @@ def build_one(platform: str, pack_version: str, sc_version: str) -> None:
     sc_file = STREAMCRAFT_REGISTRY[sc_version][platform]
 
     print(f"\n=== Building {platform} (StreamCraft {sc_file.filename}) ===")
-    write_streamcraft_toml(sc_file)
-    run([str(PACKWIZ), "refresh"])
-    run([str(PACKWIZ), "modrinth", "export"])
-    curseforge_export_with_swaps()
+    write_streamcraft_toml(sc_file, "modrinth")
+    export_for_store("modrinth")
+    write_streamcraft_toml(sc_file, "curseforge")
+    export_for_store("curseforge")
 
     # Packwiz writes <pack-name>-<version>.{mrpack,zip} to repo root.
     src_mrpack = REPO_ROOT / f"TBA-{pack_version}.mrpack"
@@ -336,6 +404,7 @@ def main() -> int:
     print(f"StreamCraft:        {sc_version}")
     print(f"Platforms to build: {', '.join(available)}")
 
+    check_layers()
     original_toml = STREAMCRAFT_TOML.read_text(encoding="utf-8")
     try:
         for platform in available:
@@ -345,6 +414,14 @@ def main() -> int:
         run([str(PACKWIZ), "refresh"])
         print(f"\nRestored {STREAMCRAFT_TOML.name} to original.")
 
+    # Store-compliance gate over everything just built.
+    built = [DIST / f"TBA-{pack_version}{'' if p == 'windows' else '-' + p}.{ext}"
+             for p in available for ext in ("mrpack", "zip")]
+    gate = subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "audit-artifacts.py"),
+                           *map(str, built)], cwd=REPO_ROOT)
+    if gate.returncode != 0:
+        print("\nERROR: artifact gate failed; do not publish these files.", file=sys.stderr)
+        return 1
     print(f"\nDone. Artifacts in {DIST}/")
     return 0
 

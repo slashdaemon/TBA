@@ -1,0 +1,13 @@
+name = "Os' Colorful Grasses (Official)"
+filename = "Os' Colorful Grasses (Tall).zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "2cb8cece1ba69918cea5a26c61993a1aa72124d0"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8936933
+project-id = 1690239

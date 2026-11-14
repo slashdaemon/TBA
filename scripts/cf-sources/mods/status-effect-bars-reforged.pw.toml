@@ -1,0 +1,13 @@
+name = "Status Effect Bars Reforged"
+filename = "statuseffectbars-1.21.1-NeoForge-1.0.2.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "bc2d624a831126bb00032d53ca0211d026e95682"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6707544
+project-id = 1284599

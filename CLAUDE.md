@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-TBA (TheBlock.Academy) is a Fabric 1.21.1 modpack for a community Minecraft server, built with [Packwiz](https://packwiz.infra.link/) for version control and distribution. The server runs on Bloom.host using mrpack4server for automatic modpack deployment from GitHub releases.
+TBA (TheBlock.Academy) is a NeoForge 1.21.1 modpack (Fabric through 1.0.7; 2.0.0 moved to NeoForge for Create) for a community Minecraft server, built with [Packwiz](https://packwiz.infra.link/) for version control and distribution. The server runs on Bloom.host using mrpack4server for automatic modpack deployment from GitHub releases.
 
 ## Common Commands
 
@@ -108,26 +108,32 @@ Local Dev (packwiz) → GitHub Release (.mrpack) → Bloom.host (mrpack4server)
 - Any mod "added to zip" is an override — search CurseForge for it before accepting
 - If switching a mod from Modrinth to CF, delete the old `.pw.toml` file (packwiz creates a new one with a different name rather than overwriting)
 
-## Shaderpacks
+## Store Packaging (2.0.1+): never bundle store-hosted files
 
-**⚠️ CRITICAL: Always commit shader files to git immediately after adding them.**
+Each store rejects packs that bundle files it hosts (or files we have no right to redistribute).
+Modrinth is strict and stops reviewing after repeated rejections; CurseForge hard-rejects bundled
+jars of CurseForge projects. TheBlockSurvival was rejected by both for this. The build therefore
+makes every entry a store reference in each store's own export:
 
-Packwiz exports include all files in the `shaderpacks/` directory regardless of git status. If shader files exist locally but aren't committed:
-- They'll be included in exports while on that machine
-- They'll be lost when the working directory is cleaned/rebuilt
-- Other contributors won't have them
-
-**When adding shaders:**
-1. Download/copy shader to `shaderpacks/` directory
-2. Run `./packwiz.exe refresh` to update index.toml
-3. `git add shaderpacks/<shader>.zip` immediately
-4. Commit with the release
-
-**Current bundled shaders (all must be in git):**
-- BSL v10.0
-- Complementary Reimagined r5.6.1
-- Photon v1.2a
-- Solas Shader v3.1c
+- **Canonical pack** (`mods/`, `resourcepacks/`, `shaderpacks/`) is CurseForge-first.
+- **`scripts/mr-sources/`** (generated, committed): the Modrinth copy of every CurseForge entry,
+  found by sha1. **Run `py -3 scripts/sync-mr-sources.py` after any add/update/remove**;
+  `build-variants.py` refuses to build when it is stale. Not-on-Modrinth, open-licence entries go in
+  its `BUNDLED_ON_MODRINTH`.
+- **`scripts/cf-sources/`** (hand-made): the CurseForge copy of each Modrinth-canonical entry
+  (`packwiz cf detect` on the jars finds byte-identical files; packwiz drops pack/shader metafiles
+  at the root, move them to the mirrored path and copy the canonical `side`).
+- **`CF_EXCLUDED` / `MR_EXCLUDED`** in `build-variants.py`: entries on neither store whose licence
+  forbids redistribution are left out of that store's build.
+- **Gate:** `scripts/audit-artifacts.py` runs after every build and before both publish scripts.
+  Any bundled jar/zip not in its `ALLOWED_OVERRIDES` (with a licence reason) fails the build, as do
+  stray root files, non-Modrinth download hosts and secrets.
+- **Shaders and resource packs are store entries too** (`cf install` / `mr install`), never raw
+  zips committed to `shaderpacks/` or `resourcepacks/`.
+- **Platform variants:** Modrinth gets the Windows `.mrpack` only (Content Rule 5.7: one pack per
+  version; `publish-modrinth.py` enforces it). CurseForge gets Windows as the primary file plus
+  Linux/macOS as additional files. GitHub releases carry all 8.
+- Repo files that must not ship go in `.packwizignore` (packwiz exports untracked files too).
 
 ## Files to Update When Releasing
 
@@ -150,10 +156,10 @@ Two export formats for different purposes:
 
 | Format | Created By | For | Notes |
 |--------|------------|-----|-------|
-| `.mrpack` | `modrinth export` | Prism Launcher + Server | Full modpack including server-only mods |
-| `.zip` | `curseforge export` | CurseForge App | Excludes Modrinth-only mods |
+| `.mrpack` | `build-variants.py` (mr-sources overlay) | Prism Launcher + Server | Modrinth links; includes server-only mods |
+| `.zip` | `build-variants.py` (cf-sources overlay) | CurseForge App | CurseForge references; no server-only mods |
 
-**Server-only mods** (in mrpack, not needed by clients): Better Sleep, Ledger, Advanced Backups, LuckPerms
+**Server-only mods** (in mrpack, not needed by clients): Advanced Backups, Chunky
 
 **Note (v1.0.7+):** Fabricord and AutoWhitelist were removed; the Discord chat bridge and `/register` whitelist now run via slashAI's `@DeanBot` client + the theblockacademy backend. See `slashAI/docs/DEPRECATE_FABRICORD.md`.
 
@@ -175,6 +181,6 @@ The Bloom.host server accumulates data over time. Key space consumers (as of Feb
 ## Requirements
 
 - Minecraft 1.21.1
-- Fabric 0.18.3+
+- NeoForge 21.1.265 (TBA 2.0.0+; 1.x was Fabric)
 - Java 21 (required for MC 1.20.5+)
 - Python 3.x with `paramiko`, `rich` (for server-config.py)

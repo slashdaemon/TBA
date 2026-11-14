@@ -1,0 +1,13 @@
+name = "Neo Language Reload"
+filename = "neo_language_reload-1.0.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "6e98066515853318d1b760bed021045884d5c9ca"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7284966
+project-id = 1297244

@@ -3,6 +3,32 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [2.0.1] - 2026-11-13
+
+**Store-ready packaging.** No gameplay changes beyond the two removals below. Each store's
+download now links to that store's copy of every mod, resource pack and shader instead of
+bundling the files, which also makes the Modrinth/Prism download far smaller.
+
+### Removed
+- **Connectivity** and its library **Cupboard**: CurseForge-only with no redistribution licence,
+  so they cannot ship in the Modrinth pack. NeoForge 1.21.1 covers what they were added for.
+- Leftover Simple Voice Chat client config (the mod itself left in 2.0.0; StreamCraft covers voice).
+
+### Packaging
+- Modrinth (.mrpack): every mod, resource pack and shader is a Modrinth link, StreamCraft
+  included (per-OS file). Only Framework and Mighty Mail (CurseForge-only, LGPL/MIT) are bundled.
+- CurseForge (.zip): every CurseForge-hosted project is a CurseForge reference. Bundled with
+  credit: Better Sleep + Matthiesen Core (MIT), SPBR (GPL-3.0), Modern PSX shaders (MIT).
+  Unobtrusive Weather and Mello (Modrinth-only, all rights reserved) are left out of the
+  CurseForge build.
+- BSL, Photon and Solas shaders are store links at the same versions instead of bundled zips.
+- Stray repo files (old stats exports, an old server-info file, server.properties, images) no
+  longer ship inside the pack.
+- Modrinth carries the Windows pack only; macOS and Linux packs are on GitHub releases.
+  CurseForge carries all four (Windows primary, the others as additional files).
+
+**Mods:** 172
+
 ## [2.0.0] - 2026-11-13
 
 **TBA moves to NeoForge 1.21.1 and adds Create.** Create has no Fabric build for 1.21.1, so the

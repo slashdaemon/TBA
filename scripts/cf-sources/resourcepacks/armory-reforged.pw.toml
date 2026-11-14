@@ -1,0 +1,13 @@
+name = "Armory Reforged "
+filename = "Armory Reforged v1.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "e51c8a7a62db621b8e07bb4f75144231b6331496"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8271731
+project-id = 1411161

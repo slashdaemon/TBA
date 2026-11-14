@@ -1,0 +1,13 @@
+name = "Beautify!"
+filename = "beautify-neoforge-1.21.1-2.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "936dc981f243c4606376ba7d6f03798e0b5a6871"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5947973
+project-id = 633252

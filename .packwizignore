@@ -72,3 +72,10 @@ README.md
 CHANGELOG.md
 LICENSE
 logo.png
+
+# Repo/store art and server-side files: not part of the client pack
+tba_banner.png
+tba_square.png
+icon-400x400.png
+icon-512x512.png
+server.properties

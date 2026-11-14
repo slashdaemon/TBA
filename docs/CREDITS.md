@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** November 13, 2026
-**Modpack Version:** 2.0.0 (174 mods total, NeoForge 1.21.1)
+**Modpack Version:** 2.0.1 (172 mods total, NeoForge 1.21.1)
 
 ---
 
@@ -46,7 +46,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) | shedaniel | 15.0.140 | [Patreon](https://www.patreon.com/shedaniel) |
 | [CraterLib](https://www.curseforge.com/minecraft/mc-mods/craterlib) | HypherionSA | 3.1.3 | [Ko-fi](https://ko-fi.com/hypherionsa) |
 | [CreativeCore](https://www.curseforge.com/minecraft/mc-mods/creativecore) | CreativeMD | 2.13.53 | [Patreon](https://www.patreon.com/creativemd) |
-| [Cupboard](https://www.curseforge.com/minecraft/mc-mods/cupboard) | someaddon | 4.2 | - |
 | [Curios API](https://www.curseforge.com/minecraft/mc-mods/curios) | TheIllusiveC4 | 9.5.1 | - |
 | [Delight Lib](https://modrinth.com/mod/delight-lib) | Axperty | 26.05.18 | [Donate](https://ko-fi.com/axperty) |
 | [Entity Model Features](https://www.curseforge.com/minecraft/mc-mods/entity-model-features) | Traben | 3.3.12 | - |
@@ -205,7 +204,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 
 | Mod | Author(s) | Version | Donate |
 |-----|-----------|---------|--------|
-| [Connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | someaddon | 7.7 | - |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.8 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
 | [spark](https://www.curseforge.com/minecraft/mc-mods/spark) | lucko | 1.10.124 | - |
 | [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.33.0 | - |

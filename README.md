@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.0
+# TBA (TheBlock.Academy) v2.0.1
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**174 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**172 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -131,7 +131,6 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
-- **Connectivity** - Improved connection stability and error handling
 - **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
 
 ### Discord Integration

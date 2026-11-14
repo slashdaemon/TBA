@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "compare.png"
-hash = "344126d90b3422b2a08b16ea11adfa8e76c5dd4e1be3363fdf09d8e686503bd9"
-
-[[files]]
 file = "config/AdvancedBackups.properties"
 hash = "28b1af7e1ccd9695166ec1df33e0d08c1ec078e6e186e0b2e8c0228fe9e10acf"
 
@@ -473,18 +469,6 @@ file = "config/streamcraft/config.properties"
 hash = "bc2ca27ef164235b80cdd44dfbad05b20f201cef93a8be73d42fda77e816f01b"
 
 [[files]]
-file = "defaultconfigs/voicechat/voicechat-client.properties"
-hash = "8d10cb5c84c81383401303205083c9a0f97766ab1ca4a6e616182f8354901d09"
-
-[[files]]
-file = "icon-400x400.png"
-hash = "cfea59431e6afb8ca9d4e336607e2e0e94d469f3f0bf8926d350e9122318efbe"
-
-[[files]]
-file = "icon-512x512.png"
-hash = "1eab421ec5ea028a02e86bb09ce14a01805dd3d6532aab30241c5fe99676d321"
-
-[[files]]
 file = "journeymap/config/6.0/journeymap.core.config"
 hash = "5896f87075123ab552dca13dab7af629a64c122829fbc413b233c3a4e08be78a"
 
@@ -499,10 +483,6 @@ hash = "89eabb286e12a96f4af8df530c390ea0fcfabfab7dad4c68a9d6ee676eec5880"
 [[files]]
 file = "minescript/config.txt"
 hash = "4dcf7855abb3439f00d76ba676653eeb01ffc529babc0a2bdd1bb37d144a6833"
-
-[[files]]
-file = "modified_stats_sonar6ix.json"
-hash = "605ef244f96db8bc88c65d08644243e4ae980e2b08b40e7963118051c0135757"
 
 [[files]]
 file = "mods/actually-harvest.pw.toml"
@@ -675,11 +655,6 @@ hash = "9bf180ee5c2685f210b118d115ff27eb9f996142cfae36c4579ca3fa51ca1a19"
 metafile = true
 
 [[files]]
-file = "mods/connectivity.pw.toml"
-hash = "2a41749411745cc6e3500f715914b4e7728c9f4eb57b67e0692c8685f279ebb1"
-metafile = true
-
-[[files]]
 file = "mods/controlify.pw.toml"
 hash = "24e31600ea54edc3fdd124b365dc5a350312732fca0d9ce991c35cbd5d40164b"
 metafile = true
@@ -717,11 +692,6 @@ metafile = true
 [[files]]
 file = "mods/cubes-without-borders.pw.toml"
 hash = "d462884e125af2957dea0c0b6dd92a363c50942dc8bde89393f187de3dd554a7"
-metafile = true
-
-[[files]]
-file = "mods/cupboard.pw.toml"
-hash = "55f8f5c6152e6c0ceb79d38ca741910665754d1ce0755234b09318923e586e43"
 metafile = true
 
 [[files]]
@@ -1424,20 +1394,8 @@ hash = "233cb67f66fd6e547725fbf3a6c96eb91a1d828fee5e28fdc41d54f3ac96bbaf"
 metafile = true
 
 [[files]]
-file = "server.properties"
-hash = "c2d03a19a6c931658ae2cab5617781f7f2016499f2986ad9e603e7364119605f"
-
-[[files]]
 file = "servers.dat"
 hash = "9568e02cb11ba1359585e8c755bfbbfb8d263e756531de9f5a3bc8643de501f9"
-
-[[files]]
-file = "shaderpacks/BSL_v10.0.zip"
-hash = "b6e79a4f5746bd0b2bd8d54bb4c430539e7e747e8679ac985bc07368422e4e09"
-
-[[files]]
-file = "shaderpacks/Solas_Shader_v3.1c.zip"
-hash = "188d2b058210d3e4df1f98c770df3d7022fba930f7c0cfc6ca4490efb0bc2f88"
 
 [[files]]
 file = "shaderpacks/alpha-piscium.pw.toml"
@@ -1447,6 +1405,11 @@ metafile = true
 [[files]]
 file = "shaderpacks/artshade.pw.toml"
 hash = "7d94f6cb98a1f1d177400907b0c4cb2a585977fee4c9f4cd735b2caf9244a79e"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bsl-shaders.pw.toml"
+hash = "8a3236628ee31b091f6e58d518ebff476a6abc02835f3e3b3fce62f62bbed415"
 metafile = true
 
 [[files]]
@@ -1480,21 +1443,11 @@ hash = "dfe3ac99ea637eac700b3ac5f012597ce4e49fcbd53f61d3e30d987580fdcf3e"
 metafile = true
 
 [[files]]
-file = "shaderpacks/photon_v1.2a.zip"
-hash = "a7134a10138f6e5fe523dafa23bd266ba2e53621ac65a5e23294fe9a125b9d73"
+file = "shaderpacks/photon-shader.pw.toml"
+hash = "3b1418914b05b2ce2e7bcfd33b9f406348fd3082f4e7f3ae2e3de12002d55228"
+metafile = true
 
 [[files]]
-file = "tba_banner.png"
-hash = "b25c509451ea10683a49e6896e1fae382985548ddcb688b0f3a5524f190d482a"
-
-[[files]]
-file = "tba_square.png"
-hash = "ceefe9e446445d2d34911e0167e9bb2a6d8531082fa8bd84c211db4576d0d479"
-
-[[files]]
-file = "temp_modpack_info.json"
-hash = "a6287c761505a2609070f74c87a6d01989f0db5a1a0f85296998b14e172d3d53"
-
-[[files]]
-file = "temp_stats_f36cf7dc-9742-45ba-862d-0597d523fda1.json"
-hash = "ec2fcef186414e0f37e4ea7fbbd401f849993f43bec618b83d1538c51ac59576"
+file = "shaderpacks/solas-shader.pw.toml"
+hash = "66e99abed12b7e4756613259b4d8fd163e3df839d08cd0977ca8f39a72b61c59"
+metafile = true

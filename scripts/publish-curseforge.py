@@ -62,12 +62,23 @@ CURSEFORGE_API = "https://minecraft.curseforge.com/api"
 # TBA's CurseForge modpack project — https://www.curseforge.com/minecraft/modpacks/theblockacademy
 DEFAULT_PROJECT_ID = 1414683
 
-# TBA targets MC 1.21.1 / Fabric. CurseForge wants every compatible MC point
-# release advertised; the 1.21 line is "1.21" + "1.21.1". Note: unlike a mod
-# project, a modpack project rejects the "Java NN" game-version tag (CF error
-# 1009) — only MC versions + the modloader are valid here.
+# TBA targets MC 1.21.1 on the loader named in pack.toml. CurseForge wants every
+# compatible MC point release advertised; the 1.21 line is "1.21" + "1.21.1". Note:
+# unlike a mod project, a modpack project rejects the "Java NN" game-version tag (CF
+# error 1009) — only MC versions + the modloader are valid here.
 MC_VERSIONS = ["1.21", "1.21.1"]
-LOADER_NAME = "Fabric"
+
+
+def _pack_loader_name() -> str:
+    text = (Path(__file__).resolve().parent.parent / "pack.toml").read_text(encoding="utf-8")
+    versions = text.split("[versions]", 1)[1]
+    for key, label in (("neoforge", "NeoForge"), ("fabric", "Fabric"), ("forge", "Forge"), ("quilt", "Quilt")):
+        if re.search(rf"^{key}\s*=", versions, re.M):
+            return label
+    raise RuntimeError("no loader in pack.toml [versions]")
+
+
+LOADER_NAME = _pack_loader_name()
 
 # Windows is canonical (no classifier in filename); other platforms get a suffix.
 PLATFORMS = ["windows", "linux", "macos-arm64", "macos-x86_64"]
@@ -273,6 +284,13 @@ def main() -> int:
     print(f"Total:          {total_mb:.1f} MB")
     print(f"Changelog:      {changelog_path.name} "
           f"({len(changelog)} chars, type={changelog_type})")
+
+    import subprocess
+    gate = subprocess.run([sys.executable, str(project_root / "scripts" / "audit-artifacts.py"),
+                           *[str(path) for _, path in files]])
+    if gate.returncode != 0:
+        print("ERR: artifact gate failed; refusing to publish (CurseForge review would reject it)")
+        return 1
 
     # Resolve gameVersion integer IDs (CF wants ints, not strings). Runs in
     # dry-run too when a token is present — surfaces catalog drift early.

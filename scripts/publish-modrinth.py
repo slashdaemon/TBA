@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """
-Publish all 4 platform variants of TBA to Modrinth as a single version.
+Publish TBA to Modrinth: the Windows .mrpack only.
 
-Reads .mrpack files from dist/ produced by scripts/build-variants.py and uploads
-them as one Modrinth version with 4 files attached. Windows variant is marked as
-the primary file (matches our CurseForge convention and the canonical no-suffix
-filename).
+Modrinth modpack versions carry ONE .mrpack. Attaching the macOS/Linux variants as extra
+files to the same version is what got TheBlockSurvival rejected (Content Rule 5.7,
+"Unsupported project"), so this script uploads only TBA-X.Y.Z.mrpack. The per-OS variants
+ship on GitHub releases (CurseForge keeps them as additional files; publish-curseforge.py).
+
+The file must pass scripts/audit-artifacts.py (no bundled store-hosted content) or the
+script refuses to upload. The loader is read from pack.toml.
 
 Usage:
     # Dry-run to inspect metadata before publishing
@@ -45,8 +48,18 @@ PROJECT_SLUG = "theblockacademy"
 # Game versions this build is compatible with. TBA targets 1.21.1 only.
 GAME_VERSIONS = ["1.21.1"]
 
-# Platform variants in upload order (Windows first → primary file).
-PLATFORMS = ["windows", "linux", "macos-arm64", "macos-x86_64"]
+# Modrinth gets the Windows .mrpack only (see module docstring; never add the others here).
+PLATFORMS = ["windows"]
+
+
+def pack_loader() -> str:
+    import re
+    text = (Path(__file__).resolve().parent.parent / "pack.toml").read_text(encoding="utf-8")
+    versions = text.split("[versions]", 1)[1]
+    for loader in ("neoforge", "fabric", "forge", "quilt"):
+        if re.search(rf"^{loader}\s*=", versions, re.M):
+            return loader
+    raise RuntimeError("no loader in pack.toml [versions]")
 
 
 def filename_for(version: str, platform: str) -> str:
@@ -166,7 +179,7 @@ def main() -> int:
         "dependencies": [],
         "game_versions": GAME_VERSIONS,
         "version_type": args.type,
-        "loaders": ["fabric"],
+        "loaders": [pack_loader()],
         "featured": False,
         # project_id is filled in below (resolve_project_id)
         "file_parts": [path.name for _, path in files],
@@ -185,6 +198,13 @@ def main() -> int:
         print(f"  {plat:14s} {path.name}  ({size_mb:.1f} MB){marker}")
     print(f"Total:          {total_mb:.1f} MB")
     print(f"Changelog:      {changelog_path.name} ({len(changelog)} chars)")
+
+    import subprocess
+    gate = subprocess.run([sys.executable, str(project_root / "scripts" / "audit-artifacts.py"),
+                           *[str(path) for _, path in files]])
+    if gate.returncode != 0:
+        print("ERR: artifact gate failed; refusing to publish (Modrinth review would reject it)")
+        return 1
 
     if args.dry_run:
         print(f"\nDRY-RUN metadata (project_id will be resolved at upload):")

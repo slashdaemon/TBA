@@ -1,0 +1,13 @@
+name = "wind chimes"
+filename = "windchimes-neoforge-1.2.0+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "75b4c317dc5b715f14f11f26659073329aef7383"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8578466
+project-id = 1588208

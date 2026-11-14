@@ -1,0 +1,13 @@
+name = "Alpha Piscium"
+filename = "Alpha Piscium v1.10.0.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "3e98933d733459d015adc7ad7be7e364b554b366"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9007380
+project-id = 1445997
