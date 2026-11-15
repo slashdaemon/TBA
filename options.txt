@@ -48,7 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["fabric","seasons:seasonal_lush_caves","excessive_building:vanilla_retextures","itemswapper:default","file/Os' Colorful Grasses (Tall).zip","file/Better-Leaves-9.6.zip","file/Mushrooms Reforged v1.1.zip","file/Pumpkins Reforged v1.0.zip","file/SPBR_Legacy-261030.zip","file/§9⛈ §bUnobtrusive Weather §8[v2.0].zip","file/Armory Reforged v1.1.zip","file/Health Bars Reforged v1.1.zip"]
+resourcePacks:["fabric","seasons:seasonal_lush_caves","excessive_building:vanilla_retextures","itemswapper:default","file/Os' Colorful Grasses (Tall).zip","file/Better-Leaves-9.6.zip","file/Mushrooms Reforged v1.1.zip","file/Pumpkins Reforged v1.0.zip","file/SPBR_Legacy-261030.zip","file/§9⛈ §bUnobtrusive Weather §8[v2.0].zip","file/Armory Reforged v1.1.zip","file/Health Bars Reforged v1.1.zip","file/Matcha Block Overlays 2-b1+fusion.zip","file/Grassrise-1.0.3-mc1.21.1.zip","file/Bushy pink petals, wildflowers  leaf litter.zip","file/rainbows-foliage-polytone-edition-v2.2.zip","file/FreshAnimations_v1.11.2_1.20.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -226,3 +226,20 @@ key_evenmoreinstruments.keymaps.record:key.keyboard.grave.accent
 key_key.presencefootsteps.settings:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown
 key_keybind.invmove.toggleMove:key.keyboard.unknown
+key_key.clickthrough.toggle:key.keyboard.f9
+key_key.punchy.inspect:key.keyboard.i
+key_key.punchy.open_main_menu:key.keyboard.unknown
+key_key.punchy.triggerable.punchy_sword_inspect_old:key.keyboard.unknown
+key_key.punchy.triggerable.punchy_sword_inspect_rework:key.keyboard.unknown
+key_key.scholar.toggle_book_tools:key.keyboard.f1
+key_key.scholar.import_book:key.keyboard.unknown
+key_key.scholar.export_book:key.keyboard.unknown
+key_key.scholar.insert_empty_page_left:key.keyboard.insert:SHIFT
+key_key.scholar.insert_empty_page_right:key.keyboard.insert:ALT
+key_key.scholar.remove_page_left:key.keyboard.delete:SHIFT
+key_key.scholar.remove_page_right:key.keyboard.delete:ALT
+key_key.simple_music_control.next_music_track:key.keyboard.unknown
+key_key.simple_music_control.toggle_music:key.keyboard.unknown
+key_key.toggleCarriedItemTooltips:key.keyboard.unknown
+key_key.toggleSelectedItemTooltips:key.keyboard.unknown
+key_key.toggleVisualItemContents:key.keyboard.unknown

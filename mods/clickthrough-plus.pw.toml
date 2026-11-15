@@ -1,0 +1,13 @@
+name = "ClickThrough Plus"
+filename = "clickthrough-plus-neoforge-3.5.0+1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "4bc5266721f37721ef76fa431ead12d53f2193da"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6698905
+project-id = 1122678

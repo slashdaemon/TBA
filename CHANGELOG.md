@@ -3,6 +3,37 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [2.0.4] - 2026-11-15
+
+### Added
+- **Eclipse** shader pack (gamerbenyt). Pick it in Options → Video Settings → Shader Packs.
+- **Building:** Jake's Build Tools, Slabbed, Fusion (connected textures, NeoForge's
+  answer to Continuity), Reconnectible Chains (brings back the decorative chains that 1.0 had).
+- **Convenience:** Shulker Box Tooltip, Easy Shulker Boxes, ClickThrough Plus, Overflowing Bars,
+  Scholar, Simple Music Control, Iris & Oculus Search.
+- **Camera:** Punchy! (first-person animations), Countered's Smooth Steps, Disable Front Camera.
+- **Resource packs (on by default):** Fresh Animations, Grassrise, Bushy pink petals/wildflowers/leaf
+  litter, Matcha Block Overlays, Rainbow's Foliage.
+- Picked from comparing against the Better Adventures+ pack. Matcha Block Overlays is left out of
+  the CurseForge download (its licence is non-commercial); Jake's Build Tools and Disable Front
+  Camera are bundled there with their licences' permission (neither jar is on CurseForge).
+
+### Updated
+- **StreamCraft Live 0.33.0 → 0.34.1.** Live alerts: a popup and soft chime when someone on the
+  server starts a screen share, and a Live page listing who is sharing now (Settings → Live alerts
+  to change or turn off). Tablet and phone screens no longer go dark under shader packs. Clears the
+  "newer version available" notice.
+
+### Changed
+- **REI no longer grabs R, U and A.** Typing in a search box with the mouse over an item could open
+  a recipe screen instead. Left-click an item in REI's list for its recipe, right-click for its uses.
+  REI also opens in its original recipe layout without asking first.
+- **New mods' keys don't steal existing ones.** Simple Music Control's next track (was M, the
+  StreamCraft mic), Punchy's menu and sword inspects (F8, G, J) and Scholar's book import/export
+  (F6, F7) start unbound; set them in Controls if you want them.
+
+**Mods:** 179
+
 ## [2.0.3] - 2026-11-14
 
 ### Fixed

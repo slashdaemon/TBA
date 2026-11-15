@@ -465,6 +465,10 @@ file = "config/iris.properties"
 hash = "268f71f955aede24519f4cae967624cc18b0358d1e5c0ddb88645cc7e70c0b1b"
 
 [[files]]
+file = "config/roughlyenoughitems/config.json5"
+hash = "91b2befef86d7e0fc556590192736ba9bdb38224f20b85a036fccf5809b16c76"
+
+[[files]]
 file = "config/streamcraft/config.properties"
 hash = "20f977659b6b034391f21ba355ec4b668fb686b272d31045dd415018ed029b4f"
 
@@ -636,6 +640,11 @@ hash = "68cc51e721e993a8b7a2cbaf45369933b22b07a9c82327ab14757ee10684aa81"
 metafile = true
 
 [[files]]
+file = "mods/clickthrough-plus.pw.toml"
+hash = "f260e921e47d56414e32690be60b2ce3dafb307d004ce260ed1208d6192bd731"
+metafile = true
+
+[[files]]
 file = "mods/clientsort.pw.toml"
 hash = "179f0e10a7a06c1a7bc34a8dcadab7bf98ad902f19a377f9ec212b2215fee99d"
 metafile = true
@@ -658,6 +667,11 @@ metafile = true
 [[files]]
 file = "mods/copycats.pw.toml"
 hash = "af68f400faa4564bfaa16509dedcb2dbafb8c3a0154d6e4e0b1443bcb4c6d536"
+metafile = true
+
+[[files]]
+file = "mods/countereds-smooth-steps.pw.toml"
+hash = "57a9169786a98b5fec219615ef05324b92325a961a8fc72670813a48cff9d096"
 metafile = true
 
 [[files]]
@@ -706,6 +720,11 @@ hash = "31c57b88e515702a68e3354ae41e4cc1b06fc1749012ae8a33cedc00d495ab98"
 metafile = true
 
 [[files]]
+file = "mods/disable-front-camera.pw.toml"
+hash = "8e111a32901fd0520fe1edd8679b815bb20a3014ac9b3fa66f8c5bdca95d8afd"
+metafile = true
+
+[[files]]
 file = "mods/distant-horizons.pw.toml"
 hash = "a61ce58b03148d8d382907d97b75a5b1d7c33382842fdb13d4b008f27b7d885e"
 metafile = true
@@ -718,6 +737,11 @@ metafile = true
 [[files]]
 file = "mods/easy-magic.pw.toml"
 hash = "22495f861856161c8b4778e52100a8145506a7f67b657f5ea2437310f794bb3a"
+metafile = true
+
+[[files]]
+file = "mods/easy-shulker-boxes.pw.toml"
+hash = "6a8e2439006434d1d143b1a7737e4eae735286f428f63536bcf7cbb74ebcced6"
 metafile = true
 
 [[files]]
@@ -816,6 +840,11 @@ hash = "c9f0a2fce8755344eb7c229dd00d3f0d05aadaa3b735690111af0cf2816c5d81"
 metafile = true
 
 [[files]]
+file = "mods/fusion-connected-textures.pw.toml"
+hash = "7d029c6739ba3c70b3c593cc116cd25a08b1fff95df5002334a9253f4a681b4f"
+metafile = true
+
+[[files]]
 file = "mods/fzzy-config.pw.toml"
 hash = "0431771ba664f762587b1d876b0cd0ef4ca0751aed1a5604dfb5f4190f29d409"
 metafile = true
@@ -871,8 +900,18 @@ hash = "00b9ca0f3ee15ceac1a6ff0c73a1cf273c56f719f01aa5d0134c3ec7b7c31b47"
 metafile = true
 
 [[files]]
+file = "mods/irissearch.pw.toml"
+hash = "a1474116900d90e1ad0ef4620d4f70512ab3df7047b35273f7d3639d0bce3513"
+metafile = true
+
+[[files]]
 file = "mods/irisshaders.pw.toml"
 hash = "bc0ed43619af3b5e453ccb36412d72aef8d066594946a927155d2fbd440e4b40"
+metafile = true
+
+[[files]]
+file = "mods/jakes-build-tools.pw.toml"
+hash = "de769847ad6d478870f9a65367b17cd4664396df91ecef19ed6573c4e3815cff"
 metafile = true
 
 [[files]]
@@ -1071,6 +1110,11 @@ hash = "fd84fcf376910b659fdfbcc2401aa545400b0d7c65834eb2fe22bae3a3c921c2"
 metafile = true
 
 [[files]]
+file = "mods/overflowing-bars.pw.toml"
+hash = "aaadd8f419cb436daea94bfae4976602111a12f7fd8345c203dcb53fb068934c"
+metafile = true
+
+[[files]]
 file = "mods/particle-rain.pw.toml"
 hash = "8cebbb5931e6b3ebae29c62ef386da9d3da0b812a18eeb8a683ac60c65ba13c3"
 metafile = true
@@ -1096,8 +1140,18 @@ hash = "c55e4e9ffcbd268b26752f5d38012f4bcfe43e2724e1eaaf3be491fa183eb2a4"
 metafile = true
 
 [[files]]
+file = "mods/punchy.pw.toml"
+hash = "ae777b275998458202f9a7618c84edb76ef119acd208cca642260d80afea3239"
+metafile = true
+
+[[files]]
 file = "mods/puzzles-lib.pw.toml"
 hash = "611f589f0874ce5db4a2241421ce4453f9efb5bedf57e3f24c039a16a0e604c5"
+metafile = true
+
+[[files]]
+file = "mods/reconnectible-chains.pw.toml"
+hash = "cb1b4de58cbf313bc4c28987fb31791182ea1346f11f618b374c7533487c7d6d"
 metafile = true
 
 [[files]]
@@ -1131,6 +1185,11 @@ hash = "81ec23040d40d9c4d3015990cf871056c4e5a1b5fdd0cca13fc5b83d7f9d5aac"
 metafile = true
 
 [[files]]
+file = "mods/scholar.pw.toml"
+hash = "e8d09a2948cb49b018d598e6f99e80961272d63ce040a00aedf65c437b34b032"
+metafile = true
+
+[[files]]
 file = "mods/searchables.pw.toml"
 hash = "b210b54498abff891f524a0ce32b7b81bfc88043604065bd4ece9e71c36427f4"
 metafile = true
@@ -1146,6 +1205,16 @@ hash = "eb438b9d4a49c0cc65560cdc295bf927cabc6f34319375a0cfbf3aece662add8"
 metafile = true
 
 [[files]]
+file = "mods/shulkerboxtooltip.pw.toml"
+hash = "75b61b32930624b6f02815d467e049eae7000ea14e872cf196b79375b69d706e"
+metafile = true
+
+[[files]]
+file = "mods/simple-music-control.pw.toml"
+hash = "e83f14a002abd46fd3f65b16f6881d0f7a2c3be5c362d20ca80e8350c67450a1"
+metafile = true
+
+[[files]]
 file = "mods/sit.pw.toml"
 hash = "f1030305cfefdf2852048135ea6d3c03090c0af522b0846c9b17e1cd0310ba7e"
 metafile = true
@@ -1153,6 +1222,11 @@ metafile = true
 [[files]]
 file = "mods/skin-layers-3d.pw.toml"
 hash = "2dc498bd8a43a8e02fc9d08fe5846ac17f6eabbecbf38ae39aa7b1f23fe100b0"
+metafile = true
+
+[[files]]
+file = "mods/slabbed.pw.toml"
+hash = "782de7265bfb8d38792586481e0f1460410d553c3524bc2c348144d4c722d1ea"
 metafile = true
 
 [[files]]
@@ -1217,7 +1291,7 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-live.pw.toml"
-hash = "a4e71cf9f1964ecc2b4066d7600a50ab368376b4beb82297c8baf6918124e899"
+hash = "e1e905133410f27be6daeca72742573d0524130351a9e7e86320260bc0d79731"
 metafile = true
 
 [[files]]
@@ -1307,11 +1381,26 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "3ea43f43f91921fdc609edb002d96cc0647d8c26d6553d6756142d4325c5f9e2"
+hash = "88ed9cb504493c8bc98dd546176ac5c1ee8a59c074780a6f1b67de0ebcf21825"
 
 [[files]]
 file = "resourcepacks/armory-reforged.pw.toml"
 hash = "8b334b3702dc211a2b4683f324d2ee6f715afcb7a6c9f9b31a111d5d320b92be"
+metafile = true
+
+[[files]]
+file = "resourcepacks/bushy-pinkpetals-wildflowers-leaflitter.pw.toml"
+hash = "b1988cf1be10110bbe8c897e1ca7bb252a917939866577233a267a5374775b2c"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fresh-animations.pw.toml"
+hash = "c3abe55ff7fb123bf92f83d7458c4e68a318fd973b0fad6ed16173d10ad97335"
+metafile = true
+
+[[files]]
+file = "resourcepacks/grassrise.pw.toml"
+hash = "05434205501d5d1c681e46eb3f731a4fca15a300e5ae67a2fe5a8f5c2e8f8776"
 metafile = true
 
 [[files]]
@@ -1322,6 +1411,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/invisible-armor-model.pw.toml"
 hash = "12df862e0abc11be1893f869327296f5b4fe48259b18cdd2eb0b3c1d804a0e1a"
+metafile = true
+
+[[files]]
+file = "resourcepacks/matcha-block-overlays.pw.toml"
+hash = "7184699633b1d7c5d693a0b7b871ccd46ae273bc60e6e95df1e5492ef1a99ae5"
 metafile = true
 
 [[files]]
@@ -1342,6 +1436,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/pumpkins-reforged.pw.toml"
 hash = "7f81a9c716f9b82f9cefffe470bd6317ae98aca27ba964ae246ec2f7b1ce1a7f"
+metafile = true
+
+[[files]]
+file = "resourcepacks/rainbows-foliage.pw.toml"
+hash = "d802e04d3deb86feff1be8586b039525012b9f618ec7e04f9bd3fea6b92e4ff6"
 metafile = true
 
 [[files]]
@@ -1381,6 +1480,11 @@ metafile = true
 [[files]]
 file = "shaderpacks/complementary-unbound.pw.toml"
 hash = "8f8677c6304647ab640f6bf06b7748d1fc5d496b56ea661e31b4d6be899178ac"
+metafile = true
+
+[[files]]
+file = "shaderpacks/eclipse.pw.toml"
+hash = "5381952b05253da52a1ba916f5e512386ee85462ced095d123eefcfa757869fc"
 metafile = true
 
 [[files]]

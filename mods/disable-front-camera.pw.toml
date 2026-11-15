@@ -1,0 +1,13 @@
+name = "disable front camera"
+filename = "disable_front_camera-1.2.26.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/WklfOz03/versions/BNq7btaU/disable_front_camera-1.2.26.jar"
+hash-format = "sha512"
+hash = "472125384bbc26a2f615a40a0b24928d688510fa9da9f4d1e316d4a3c86c8c20585ba123e74eac41cf1b5eec879c4061d5a51a8ecd6e8137eb04254e2ba747b9"
+
+[update]
+[update.modrinth]
+mod-id = "WklfOz03"
+version = "BNq7btaU"

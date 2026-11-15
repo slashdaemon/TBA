@@ -178,6 +178,41 @@ STREAMCRAFT_REGISTRY: dict[str, dict[str, StreamCraftFile]] = {
             mr_sha512="be6af31149a3b845c8e10518a3dba3aa9321b2fb5f9fd1bcb85e83489d7c2091d5bf0bd12ac9b2a3d4ec43a938dfe36243f3af93691b2a1767f9029e11811196",
         ),
     },
+    # Modrinth version NKljHEpr holds byte-identical copies (same sha1) of the CurseForge files.
+    "0.34.1+mc1.21.1-neoforge": {
+        "windows": StreamCraftFile(
+            filename="streamcraft-pc-0.34.1-mc1.21.1-neoforge-cf.jar",
+            sha1="940ba5d4357df9bc8fa7e1b8836ebcac9bbf468f",
+            cf_file_id=9522886,
+            mr_url=f"{MR_SC_BASE}/NKljHEpr/streamcraft-pc-0.34.1%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-pc-0.34.1+mc1.21.1-neoforge.jar",
+            mr_sha512="88293e1fa913015b3589b621d299f767afa990223813fbf92e893dfc8d72e982a301f6fa08ea45533f0fb6de68471f9a1dec1f9c2cc76000aa0cad12eb6d68e9",
+        ),
+        "linux": StreamCraftFile(
+            filename="streamcraft-linux-x64-0.34.1-mc1.21.1-neoforge-cf.jar",
+            sha1="b564c05024e69d994937aef42381fbc19b803168",
+            cf_file_id=9522890,
+            mr_url=f"{MR_SC_BASE}/NKljHEpr/streamcraft-linux-x64-0.34.1%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-linux-x64-0.34.1+mc1.21.1-neoforge.jar",
+            mr_sha512="cd4b2ded813207ed453fdcd9fba7e052a6d9e445d50225f3d6ba4d865cad9b7557c45d7c6b57daa6b77409e4bc57bc1e3a1c1668627c97b564f705121e0c3ec2",
+        ),
+        "macos-arm64": StreamCraftFile(
+            filename="streamcraft-mac-arm64-0.34.1-mc1.21.1-neoforge-cf.jar",
+            sha1="17b82c899860c2242abf13b08234abc8f1a816eb",
+            cf_file_id=9522887,
+            mr_url=f"{MR_SC_BASE}/NKljHEpr/streamcraft-mac-arm64-0.34.1%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-mac-arm64-0.34.1+mc1.21.1-neoforge.jar",
+            mr_sha512="1927c501507bad370fcaa1663d7aa14a1db9cd1ddc994fa526dbbbbf4e636ae1e2809fc3718b56e26d7de84a437ccf3c1e403a97be4fbeb801050a13b5c56710",
+        ),
+        "macos-x86_64": StreamCraftFile(
+            filename="streamcraft-mac-x64-0.34.1-mc1.21.1-neoforge-cf.jar",
+            sha1="b2a99410b1bc02883a562f94b716fcf20af665ee",
+            cf_file_id=9522888,
+            mr_url=f"{MR_SC_BASE}/NKljHEpr/streamcraft-mac-x64-0.34.1%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-mac-x64-0.34.1+mc1.21.1-neoforge.jar",
+            mr_sha512="08e14adda3d6b2bf02985267cebeb6a7e6749dad91fba6ad06a2ed8970330168c2fbabb584cd922b3cd50a871a5e6bb1923747c8df35d1c2f07a0b3e1593fb77",
+        ),
+    },
 }
 
 
@@ -271,6 +306,7 @@ MR_SOURCES = REPO_ROOT / "scripts" / "mr-sources"
 CF_EXCLUDED = {
     "resourcepacks/unobtrusive-weather.pw.toml": "Modrinth-only, All Rights Reserved",
     "shaderpacks/mello.pw.toml": "Modrinth-only, All Rights Reserved",
+    "resourcepacks/matcha-block-overlays.pw.toml": "Modrinth-only, CC-BY-NC-SA-4.0 (non-commercial; CurseForge pays rewards)",
 }
 MR_EXCLUDED: dict[str, str] = {}
 LAYERS = {

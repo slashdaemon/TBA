@@ -1,0 +1,13 @@
+name = "Countered's Smooth Steps"
+filename = "smooth_steps-neoforge-1.1.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "5ab7e196b99ae7cd06e6f910ae0e88db9f8c659c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8057041
+project-id = 1510451

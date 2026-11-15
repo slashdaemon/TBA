@@ -1,0 +1,13 @@
+name = "Grassrise"
+filename = "Grassrise-1.0.3-mc1.21.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "45e4246bbeab591ba7bfdbe0244af7ff6bd54fa3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8911849
+project-id = 1653445

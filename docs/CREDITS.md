@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** November 14, 2026
-**Modpack Version:** 2.0.3 (165 mods total, NeoForge 1.21.1)
+**Modpack Version:** 2.0.4 (179 mods total, NeoForge 1.21.1)
 
 ---
 
@@ -85,6 +85,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | Mod | Author(s) | Version | Donate |
 |-----|-----------|---------|--------|
 | [Effortless Building](https://www.curseforge.com/minecraft/mc-mods/effortless-building) | Requioss | 4.2 | - |
+| [Fusion (Connected Textures)](https://modrinth.com/project/fusion-connected-textures) | SuperMartijn642 | 1.3.16 | - |
+| [Slabbed](https://modrinth.com/project/slabbed) | Peetsa | 0.6.13-alpha | [Donate](https://ko-fi.com/peetsa) |
+| [Jake's Build Tools](https://modrinth.com/project/jakes-build-tools) | maybejake | 2.0.1.5 | [Donate](https://ko-fi.com/maybejake) |
 
 ---
 
@@ -127,6 +130,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Underlay](https://www.curseforge.com/minecraft/mc-mods/underlay) | Kir_Antipov | 1.0.5 | - |
 | [wind chimes](https://modrinth.com/mod/windchime) | NightEpiphany0401 | 1.2.0 | - |
 | [Woodworks](https://www.curseforge.com/minecraft/mc-mods/woodworks) | TeamAbnormals, bageldotjpg | 4.0.2 | - |
+| [Reconnectible Chains](https://modrinth.com/project/reconnectible-chains) | evanbones | 2.5.1 | [Donate](https://ko-fi.com/evanbones) |
 
 ---
 
@@ -192,6 +196,12 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Trade Cycling](https://www.curseforge.com/minecraft/mc-mods/trade-cycling) | henkelmax | 1.0.23 | - |
 | [Universal Bone Meal](https://www.curseforge.com/minecraft/mc-mods/universal-bone-meal) | Fuzss | 21.1.0 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [WTHIT](https://modrinth.com/mod/wthit) | deirn | 12.10.3 | [GitHub Sponsors](https://github.com/sponsors/deirn) |
+| [ClickThrough Plus](https://modrinth.com/project/clickthrough-plus) | Cassian | 3.5.0 | [Donate](https://ko-fi.com/cassiancc) |
+| [Shulker Box Tooltip](https://modrinth.com/project/shulkerboxtooltip) | MisterPeModder | 5.1.9 | - |
+| [Easy Shulker Boxes](https://modrinth.com/project/easy-shulker-boxes) | Fuzs | 21.1.3 | - |
+| [Overflowing Bars](https://modrinth.com/project/overflowing-bars) | Fuzs | 21.1.1 | - |
+| [Scholar](https://modrinth.com/project/scholar) | mortuusars | 1.2.10 | [Donate](https://www.paypal.com/donate/?hosted_button_id=YTSFJQ8XTXZBW) |
+| [Iris & Oculus Search](https://modrinth.com/project/irissearch) | SpacEagle17 | 1.8.4 | [Donate](https://www.patreon.com/c/SpacEagle17) |
 
 ---
 
@@ -201,7 +211,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|--------|
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.8 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
 | [spark](https://www.curseforge.com/minecraft/mc-mods/spark) | lucko | 1.10.124 | - |
-| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.33.0 | - |
+| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.34.1 | - |
 
 ---
 
@@ -240,6 +250,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Sound Physics Remastered](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered) | henkelmax | 1.5.2 | - |
 | [Sound​s](https://www.curseforge.com/minecraft/mc-mods/sound) | mineblock11 | 2.4.22+lts | - |
 | [Subtle Effects](https://modrinth.com/mod/subtle-effects) | Fzzy | 1.15.1 | - |
+| [Simple Music Control](https://modrinth.com/project/simple-music-control) | pajic | 1.5.6 | [Donate](https://ko-fi.com/pajic) |
 
 ---
 
@@ -259,6 +270,21 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Picture Mode](https://www.curseforge.com/minecraft/mc-mods/picture-mode) | icanttellyou | 1.1.7 | - |
 | [Smooth Swapping](https://www.curseforge.com/minecraft/mc-mods/smooth-swapping) | Schauweg | 0.9.3.2 | - |
 | [Visuality: Reforged](https://modrinth.com/mod/visuality-forge) | PinkGoosik | 3.0.0 | - |
+| [Punchy!](https://modrinth.com/project/punchy-fpa) | Punchy Guys Studios | 3.2b | [Donate](https://ko-fi.com/modinpunchy) |
+| [Countered's Smooth Steps](https://modrinth.com/project/countereds-smooth-steps) | Countered | 1.1.0 | - |
+| [disable front camera](https://modrinth.com/project/disable-front-camera) | DrHirsch | 1.2.26 | - |
+
+---
+
+## Resource Packs
+
+| Pack | Author(s) | Version | Donate |
+|------|-----------|---------|--------|
+| [Fresh Animations](https://modrinth.com/project/fresh-animations) | FreshLX | 1.11.2 | [Donate](https://www.patreon.com/FreshLX) |
+| [Grassrise](https://modrinth.com/project/grassrise) | Korbee | 1.0.3 | - |
+| [Bushy pink petals, wildflowers & leaf litter](https://modrinth.com/project/bushy-pinkpetals-wildflowers-leaflitter) | godhusk | 1.0.1 | [Donate](https://www.donationalerts.com/r/godhusk) |
+| [Matcha Block Overlays](https://modrinth.com/project/matcha-block-overlays) | Bird73 | 2-b1 | - |
+| [rainbow's foliage: polytone](https://modrinth.com/project/rainbows-foliage) | PoeticRainbow | 2.2 | - |
 
 ---
 
@@ -270,6 +296,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | Complementary Reimagined | EminGT | [Patreon](https://www.patreon.com/emingt) |
 | Photon | sixthsurge | [Ko-fi](https://ko-fi.com/sixthsurge) |
 | Solas Shader | septonious | [Boosty](https://boosty.to/septonious) |
+| [Eclipse](https://www.curseforge.com/minecraft/shaders/eclipse) | gamerbenyt | - |
 
 ---
 

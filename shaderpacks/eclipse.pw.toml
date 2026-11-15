@@ -1,0 +1,13 @@
+name = "Eclipse"
+filename = "EclipseShaders.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "9341d391e4eb6e5baea23d42593a395523374133"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6892552
+project-id = 1328330

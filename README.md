@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.3
+# TBA (TheBlock.Academy) v2.0.4
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**165 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**179 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -24,6 +24,10 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 
 ### Building Tools
 - **Effortless Building** - Mirrors, arrays, build modes, block randomizer
+- **Jake's Build Tools** - Trowel, chisel, hammer and other building tools
+- **Slabbed** - Torches and lanterns on slabs, blocks on top of slabs
+- **Fusion** - Connected textures (glass and block overlays)
+- **Reconnectible Chains** - Hang decorative chains between fences and walls
 
 ### Cinematics & Recording
 - **Better Third Person** - Independent camera rotation, 360° orbit, enhanced third-person controls
@@ -90,6 +94,12 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **JourneyMap** - Full-featured world map with browser viewing and waypoints
 - **WTHIT** - Block/entity tooltips (what am I looking at?)
 - **AppleSkin** - Food/hunger visualization
+- **Shulker Box Tooltip** / **Easy Shulker Boxes** - See and manage shulker box contents from your inventory
+- **ClickThrough Plus** - Open chests through signs and item frames
+- **Overflowing Bars** - Compact health and armor bars beyond vanilla
+- **Scholar** - Two-page book editing and nicer books
+- **Iris & Oculus Search** - Search box for shader settings
+- **Punchy!** / **Smooth Steps** / **Disable Front Camera** - First-person animations, smoother stair steps, skip the front camera
 - **Mouse Tweaks** + **Client Sort** - Inventory scrolling, dragging and sorting
 - **Controlling** - Searchable keybinds with conflict detection
 - **InvMove** - Move while inventory is open
@@ -114,6 +124,7 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Sound Physics Remastered** - Realistic reverb and sound occlusion
 - **AmbientSounds** - Dynamic ambient soundscapes based on biome, weather, and time of day
 - **Subtle Effects** - Ambient environmental particle effects
+- **Simple Music Control** - Shorter gaps between music tracks, next-track key, now-playing widget
 - **Presence Footsteps** - Material-aware footstep sounds
 - **Visuality** - Additional ambient particles
 - **Particle Rain** - Enhanced rain and snow particle effects
@@ -138,6 +149,7 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Complementary Reimagined r5.6.1** - Vanilla-enhanced aesthetic with "Potato" to "Ultra" presets
 - **Photon v1.2a** - Gameplay-focused with semi-realistic style and colored lighting
 - **Solas Shader v3.1c** - Fantasy stylized with colored lighting and fancy visuals
+- **Eclipse** - Bright, colorful shader by gamerbenyt
 
 ### Default Settings
 The modpack comes pre-configured with sensible defaults:

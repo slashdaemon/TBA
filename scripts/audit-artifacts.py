@@ -28,6 +28,8 @@ ALLOWED_OVERRIDES = {
         "matthiesen-core-*.jar": "Matthiesen Core (Better Sleep library), Modrinth-only, MIT",
         "SPBR_*.zip": "SPBR resource pack, Modrinth-only, GPL-3.0-or-later",
         "ModernPSX-*.zip": "Modern PSX shaders, Modrinth-only, MIT",
+        "jakes-build-tools-*.jar": "Jake's Build Tools, mod jar Modrinth-only (CurseForge hosts only the data pack zip); JBT License B.4 allows public modpacks with credit",
+        "disable_front_camera-*.jar": "disable front camera, Modrinth-only, MIT",
     },
     "modrinth": {
         "framework-neoforge-*.jar": "Framework (MrCrayfish), CurseForge-only, LGPL-2.1",

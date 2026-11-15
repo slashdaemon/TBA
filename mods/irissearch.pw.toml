@@ -1,0 +1,13 @@
+name = "Iris & Oculus Search"
+filename = "IrisSearch-1.8.4-neoforge.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "9db118b12f4bf1a20221d054b8ed57bd1603993b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9390096
+project-id = 1583035

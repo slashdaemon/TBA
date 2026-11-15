@@ -1,0 +1,13 @@
+name = "Bushy pink petals, wildflowers & leaf litter"
+filename = "Bushy pink petals, wildflowers  leaf litter.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "a287f4205901ba93ed3b847e7332431df0872367"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8493563
+project-id = 1321476

@@ -1,12 +1,12 @@
 name = "TBA"
 author = "Slash"
-version = "2.0.3"
+version = "2.0.4"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "2e3e3398df356547e2ed6b6b867961d0c455deef1295ded249fa1df578f1afe9"
+hash = "713d8a1e90ee6f06869281b5714c5256d5972131b7b5b6433daaf167049569a0"
 
 [versions]
 minecraft = "1.21.1"
