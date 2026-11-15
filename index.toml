@@ -466,7 +466,7 @@ hash = "268f71f955aede24519f4cae967624cc18b0358d1e5c0ddb88645cc7e70c0b1b"
 
 [[files]]
 file = "config/streamcraft/config.properties"
-hash = "e151a62383d0be34d20691b47e76cb7404ec5cb41fda6e3b78387baae7afda1b"
+hash = "20f977659b6b034391f21ba355ec4b668fb686b272d31045dd415018ed029b4f"
 
 [[files]]
 file = "journeymap/config/6.0/journeymap.core.config"
@@ -1307,7 +1307,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "e84bde80393d1f698a80e853cd5746e98404e318352a2119a1e674db9e9e07de"
+hash = "3ea43f43f91921fdc609edb002d96cc0647d8c26d6553d6756142d4325c5f9e2"
 
 [[files]]
 file = "resourcepacks/armory-reforged.pw.toml"

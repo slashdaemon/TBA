@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** November 14, 2026
-**Modpack Version:** 2.0.2 (165 mods total, NeoForge 1.21.1)
+**Modpack Version:** 2.0.3 (165 mods total, NeoForge 1.21.1)
 
 ---
 

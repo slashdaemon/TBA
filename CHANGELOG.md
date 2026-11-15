@@ -3,6 +3,17 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [2.0.3] - 2026-11-14
+
+### Fixed
+- **StreamCraft voice works on the server.** Its voice relay used a port our host doesn't open,
+  so players saw "voice unavailable". It now uses one the server has.
+
+### Changed
+- **Default GUI scale is 6** (was 3). Screens that can't fit 6 use their largest scale.
+
+**Mods:** 165
+
 ## [2.0.2] - 2026-11-14
 
 **Mod audit.** Every mod in the pack was reviewed by hand; seven came out and StreamCraft voice
