@@ -73,7 +73,7 @@ def keybind_conflicts(binds: dict[str, str]) -> list[str]:
 
 MODRINTH_HOSTS ={"cdn.modrinth.com", "github.com", "raw.githubusercontent.com", "gitlab.com"}
 ROOT_FILES = {"options.txt", "servers.dat"}
-TOP_DIRS = {"mods", "resourcepacks", "shaderpacks", "config", "defaultconfigs", "journeymap", "minescript"}
+TOP_DIRS = {"mods", "resourcepacks", "shaderpacks", "config", "defaultconfigs", "journeymap"}
 CONTENT_DIRS = {"mods", "resourcepacks", "shaderpacks"}
 SECRET_MARKERS = (".ssh/", "ed25519", "/.env", ".pem")
 OVERRIDE_ROOTS = ("overrides/", "client-overrides/", "server-overrides/")

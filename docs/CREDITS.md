@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** November 13, 2026
-**Modpack Version:** 2.0.1 (172 mods total, NeoForge 1.21.1)
+**Last Updated:** November 14, 2026
+**Modpack Version:** 2.0.2 (165 mods total, NeoForge 1.21.1)
 
 ---
 
@@ -44,13 +44,11 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Balm](https://www.curseforge.com/minecraft/mc-mods/balm) | BlayTheNinth | 21.0.67 | [Ko-fi](https://ko-fi.com/blaytheninth), [Patreon](https://www.patreon.com/blay09) |
 | [Blueprint](https://www.curseforge.com/minecraft/mc-mods/blueprint) | TeamAbnormals, SmellyModder, bageldotjpg | 8.2.0 | - |
 | [Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) | shedaniel | 15.0.140 | [Patreon](https://www.patreon.com/shedaniel) |
-| [CraterLib](https://www.curseforge.com/minecraft/mc-mods/craterlib) | HypherionSA | 3.1.3 | [Ko-fi](https://ko-fi.com/hypherionsa) |
 | [CreativeCore](https://www.curseforge.com/minecraft/mc-mods/creativecore) | CreativeMD | 2.13.53 | [Patreon](https://www.patreon.com/creativemd) |
 | [Curios API](https://www.curseforge.com/minecraft/mc-mods/curios) | TheIllusiveC4 | 9.5.1 | - |
 | [Delight Lib](https://modrinth.com/mod/delight-lib) | Axperty | 26.05.18 | [Donate](https://ko-fi.com/axperty) |
 | [Entity Model Features](https://www.curseforge.com/minecraft/mc-mods/entity-model-features) | Traben | 3.3.12 | - |
 | [Entity Texture Features](https://www.curseforge.com/minecraft/mc-mods/entity-texture-features-fabric) | Traben | 7.2.7 | - |
-| [Forge Config API Port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port) | Fuzss | 21.1.6 | - |
 | [Framework](https://www.curseforge.com/minecraft/mc-mods/framework) | MrCrayfish | 0.13.11 | [Patreon](https://www.patreon.com/mrcrayfish) |
 | [Fzzy Config](https://www.curseforge.com/minecraft/mc-mods/fzzy-config) | Fzzy | 0.7.7+fix1 | - |
 | [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) | Tslat, Gecko, AzureDoom | 4.9.3 | [Ko-fi](https://ko-fi.com/geckolib) |
@@ -62,13 +60,11 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Moonlight Lib](https://www.curseforge.com/minecraft/mc-mods/selene) | MehVahdJukaar | 3.8.3 | - |
 | [MossyLib](https://modrinth.com/mod/mossylib) | Mossy | 1.6.0 | - |
 | [MRU](https://www.curseforge.com/minecraft/mc-mods/mru) | Okamomille, frikinjay | 1.0.41 | - |
-| [oωo (owo-lib)](https://www.curseforge.com/minecraft/mc-mods/owo-lib) | glisco | 0.12.15.6 | - |
 | [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) | KosmX | 2.0.4 | - |
 | [Puzzles Lib](https://www.curseforge.com/minecraft/mc-mods/puzzles-lib) | Fuzs | 21.1.66 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Resourceful Lib](https://www.curseforge.com/minecraft/mc-mods/resourceful-lib) | Team Resourceful | 3.0.12 | [Patreon](https://www.patreon.com/resourcefulbees) |
 | [RunicLib](https://www.curseforge.com/minecraft/mc-mods/runiclib) | Yirmiri | 5.0.7 | - |
 | [Searchables](https://www.curseforge.com/minecraft/mc-mods/searchables) | jaredlll08 | 1.0.2 | - |
-| [SuperMartijn642's Config Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib) | SuperMartijn642 | 1.1.8 | - |
 | [WATERMeDIA: Multimedia API](https://www.curseforge.com/minecraft/mc-mods/watermedia) | SrRapero720 | 2.1.37 | - |
 | [WATERMeDIA: Platform Extension](https://www.curseforge.com/minecraft/mc-mods/watermedia-platform-extension) | SrRapero720 | 2.1.2 | - |
 | [YetAnotherConfigLib](https://www.curseforge.com/minecraft/mc-mods/yacl) | isXander | 3 | [Ko-fi](https://ko-fi.com/isxander) |
@@ -175,7 +171,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Bridging Mod](https://www.curseforge.com/minecraft/mc-mods/bridging-mod) | Giselbaer | 2.6.2+1.21.1 | - |
 | [Carry On](https://www.curseforge.com/minecraft/mc-mods/carry-on) | Tschipp | 2.2.6.13 | - |
 | [Client Sort](https://modrinth.com/mod/clientsort) | NotRyken | 3.89.2 | - |
-| [Controlify](https://www.curseforge.com/minecraft/mc-mods/controlify) | isXander | 3.0.1+lts | - |
 | [Controlling](https://www.curseforge.com/minecraft/mc-mods/controlling) | jaredlll08 | 19.0.5 | - |
 | [Crash Assistant](https://www.curseforge.com/minecraft/mc-mods/crash-assistant) | PandaMods | 1.20.6 | - |
 | [Cubes Without Borders](https://www.curseforge.com/minecraft/mc-mods/cubes-without-borders) | Kir_Antipov | 5.0.0+1.21.0 | - |
@@ -230,16 +225,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [LambDynamicLights](https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights) | LambdAurora | 4.8.11 | - |
 | [Polytone](https://www.curseforge.com/minecraft/mc-mods/polytone) | MehVahdJukaar | 5.3.8 | - |
 | [Serene Seasons](https://www.curseforge.com/minecraft/mc-mods/serene-seasons) | TheAdubbz, Forstride | 10.1.0.3 | - |
-| [Simple Discord RPC](https://www.curseforge.com/minecraft/mc-mods/simple-discord-rpc) | HypherionSA | 4.1.4 | [Ko-fi](https://ko-fi.com/hypherionsa) |
 | [Windy](https://modrinth.com/mod/windy) | mazik, bunnua | 1.1.1 | [Donate](https://ko-fi.com/bonfiremc) |
-
----
-
-## Scripting & Automation
-
-| Mod | Author(s) | Version | Donate |
-|-----|-----------|---------|--------|
-| [Minescript](https://modrinth.com/mod/minescript) | maxuser0 | 4.0 | [Patreon](https://www.patreon.com/Minescript) |
 
 ---
 

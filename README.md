@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.1
+# TBA (TheBlock.Academy) v2.0.2
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**172 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**165 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -110,9 +110,6 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Mighty Mail** - In-game mailbox system for sending items and letters between players
 - **Cubes Without Borders** - Borderless fullscreen windowed mode
 
-### Scripting & Automation
-- **Minescript** - Python scripting for Minecraft (run scripts from chat with `\scriptname`)
-
 ### Audio & Immersion
 - **Sound Physics Remastered** - Realistic reverb and sound occlusion
 - **AmbientSounds** - Dynamic ambient soundscapes based on biome, weather, and time of day
@@ -134,7 +131,6 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
 
 ### Discord Integration
-- **Simple Discord RPC** - Shows Minecraft activity in your Discord status (client-side)
 - **Discord bridge** - Chat ↔ server, player events, and `/register` whitelist run via slashAI (`@DeanBot` client) + the theblockacademy backend; not a mod in this pack
 
 ### Bundled Shaders
@@ -322,7 +318,7 @@ These run on the server only — players don't need them installed.
 
 | Side | Mods |
 |------|------|
-| **Client-only** | Sodium, Iris and other rendering/visual/audio/UI mods (49) |
+| **Client-only** | Sodium, Iris and other rendering/visual/audio/UI mods (47) |
 | **Server-only** | Advanced Backups, Chunky |
 | **Both** | Everything else |
 

@@ -3,6 +3,24 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [2.0.2] - 2026-11-14
+
+**Mod audit.** Every mod in the pack was reviewed by hand; seven came out and StreamCraft voice
+is back on.
+
+### Removed
+- **Controlify**: controller support the pack doesn't need. On macOS it crashed Java when quitting
+  the game (its controller shutdown runs on the wrong thread).
+- **Minescript** and **Simple Discord RPC** (with its library **CraterLib**).
+- **owo-lib**, **SuperMartijn642's Config Lib** and **Forge Config API Port**: libraries no mod in
+  the pack uses any more.
+
+### Fixed
+- **StreamCraft proximity voice is on again.** The pack still had it switched off from when Simple
+  Voice Chat carried voice, and Simple Voice Chat left in 2.0.0.
+
+**Mods:** 165
+
 ## [2.0.1] - 2026-11-13
 
 **Store-ready packaging.** No gameplay changes beyond the two removals below. Each store's

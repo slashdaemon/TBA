@@ -466,7 +466,7 @@ hash = "268f71f955aede24519f4cae967624cc18b0358d1e5c0ddb88645cc7e70c0b1b"
 
 [[files]]
 file = "config/streamcraft/config.properties"
-hash = "bc2ca27ef164235b80cdd44dfbad05b20f201cef93a8be73d42fda77e816f01b"
+hash = "e151a62383d0be34d20691b47e76cb7404ec5cb41fda6e3b78387baae7afda1b"
 
 [[files]]
 file = "journeymap/config/6.0/journeymap.core.config"
@@ -479,10 +479,6 @@ hash = "3cc0c1a7ea73053c1f3713bab68d15b64942735a97d77f73a216627ab407e4cb"
 [[files]]
 file = "journeymap/config/6.0/journeymap.minimap2.config"
 hash = "89eabb286e12a96f4af8df530c390ea0fcfabfab7dad4c68a9d6ee676eec5880"
-
-[[files]]
-file = "minescript/config.txt"
-hash = "4dcf7855abb3439f00d76ba676653eeb01ffc529babc0a2bdd1bb37d144a6833"
 
 [[files]]
 file = "mods/actually-harvest.pw.toml"
@@ -655,11 +651,6 @@ hash = "9bf180ee5c2685f210b118d115ff27eb9f996142cfae36c4579ca3fa51ca1a19"
 metafile = true
 
 [[files]]
-file = "mods/controlify.pw.toml"
-hash = "24e31600ea54edc3fdd124b365dc5a350312732fca0d9ce991c35cbd5d40164b"
-metafile = true
-
-[[files]]
 file = "mods/controlling.pw.toml"
 hash = "616036c38fafbcaf00c0720d947ec39f571d885a014f0c81b5eeeb4193784e0e"
 metafile = true
@@ -672,11 +663,6 @@ metafile = true
 [[files]]
 file = "mods/crash-assistant.pw.toml"
 hash = "8cb7ed61c9d40c9f60a3c7d360f7fba1e3902a75127a6377ce2f0733825982d0"
-metafile = true
-
-[[files]]
-file = "mods/craterlib.pw.toml"
-hash = "de458df2b3c8254aac109a8f34dbefdf1a1945b09f231aa25ffc9c647c95a78a"
 metafile = true
 
 [[files]]
@@ -817,11 +803,6 @@ metafile = true
 [[files]]
 file = "mods/flan.pw.toml"
 hash = "f036ac9607aa549e9c5db74aeed5fbfa4c2f28571693db43e305f567f69d7755"
-metafile = true
-
-[[files]]
-file = "mods/forge-config-api-port.pw.toml"
-hash = "7b187ef0f5f1dbe756540e5a5bf0d7bda64ee48eb614f6d79fcfd3e40c39fee9"
 metafile = true
 
 [[files]]
@@ -1040,11 +1021,6 @@ hash = "4c26e54751c54b79db87ad78717906af2a9ab1f1f1d895555c46398427f6f07c"
 metafile = true
 
 [[files]]
-file = "mods/minescript.pw.toml"
-hash = "513b78df1669ed0c02c12cf0025df73cc18cafd54a42c2d615fa7a4f67b4b57f"
-metafile = true
-
-[[files]]
 file = "mods/modernfix.pw.toml"
 hash = "72da9b75ec3d6bd3d39c1ac1955df4ecd4c947106a31cbe8e133632e98477ffc"
 metafile = true
@@ -1092,11 +1068,6 @@ metafile = true
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
 hash = "fd84fcf376910b659fdfbcc2401aa545400b0d7c65834eb2fe22bae3a3c921c2"
-metafile = true
-
-[[files]]
-file = "mods/owo-lib.pw.toml"
-hash = "a7fd33e3171967cf90314c3a1147769b051315b7db4f30e7c51304d0d3ef4dee"
 metafile = true
 
 [[files]]
@@ -1172,11 +1143,6 @@ metafile = true
 [[files]]
 file = "mods/serene-seasons.pw.toml"
 hash = "eb438b9d4a49c0cc65560cdc295bf927cabc6f34319375a0cfbf3aece662add8"
-metafile = true
-
-[[files]]
-file = "mods/simple-discord-rpc.pw.toml"
-hash = "d404de58c0ccc04a52a9b8d9540b355ee7a77c9c88c58ab1b4ffbf07d0357e7c"
 metafile = true
 
 [[files]]
@@ -1262,11 +1228,6 @@ metafile = true
 [[files]]
 file = "mods/subtle-effects.pw.toml"
 hash = "fdf3d8942d14758ea44a1f27e071fcfbffeafd4720e2d326dbc7dd939d588adc"
-metafile = true
-
-[[files]]
-file = "mods/supermartijn642s-config-lib.pw.toml"
-hash = "2e42245826ce70d4ad673addb0e5244da388841f1484f03ee5a9426ee33b2229"
 metafile = true
 
 [[files]]

@@ -1,3 +1,0 @@
-# Lines starting with "#" are ignored.
-
-python="python"
