@@ -4,7 +4,7 @@
 The pack's own entries (mods/, resourcepacks/, shaderpacks/ *.pw.toml) are the list. Each is filled from:
   docs/CREDITS.md   section, link, author(s), version, donate link (matched by store slug, then name)
   README.md         the one-line "what it does" written for the pack (preferred description)
-  store APIs        Modrinth / cfwidget summary, authors and link for anything the docs don't cover
+  store APIs        icon (Modrinth, else CurseForge), plus summary, authors and link for anything the docs don't cover
 
     py -3 scripts/export-mod-page.py [--out ../theblockacademy/src/data/tba-mods.json]
 
@@ -131,7 +131,7 @@ def main() -> int:
         desc = find(e["name"], descs) or (find(c["name"], descs) if c else None) or ""
         p = mr.get(e["mr_id"] or "")
         cfw = None
-        if e["cf_id"] and (not desc or not c):
+        if e["cf_id"] and (not desc or not c or not (p or {}).get("icon_url")):
             try:
                 cfw = get_json(f"https://api.cfwidget.com/{e['cf_id']}")
             except Exception:  # noqa: BLE001 - store data is a fallback only
@@ -154,11 +154,14 @@ def main() -> int:
             section = "Shaders"
         out.append({"key": e["key"], "name": clean_name((c or {}).get("name") or e["name"]), "section": section,
                     "side": e["side"], "description": desc, "authors": authors, "url": url,
-                    "version": (c or {}).get("version", ""), "donate": (c or {}).get("donate", "")})
+                    "version": (c or {}).get("version", ""), "donate": (c or {}).get("donate", ""),
+                    "icon": (p or {}).get("icon_url") or (cfw or {}).get("thumbnail") or ""})
         if not c:
             report.append(f"not in CREDITS: {e['dir']}/{e['key']}")
         if not desc:
             report.append(f"no description: {e['key']}")
+        if not out[-1]["icon"]:
+            report.append(f"no icon: {e['key']}")
     for c in credits:
         if id(c) not in used:
             report.append(f"CREDITS row with no pack entry: {c['name']}")
