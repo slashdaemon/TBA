@@ -670,6 +670,11 @@ hash = "af68f400faa4564bfaa16509dedcb2dbafb8c3a0154d6e4e0b1443bcb4c6d536"
 metafile = true
 
 [[files]]
+file = "mods/core-curriculum.pw.toml"
+hash = "c265528f941cd3feae918148f91fd97e919c9463b4c31f4a0c66eda9c3bcab66"
+metafile = true
+
+[[files]]
 file = "mods/countereds-smooth-steps.pw.toml"
 hash = "57a9169786a98b5fec219615ef05324b92325a961a8fc72670813a48cff9d096"
 metafile = true
@@ -1381,7 +1386,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "88ed9cb504493c8bc98dd546176ac5c1ee8a59c074780a6f1b67de0ebcf21825"
+hash = "5e83889fcc0cefe7e1ae950b6d361a2816bf3e5c8d909f521fada4fae709620c"
 
 [[files]]
 file = "resourcepacks/armory-reforged.pw.toml"

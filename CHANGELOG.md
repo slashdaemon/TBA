@@ -1,7 +1,25 @@
 # Changelog
 
-All notable changes to TBA will be documented in this file.
+All notable changes to TBA will be documented in this file. Versions follow
+[Semantic Versioning](https://semver.org/): a patch release (2.0.x) adds, updates or removes mods and fixes
+problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) changes the Minecraft or NeoForge
+version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
+
+## [2.0.5] - 2026-11-18
+
+### Added
+- **Core Curriculum 0.2.0** is back, ported to NeoForge: titles, build submissions and nominations.
+  - **Titles** show in front of your name in chat and the tab list. Pick yours with `/titles` or
+    `/title set <title>`. Every player can change their own title now, not just ops.
+  - **`/submit <build name>`** sends screenshots of a build to slashAI for review; `/submissions`
+    lists yours. `/nominate` recognizes someone who helped you, and `/recognitions` shows yours.
+  - **`/link`** links your Discord account.
+  - **The welcome screen** opens on join, or with **V**.
+  - Server stats sync to the website again.
+  - Players on an older pack can still join; Core Curriculum's screens tell them to update.
+
+**Mods:** 180
 
 ## [2.0.4] - 2026-11-15
 

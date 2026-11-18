@@ -34,6 +34,7 @@ ALLOWED_OVERRIDES = {
     "modrinth": {
         "framework-neoforge-*.jar": "Framework (MrCrayfish), CurseForge-only, LGPL-2.1",
         "mighty_mail-neoforge-*.jar": "Mighty Mail (MrCrayfish), CurseForge-only, MIT",
+        "corecurriculum-*-neoforge-*.jar": "Core Curriculum (ours), CurseForge-only, MIT",
     },
 }
 # Keys deliberately shared by several bindings: each works in a different context (a modifier

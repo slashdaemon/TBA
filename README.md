@@ -2,7 +2,7 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.4
+# TBA (TheBlock.Academy) v2.0.5
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -135,6 +135,7 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Fast Item Frames** - Item frame rendering optimization
 
 ### Multiplayer
+- **Core Curriculum** - Titles in chat and the tab list, build reviews by slashAI (`/submit`), peer nominations (`/nominate`) and the welcome screen (V)
 - **StreamCraft Live** - Real-time video conferencing and proximity voice (webcam, screen share, voice) rendered on in-world blocks via LiveKit WebRTC
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
@@ -338,7 +339,7 @@ These run on the server only — players don't need them installed.
 Mods with no NeoForge 1.21.1 build (Axiom, Litematica, ReFramed, Clutter, Ledger, Replay Mod and
 others), LuckPerms (its last 1.21.1 NeoForge build kicks players on join) and Simple Voice Chat
 (StreamCraft covers voice). WorldEdit is out for now (runs out of memory on Diagonal Blocks).
-CoreCurriculum, SceneCraft and SynthCraft return as NeoForge ports. Full list in [CHANGELOG.md](CHANGELOG.md).
+CoreCurriculum is back as a NeoForge port in 2.0.5; SceneCraft and SynthCraft return later. Full list in [CHANGELOG.md](CHANGELOG.md).
 
 ## Requirements
 
