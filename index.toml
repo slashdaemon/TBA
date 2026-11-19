@@ -682,8 +682,8 @@ hash = "af68f400faa4564bfaa16509dedcb2dbafb8c3a0154d6e4e0b1443bcb4c6d536"
 metafile = true
 
 [[files]]
-file = "mods/corecurriculum-0.2.2-neoforge-1.21.1.jar"
-hash = "034068afb17f84aa9e26ffe6a0cea5a612866178fa19aa563d339a6c47f0697b"
+file = "mods/corecurriculum-0.2.3-neoforge-1.21.1.jar"
+hash = "78d635c2bd42c07c4ca4b3e8827d9b165fe22d624526651c2ffbbff60b8b77d7"
 
 [[files]]
 file = "mods/countereds-smooth-steps.pw.toml"

@@ -13,8 +13,14 @@ version or needs a fresh world; a major release changes the loader or starts a n
   screen) a second time within a few minutes crashed the game. TBA now ships StreamCraft
   **0.34.1-tba1**: the official 0.34.1 with only that screen fix, built from the `streamcraft-0.34.1-tba1`
   GitHub release. We go back to the official jars once StreamCraft ships the fix.
-- **Core Curriculum 0.2.1 → 0.2.2.** The welcome screen's Roll Call button opened Discord with no
-  channel selected. It now opens #classroom, where Roll Call is launched.
+- **Core Curriculum 0.2.1 → 0.2.3.**
+  - The welcome screen's Roll Call button opened Discord with no channel selected. It now opens
+    #classroom, where Roll Call is launched.
+  - **No more getting stuck on a page of HTML when joining.** Mojang's login service sometimes answers
+    with a "Service unavailable" web page. The game showed the whole page, pushed the Back button off
+    screen and ignored Esc. Core Curriculum now retries the login twice, and if Mojang is still down it
+    says so in one short message. The "Failed to connect" screen always keeps its Back button on screen,
+    and Esc works.
 
 **Mods:** 181
 

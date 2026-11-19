@@ -208,7 +208,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 
 | Mod | Author(s) | Version | Donate |
 |-----|-----------|---------|--------|
-| [Core Curriculum](https://www.curseforge.com/projects/1430194) | Slash | 0.2.2 | - |
+| [Core Curriculum](https://www.curseforge.com/projects/1430194) | Slash | 0.2.3 | - |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.8 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
 | [spark](https://www.curseforge.com/minecraft/mc-mods/spark) | lucko | 1.10.124 | - |
 | [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.34.1-tba1 | - |
