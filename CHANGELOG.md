@@ -6,6 +6,21 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
+## [2.0.9] - 2026-11-18
+
+### Added
+- **GriefLogger** (server-side, staff only): records who placed and broke blocks, plus container,
+  chat and command history. TBA has had no block logger since 2.0.0, so build reviews could not check
+  who actually built something. Players do not need to install anything.
+  - This is a TBA build of GriefLogger 1.2.10 (Apache-2.0) with its bundled protobuf moved to its own
+    package. The stock jar will not start next to StreamCraft: both ship `com.google.protobuf`. We go
+    back to the stock jar once StreamCraft relocates its copy. The build lives on the
+    `grieflogger-1.2.10-tba1` GitHub release.
+  - Adds **SuperMartijn642's Config Lib** (server-side), which GriefLogger needs.
+  - Its data is a SQLite file, `database.db`, in the server folder (not inside `world/`).
+
+**Mods:** 181
+
 ## [2.0.8] - 2026-11-18
 
 ### Updated

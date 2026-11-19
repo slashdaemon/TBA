@@ -1,0 +1,8 @@
+name = "GriefLogger (TBA build)"
+filename = "grieflogger-1.2.10-1.21.1-neoforge-tba1.jar"
+side = "server"
+
+[download]
+url = "https://github.com/slashdaemon/TBA/releases/download/grieflogger-1.2.10-tba1/grieflogger-1.2.10-1.21.1-neoforge-tba1.jar"
+hash-format = "sha256"
+hash = "a464c54f2332fed001598b076fc188aaa257213c936d4d828f3633c50fdc3029"

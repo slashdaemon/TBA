@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** November 18, 2026
-**Modpack Version:** 2.0.8 (179 mods total, NeoForge 1.21.1)
+**Modpack Version:** 2.0.9 (181 mods total, NeoForge 1.21.1)
 
 ---
 
@@ -222,6 +222,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Advanced Backups](https://www.curseforge.com/minecraft/mc-mods/advanced-backups) | RyanMoodGAMING | 3.7.1 | - |
 | [Better Sleep](https://modrinth.com/mod/better-sleep) | Giselbaer | 2.2.2 | - |
 | [Chunky](https://modrinth.com/mod/chunky) | pop4959 | 1.4.23 | - |
+| [GriefLogger](https://www.curseforge.com/minecraft/mc-mods/grieflogger) (TBA build: protobuf relocated, Apache-2.0) | DAQEM | 1.2.10 | - |
+| [SuperMartijn642's Config Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib) | SuperMartijn642 | 1.1.8 | - |
 
 ---
 

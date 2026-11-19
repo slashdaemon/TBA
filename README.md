@@ -2,7 +2,7 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.8
+# TBA (TheBlock.Academy) v2.0.9
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -140,6 +140,7 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
 - **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
+- **GriefLogger** - Logs block placement and breaking, containers and chat for staff (server-side, ops only)
 
 ### Discord Integration
 - **Discord bridge** - Chat ↔ server, player events, and `/register` whitelist run via slashAI (`@DeanBot` client) + the theblockacademy backend; not a mod in this pack

@@ -881,6 +881,11 @@ hash = "2fd95e8fc64280fc801bf785558ea4ddd1206684d641854725a1333a01e68096"
 metafile = true
 
 [[files]]
+file = "mods/grieflogger.pw.toml"
+hash = "3e2ffc337688653cf8f5495e85d510c6b3e0b15f86b3888760f01fd4f3abddac"
+metafile = true
+
+[[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "61b9598c863307bd6649b70ed614666225b75b6c8bf0cdf3209f172d02672a0f"
 metafile = true
@@ -1313,6 +1318,11 @@ metafile = true
 [[files]]
 file = "mods/subtle-effects.pw.toml"
 hash = "fdf3d8942d14758ea44a1f27e071fcfbffeafd4720e2d326dbc7dd939d588adc"
+metafile = true
+
+[[files]]
+file = "mods/supermartijn642s-config-lib.pw.toml"
+hash = "6cdfc4427762399711da5af1b4de116c4402a300a3b640573e957d758ad8422a"
 metafile = true
 
 [[files]]
