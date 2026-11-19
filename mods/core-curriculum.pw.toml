@@ -1,0 +1,13 @@
+name = "Core Curriculum"
+filename = "corecurriculum-0.2.3-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "66f1a8a39dee26bdb339f0c5190e3754d6675708"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9706298
+project-id = 1430194

@@ -41,7 +41,7 @@ MR_PROJECT_HINTS: dict[str, str] = {}
 BUNDLED_ON_MODRINTH = {
     "mods/framework.pw.toml": "Framework (MrCrayfish), CurseForge-only, LGPL-2.1",
     "mods/mighty-mail.pw.toml": "Mighty Mail (MrCrayfish), CurseForge-only, MIT",
-    "mods/core-curriculum.pw.toml": "Core Curriculum (ours), CurseForge-only, MIT",
+    "mods/core-curriculum.pw.toml": "Core Curriculum (ours, All Rights Reserved; we hold the rights), Modrinth project in review",
 }
 
 PROJECT_TYPE_LOADERS = {"mods": [LOADER], "resourcepacks": ["minecraft"], "shaderpacks": ["iris", "optifine"]}
