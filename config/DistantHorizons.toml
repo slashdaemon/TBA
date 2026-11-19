@@ -1,24 +1,25 @@
-# Distant Horizons config - TBA defaults
-# Disable startup warnings since players get our welcome screen
-_version = 3
+# Distant Horizons config - TBA defaults. Only the settings TBA changes are listed; Distant Horizons
+# fills in everything else with its own defaults, some of which depend on the machine (numberOfThreads),
+# so do not ship a full file. _version must match the installed DH (3.3.x writes 5) or DH discards
+# this file and rewrites defaults.
+_version = 5
 
 [common]
 	[common.logging]
 		[common.logging.warning]
-			showLowMemoryWarningOnStartup = false
-			showPoolInsufficientMemoryWarning = false
-			showHighVanillaRenderDistanceWarning = false
-			showReplayWarningOnStartup = false
-			showUpdateQueueOverloadedChatWarning = false
+			showExplicitGcDisabledWarning = false
 			showSlowWorldGenSettingWarnings = false
+			showUpdateQueueOverloadedChatWarning = false
+			showLowMemoryWarningOnStartup = false
+			showReplayWarningOnStartup = false
 			showModCompatibilityWarningsOnStartup = false
+			showHighVanillaRenderDistanceWarning = false
+			showPoolInsufficientMemoryWarning = false
+			showGarbageCollectorWarning = false
 
 [client]
 	[client.advanced]
-		# Suppress the "New update available!" prompt on first launch.
-		# DH is pinned to 2.4.5-b deliberately because 3.0.x breaks server-side
-		# mixins (Travelers Backpack LanguageMixin crash, see CHANGELOG v1.0.3
-		# for the incident). Players should never click "Update" — so don't ask.
+		# The pack pins its Distant Horizons version; players should not be offered an update.
 		[client.advanced.autoUpdater]
 			enableAutoUpdater = false
 			enableSilentUpdates = false

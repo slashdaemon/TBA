@@ -6,7 +6,7 @@ hash = "28b1af7e1ccd9695166ec1df33e0d08c1ec078e6e186e0b2e8c0228fe9e10acf"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "f13a3b4a601f7f82101de3e73bc0274a69f140191017a7c7b16ce5d62e088f92"
+hash = "a2cff5da2306c8b9f0bb945af4c5db6eda3ee067281cb1f372af69a3f1c38325"
 
 [[files]]
 file = "config/autohud.json5"
@@ -469,6 +469,10 @@ file = "config/fetzis_asian_deco/fetzis-asian-deco-config.json"
 hash = "38a0c151dd48aed356762cf14e44a31e6ca7d62d550727a7f805a42a7aa69f43"
 
 [[files]]
+file = "config/inventory_particles.json5"
+hash = "fbd08cbb8fbc7606ccbec8ab7e084678ee433051c5329dad365a50cc0ba506c3"
+
+[[files]]
 file = "config/iris.properties"
 hash = "4c1db6342f58aa3cf2c078d00c1a844353924c883e9115f9cf8d03ca47041d81"
 
@@ -678,9 +682,8 @@ hash = "af68f400faa4564bfaa16509dedcb2dbafb8c3a0154d6e4e0b1443bcb4c6d536"
 metafile = true
 
 [[files]]
-file = "mods/core-curriculum.pw.toml"
-hash = "c265528f941cd3feae918148f91fd97e919c9463b4c31f4a0c66eda9c3bcab66"
-metafile = true
+file = "mods/corecurriculum-0.2.1-neoforge-1.21.1.jar"
+hash = "dd8f99c1b095d2372c81e0ed7278c8f429a8574cd78409bb1009a0fdd91580f4"
 
 [[files]]
 file = "mods/countereds-smooth-steps.pw.toml"

@@ -6,6 +6,28 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
+## [2.0.8] - 2026-11-18
+
+### Updated
+- **Core Curriculum 0.2.0 → 0.2.1.** A refreshed welcome screen:
+  - **Roll Call comes first.** Link your account with `/link` here, so you don't need the Microsoft
+    sign-in, then run `/rollcall` in our Discord.
+  - **New buttons:** Roll Call, Honor Roll (opens #honor-roll in Discord) and TBA Mods (every mod in
+    the pack on theblock.academy).
+  - **A "Don't show on join" checkbox.** Press V or type `/welcome` to open it any time.
+  - **New tips:** you start with 500 claim blocks (ask Slash for more), and [M] mutes or unmutes
+    StreamCraft voice chat.
+  - **A new "Our Philosophy" page.** The Playstyle page is gone, and the colours are calmer.
+  - **The `/link` message fits in chat** again.
+  - Core Curriculum 0.2.1 is bundled in the pack until it is published on CurseForge.
+
+### Fixed
+- **No more chat messages on startup** from Distant Horizons (G1 garbage collector, low memory and
+  similar warnings) or Inventory Particles. Distant Horizons also stops offering to update itself.
+  The pack's Distant Horizons settings were being thrown away because the file used an old format.
+
+**Mods:** 179
+
 ## [2.0.7] - 2026-11-18
 
 ### Changed
