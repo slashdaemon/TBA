@@ -6,6 +6,24 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
+## [2.0.6] - 2026-11-18
+
+### Removed
+- **Slabbed.** It drew some blocks half a block lower than where they really are. That left holes
+  you could stand on but not break (clicking broke the block behind), and it made block rendering
+  much slower. Without it those blocks show up normally again; blocks someone lowered on purpose
+  next to a slab go back to full height.
+- **Matcha Block Overlays** (resource pack). Its overlays made every chunk rebuild slower, so a
+  block you placed stayed invisible for a moment before it appeared, and the screen could hitch.
+  It was only in the Prism/Modrinth pack, never the CurseForge one.
+
+### Changed
+- **Render distance tops out at 32 again.** C2ME let the slider go up to 65, which asks the server
+  for about 17,000 chunks and makes your own game do the same work. Distant Horizons still draws
+  the far terrain.
+
+**Mods:** 179
+
 ## [2.0.5] - 2026-11-18
 
 ### Added

@@ -306,7 +306,6 @@ MR_SOURCES = REPO_ROOT / "scripts" / "mr-sources"
 CF_EXCLUDED = {
     "resourcepacks/unobtrusive-weather.pw.toml": "Modrinth-only, All Rights Reserved",
     "shaderpacks/mello.pw.toml": "Modrinth-only, All Rights Reserved",
-    "resourcepacks/matcha-block-overlays.pw.toml": "Modrinth-only, CC-BY-NC-SA-4.0 (non-commercial; CurseForge pays rewards)",
 }
 MR_EXCLUDED: dict[str, str] = {}
 LAYERS = {

@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** November 18, 2026
-**Modpack Version:** 2.0.5 (180 mods total, NeoForge 1.21.1)
+**Modpack Version:** 2.0.6 (179 mods total, NeoForge 1.21.1)
 
 ---
 
@@ -86,7 +86,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|--------|
 | [Effortless Building](https://www.curseforge.com/minecraft/mc-mods/effortless-building) | Requioss | 4.2 | - |
 | [Fusion (Connected Textures)](https://modrinth.com/project/fusion-connected-textures) | SuperMartijn642 | 1.3.16 | - |
-| [Slabbed](https://modrinth.com/project/slabbed) | Peetsa | 0.6.13-alpha | [Donate](https://ko-fi.com/peetsa) |
 | [Jake's Build Tools](https://modrinth.com/project/jakes-build-tools) | maybejake | 2.0.1.5 | [Donate](https://ko-fi.com/maybejake) |
 
 ---
@@ -284,7 +283,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Fresh Animations](https://modrinth.com/project/fresh-animations) | FreshLX | 1.11.2 | [Donate](https://www.patreon.com/FreshLX) |
 | [Grassrise](https://modrinth.com/project/grassrise) | Korbee | 1.0.3 | - |
 | [Bushy pink petals, wildflowers & leaf litter](https://modrinth.com/project/bushy-pinkpetals-wildflowers-leaflitter) | godhusk | 1.0.1 | [Donate](https://www.donationalerts.com/r/godhusk) |
-| [Matcha Block Overlays](https://modrinth.com/project/matcha-block-overlays) | Bird73 | 2-b1 | - |
 | [rainbow's foliage: polytone](https://modrinth.com/project/rainbows-foliage) | PoeticRainbow | 2.2 | - |
 
 ---

@@ -2,7 +2,7 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.5
+# TBA (TheBlock.Academy) v2.0.6
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -25,7 +25,6 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 ### Building Tools
 - **Effortless Building** - Mirrors, arrays, build modes, block randomizer
 - **Jake's Build Tools** - Trowel, chisel, hammer and other building tools
-- **Slabbed** - Torches and lanterns on slabs, blocks on top of slabs
 - **Fusion** - Connected textures (glass and block overlays)
 - **Reconnectible Chains** - Hang decorative chains between fences and walls
 

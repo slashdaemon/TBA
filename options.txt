@@ -48,7 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["fabric","seasons:seasonal_lush_caves","excessive_building:vanilla_retextures","itemswapper:default","file/Os' Colorful Grasses (Tall).zip","file/Better-Leaves-9.6.zip","file/Mushrooms Reforged v1.1.zip","file/Pumpkins Reforged v1.0.zip","file/SPBR_Legacy-261030.zip","file/§9⛈ §bUnobtrusive Weather §8[v2.0].zip","file/Armory Reforged v1.1.zip","file/Health Bars Reforged v1.1.zip","file/Matcha Block Overlays 2-b1+fusion.zip","file/Grassrise-1.0.3-mc1.21.1.zip","file/Bushy pink petals, wildflowers  leaf litter.zip","file/rainbows-foliage-polytone-edition-v2.2.zip","file/FreshAnimations_v1.11.2_1.20.zip"]
+resourcePacks:["fabric","seasons:seasonal_lush_caves","excessive_building:vanilla_retextures","itemswapper:default","file/Os' Colorful Grasses (Tall).zip","file/Better-Leaves-9.6.zip","file/Mushrooms Reforged v1.1.zip","file/Pumpkins Reforged v1.0.zip","file/SPBR_Legacy-261030.zip","file/§9⛈ §bUnobtrusive Weather §8[v2.0].zip","file/Armory Reforged v1.1.zip","file/Health Bars Reforged v1.1.zip","file/Grassrise-1.0.3-mc1.21.1.zip","file/Bushy pink petals, wildflowers  leaf litter.zip","file/rainbows-foliage-polytone-edition-v2.2.zip","file/FreshAnimations_v1.11.2_1.20.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us

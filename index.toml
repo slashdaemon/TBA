@@ -457,6 +457,10 @@ file = "config/bluemap/webserver.conf"
 hash = "8d873e188b88f5eb15af95caccb4eb2d9732ff1b4920c0ebe8facd97e956021e"
 
 [[files]]
+file = "config/c2me.toml"
+hash = "e863973361193aee9fd3be025097bac45c9ddb622bea34c6fc9233fcced49a4e"
+
+[[files]]
 file = "config/fetzis_asian_deco/fetzis-asian-deco-config.json"
 hash = "38a0c151dd48aed356762cf14e44a31e6ca7d62d550727a7f805a42a7aa69f43"
 
@@ -1230,11 +1234,6 @@ hash = "2dc498bd8a43a8e02fc9d08fe5846ac17f6eabbecbf38ae39aa7b1f23fe100b0"
 metafile = true
 
 [[files]]
-file = "mods/slabbed.pw.toml"
-hash = "782de7265bfb8d38792586481e0f1460410d553c3524bc2c348144d4c722d1ea"
-metafile = true
-
-[[files]]
 file = "mods/slashloot.pw.toml"
 hash = "659ebdec78c4edaecc3058e479306e8e1c753f71857ed475a6c711bcf3148c2e"
 metafile = true
@@ -1386,7 +1385,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "5e83889fcc0cefe7e1ae950b6d361a2816bf3e5c8d909f521fada4fae709620c"
+hash = "c4a4ea307f121bf70bf41531d20c45bc1f77d0d9ab44a4082bf8a2dcf1cded5a"
 
 [[files]]
 file = "resourcepacks/armory-reforged.pw.toml"
@@ -1416,11 +1415,6 @@ metafile = true
 [[files]]
 file = "resourcepacks/invisible-armor-model.pw.toml"
 hash = "12df862e0abc11be1893f869327296f5b4fe48259b18cdd2eb0b3c1d804a0e1a"
-metafile = true
-
-[[files]]
-file = "resourcepacks/matcha-block-overlays.pw.toml"
-hash = "7184699633b1d7c5d693a0b7b871ccd46ae273bc60e6e95df1e5492ef1a99ae5"
 metafile = true
 
 [[files]]
