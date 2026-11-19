@@ -682,8 +682,8 @@ hash = "af68f400faa4564bfaa16509dedcb2dbafb8c3a0154d6e4e0b1443bcb4c6d536"
 metafile = true
 
 [[files]]
-file = "mods/corecurriculum-0.2.1-neoforge-1.21.1.jar"
-hash = "dd8f99c1b095d2372c81e0ed7278c8f429a8574cd78409bb1009a0fdd91580f4"
+file = "mods/corecurriculum-0.2.2-neoforge-1.21.1.jar"
+hash = "034068afb17f84aa9e26ffe6a0cea5a612866178fa19aa563d339a6c47f0697b"
 
 [[files]]
 file = "mods/countereds-smooth-steps.pw.toml"
@@ -1307,7 +1307,7 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-live.pw.toml"
-hash = "e1e905133410f27be6daeca72742573d0524130351a9e7e86320260bc0d79731"
+hash = "52bb2cb85b215234e96510ccc70b804b493f4c4ea631d9c3c469aaf720a2557d"
 metafile = true
 
 [[files]]

@@ -218,6 +218,38 @@ STREAMCRAFT_REGISTRY: dict[str, dict[str, StreamCraftFile]] = {
             mr_sha512="08e14adda3d6b2bf02985267cebeb6a7e6749dad91fba6ad06a2ed8970330168c2fbabb584cd922b3cd50a871a5e6bb1923747c8df35d1c2f07a0b3e1593fb77",
         ),
     },
+    # TBA-only StreamCraft hotfix (Discover-page crash), hosted on this repo's prerelease
+    # streamcraft-0.34.1-tba1. URL entries for both stores; drop when StreamCraft ships the fix.
+    "0.34.1-tba1+mc1.21.1-neoforge": {
+        "windows": StreamCraftFile(
+            filename="streamcraft-pc-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            sha1="50464fac1126030be4ac1041e2f807d81d976041",
+            mr_url=f"https://github.com/slashdaemon/TBA/releases/download/streamcraft-0.34.1-tba1/streamcraft-pc-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-pc-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_sha512="7000278202ac7ce4370119b5ebed1c44e7d6d5024f569dc8a9096761b2e82bf62f00f3a98d9da3af482520953c776b75cad7c098339158cb68dd3d50610210bd",
+        ),
+        "linux": StreamCraftFile(
+            filename="streamcraft-linux-x64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            sha1="6907ef1cd646ac4f2360c02b89f021023bc43109",
+            mr_url=f"https://github.com/slashdaemon/TBA/releases/download/streamcraft-0.34.1-tba1/streamcraft-linux-x64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-linux-x64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_sha512="05008258c238577503909dd9498d49295bba5479d8198cded894f510bb7e02230aa1b3684a3b8818fd92d190bce9997407fb75099f2c38facfa940bde5025d0a",
+        ),
+        "macos-arm64": StreamCraftFile(
+            filename="streamcraft-mac-arm64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            sha1="1ce8bfc590e746b8321954dde2a209147eff4bea",
+            mr_url=f"https://github.com/slashdaemon/TBA/releases/download/streamcraft-0.34.1-tba1/streamcraft-mac-arm64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-mac-arm64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_sha512="90121df4ea8b3a39c85df97e3907597e2df6b542963c15881fa57f71781fe69d0b701544f312c691d88a33c4b09f61c8b9683c3d23abd9fbcff196da5bf723c8",
+        ),
+        "macos-x86_64": StreamCraftFile(
+            filename="streamcraft-mac-x64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            sha1="a72060a101a30b23f6cb0ddeeb2d1881c6da8328",
+            mr_url=f"https://github.com/slashdaemon/TBA/releases/download/streamcraft-0.34.1-tba1/streamcraft-mac-x64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-mac-x64-0.34.1-tba1-mc1.21.1-neoforge.jar",
+            mr_sha512="35af87483ba1fe60df22e04ba3808b4fc9d5652ff4d82437463fa080c7ad0502c51e33d2d211c4b8486d6f9483f9323fecbafb6abfbce2e83df3b96b00574e16",
+        ),
+    },
 }
 
 

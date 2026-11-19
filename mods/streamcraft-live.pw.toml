@@ -1,13 +1,8 @@
 name = "StreamCraft Live"
-filename = "streamcraft-pc-0.34.1-mc1.21.1-neoforge-cf.jar"
+filename = "streamcraft-pc-0.34.1-tba1-mc1.21.1-neoforge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "940ba5d4357df9bc8fa7e1b8836ebcac9bbf468f"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 9522886
-project-id = 1451729
+hash = "50464fac1126030be4ac1041e2f807d81d976041"
+url = "https://github.com/slashdaemon/TBA/releases/download/streamcraft-0.34.1-tba1/streamcraft-pc-0.34.1-tba1-mc1.21.1-neoforge.jar"

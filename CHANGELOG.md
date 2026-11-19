@@ -6,6 +6,18 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
+## [2.0.10] - 2026-11-19
+
+### Fixed
+- **StreamCraft Discover crash.** Opening StreamCraft's Discover page (the button on the Multiplayer
+  screen) a second time within a few minutes crashed the game. TBA now ships StreamCraft
+  **0.34.1-tba1**: the official 0.34.1 with only that screen fix, built from the `streamcraft-0.34.1-tba1`
+  GitHub release. We go back to the official jars once StreamCraft ships the fix.
+- **Core Curriculum 0.2.1 → 0.2.2.** The welcome screen's Roll Call button opened Discord with no
+  channel selected. It now opens #classroom, where Roll Call is launched.
+
+**Mods:** 181
+
 ## [2.0.9] - 2026-11-18
 
 ### Added
