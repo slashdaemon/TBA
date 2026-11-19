@@ -6,6 +6,19 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
+## [2.0.7] - 2026-11-18
+
+### Changed
+- **Default shader is Solas** on Windows and Linux. The Mac packs default to BSL, since Solas does not
+  run on macOS. Shaders stay on by default; pick another in Options → Video Settings → Shader Packs.
+- **Default GUI scale is 4** (was 6).
+
+### Fixed
+- **No more Dusty Decorations "Updating to 2.0" warning** on a fresh install. It is meant for worlds
+  made with the old Dusty Decorations, which TBA never had.
+
+**Mods:** 179
+
 ## [2.0.6] - 2026-11-18
 
 ### Removed

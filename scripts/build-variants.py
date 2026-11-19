@@ -19,6 +19,7 @@ Output: dist/TBA-<version>[-<platform>].{mrpack,zip}
 from __future__ import annotations
 
 import argparse
+import re
 import shutil
 import subprocess
 import sys
@@ -33,6 +34,10 @@ DIST = REPO_ROOT / "dist"
 
 # Windows is canonical (no classifier in filename); other platforms get a suffix.
 PLATFORMS = ["windows", "linux", "macos-arm64", "macos-x86_64"]
+# Default Iris shader per platform (config/iris.properties shaderPack). Solas does not run on macOS,
+# so the Mac packs default to BSL; every other platform keeps the canonical file's value.
+IRIS_PROPERTIES = REPO_ROOT / "config" / "iris.properties"
+SHADER_OVERRIDES = {"macos-arm64": "BSL_v10.0.zip", "macos-x86_64": "BSL_v10.0.zip"}
 
 
 @dataclass(frozen=True)
@@ -372,10 +377,20 @@ def build_one(platform: str, pack_version: str, sc_version: str) -> None:
     sc_file = STREAMCRAFT_REGISTRY[sc_version][platform]
 
     print(f"\n=== Building {platform} (StreamCraft {sc_file.filename}) ===")
-    write_streamcraft_toml(sc_file, "modrinth")
-    export_for_store("modrinth")
-    write_streamcraft_toml(sc_file, "curseforge")
-    export_for_store("curseforge")
+    iris_canonical = IRIS_PROPERTIES.read_bytes()
+    shader = SHADER_OVERRIDES.get(platform)
+    try:
+        if shader:
+            IRIS_PROPERTIES.write_bytes(
+                re.sub(rb"(?m)^shaderPack=[^\r\n]*", b"shaderPack=" + shader.encode("utf-8"), iris_canonical)
+            )
+            print(f"  (default shader: {shader})")
+        write_streamcraft_toml(sc_file, "modrinth")
+        export_for_store("modrinth")
+        write_streamcraft_toml(sc_file, "curseforge")
+        export_for_store("curseforge")
+    finally:
+        IRIS_PROPERTIES.write_bytes(iris_canonical)
 
     # Packwiz writes <pack-name>-<version>.{mrpack,zip} to repo root.
     src_mrpack = REPO_ROOT / f"TBA-{pack_version}.mrpack"

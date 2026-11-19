@@ -1,0 +1,5 @@
+#Config schema version. Used to detect when the migration warning screen should be shown.
+#Do not edit manually!
+# Default: 0
+# Range: > 0
+configSchemaVersion = 1
