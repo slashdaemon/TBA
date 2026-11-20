@@ -603,7 +603,7 @@ metafile = true
 
 [[files]]
 file = "mods/bluemap.pw.toml"
-hash = "389673486c4036f965356d65c55bdda1fa05c568e1db8bb14056f401c5a6672d"
+hash = "ff5879f6ad48b7a48c391054e26ef4d70b96f7339bff3bec28877e0ab919f998"
 metafile = true
 
 [[files]]
@@ -1403,7 +1403,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "c2d553fcbe5db51239e1432d5aa031cf4a2223439b49a7b3edc004158d4ea9bf"
+hash = "0f899e540572db24ddb89a97f70afab2e7e6257f8ab894654c3540e90f4a8ca8"
 
 [[files]]
 file = "resourcepacks/armory-reforged.pw.toml"

@@ -6,6 +6,20 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
+## [2.0.11] - unreleased
+
+### Fixed
+- **Single player no longer brings the PC to a halt.** In single player the game runs its own server
+  on your PC, so work the TBA server normally does landed on your machine (measured on a 20-thread
+  laptop: every core at 98% and the game past 16 GB of memory a few minutes into a new world).
+  Multiplayer is unchanged by all three fixes:
+  - Default render distance 32 → 12 and simulation distance 32 → 10. The TBA server already caps both
+    at 10, so this only changes single player.
+  - Core Curriculum 0.2.3 → 0.2.4 limits Distant Horizons to 2 threads at half speed while a
+    single-player world is open, then gives back your own Distant Horizons settings when you leave.
+    Distant terrain still fills in, just more gently.
+  - BlueMap is server-only now: it no longer starts a web map of your single-player world.
+
 ## [2.0.10] - 2026-11-19
 
 ### Fixed

@@ -1,6 +1,6 @@
 name = "BlueMap"
 filename = "bluemap-5.7-neoforge.jar"
-side = "both"
+side = "server"
 
 [download]
 hash-format = "sha1"
