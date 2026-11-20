@@ -6,7 +6,7 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
-## [2.0.11] - unreleased
+## [2.0.11] - 2026-11-19
 
 ### Fixed
 - **Single player no longer brings the PC to a halt.** In single player the game runs its own server
@@ -19,6 +19,8 @@ version or needs a fresh world; a major release changes the loader or starts a n
     single-player world is open, then gives back your own Distant Horizons settings when you leave.
     Distant terrain still fills in, just more gently.
   - BlueMap is server-only now: it no longer starts a web map of your single-player world.
+
+**Mods:** 181
 
 ## [2.0.10] - 2026-11-19
 
