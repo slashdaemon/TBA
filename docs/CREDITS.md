@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** November 18, 2026
-**Modpack Version:** 2.0.11 (181 mods total, NeoForge 1.21.1)
+**Last Updated:** November 20, 2026
+**Modpack Version:** 2.0.12 (183 mods total, NeoForge 1.21.1)
 
 ---
 
@@ -106,6 +106,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Diagonal Windows](https://www.curseforge.com/minecraft/mc-mods/diagonal-windows) | Fuzss | 21.1.1 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Dusty Decorations](https://www.curseforge.com/minecraft/mc-mods/dusty-decorations) | lunarbunten | 2.3.2 | - |
 | [Enchanted Vertical Slabs](https://www.curseforge.com/minecraft/mc-mods/enchanted-vertical-slabs) | TheWinAGT | 2.3.2 | - |
+| [Every Compat (Stone Zone)](https://www.curseforge.com/minecraft/mc-mods/stone-zone) | Xelbayria, MehVahdJukaar | 2.11.22 | - |
+| [Every Compat (Wood Good)](https://www.curseforge.com/minecraft/mc-mods/every-compat) | MehVahdJukaar, Xelbayria, Plantkillable | 2.11.59 | - |
 | [Excessive Building](https://www.curseforge.com/minecraft/mc-mods/excessive-building) | Yirmiri | 4.0.4 | - |
 | [Falling Leaves (NeoForge/Forge)](https://modrinth.com/mod/fallingleavesforge) | RandomMcSomethin | 2.6.0 | - |
 | [Fetzi's Asian Decoration](https://www.curseforge.com/minecraft/mc-mods/fetzis-asian-decoration) | Fetzi | 1.8.2.1 | - |
@@ -208,10 +210,10 @@ Many mod creators accept donations to support their work. Consider supporting yo
 
 | Mod | Author(s) | Version | Donate |
 |-----|-----------|---------|--------|
-| [Core Curriculum](https://www.curseforge.com/projects/1430194) | Slash | 0.2.4 | - |
+| [Core Curriculum](https://www.curseforge.com/projects/1430194) | Slash | 0.2.5 | - |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.8 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
 | [spark](https://www.curseforge.com/minecraft/mc-mods/spark) | lucko | 1.10.124 | - |
-| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.34.1-tba1 | - |
+| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.38.1 | - |
 
 ---
 

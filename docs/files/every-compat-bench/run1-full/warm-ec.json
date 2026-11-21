@@ -1,0 +1,9 @@
+{
+ "wall_s": 93.6,
+ "log_first": "[20Nov2026 13:38:49.631]",
+ "log_done": "[20Nov2026 13:39:29.542]",
+ "modernfix": [
+  "[20Nov2026 13:39:21.213] [main/WARN] [ModernFix/]: Initial datapack load took 9.207 s",
+  "[20Nov2026 13:39:30.512] [Server thread/WARN] [ModernFix/]: Dedicated server took 92.279 seconds to load"
+ ]
+}

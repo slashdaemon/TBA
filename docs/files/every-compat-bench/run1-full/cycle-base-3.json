@@ -1,0 +1,49 @@
+{
+ "boot": {
+  "wall_s": 52.2,
+  "log_first": "[20Nov2026 06:12:19.381]",
+  "log_done": "[20Nov2026 06:12:51.432]",
+  "modernfix": [
+   "[20Nov2026 06:12:47.993] [main/WARN] [ModernFix/]: Initial datapack load took 6.716 s",
+   "[20Nov2026 06:12:52.388] [Server thread/WARN] [ModernFix/]: Dedicated server took 42.624 seconds to load"
+  ],
+  "idle": {
+   "t": 1795184037.506508,
+   "avail_mb": 12563,
+   "server": {
+    "heap_total_mb": 3468,
+    "heap_used_mb": 1783,
+    "metaspace_mb": 265,
+    "raw": "",
+    "private_mb": 4235,
+    "ws_mb": 4146,
+    "pid": 44480
+   }
+  }
+ },
+ "client_rc": 1,
+ "client_wall_s": 345.2,
+ "inworld": {
+  "t": 1795184282.0819921,
+  "avail_mb": 2001,
+  "server": {
+   "heap_total_mb": 4508,
+   "heap_used_mb": 3815,
+   "metaspace_mb": 291,
+   "raw": "",
+   "private_mb": 5437,
+   "ws_mb": 5208,
+   "pid": 44480
+  },
+  "client": {
+   "heap_total_mb": 2,
+   "heap_used_mb": 0,
+   "metaspace_mb": 21,
+   "raw": "",
+   "private_mb": 57,
+   "ws_mb": 78,
+   "pid": 53452
+  }
+ },
+ "join_seen_s": 161.2
+}

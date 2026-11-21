@@ -73,7 +73,15 @@ For single-variant releases (StreamCraft pinned to one platform — historical, 
 # Creates: TBA-0.9.20.mrpack and TBA-0.9.20.zip in the repo root
 ```
 
-For multi-platform releases (StreamCraft 0.7.26+, with file IDs registered in `scripts/build-variants.py`):
+Since 2.0.12 (StreamCraft 0.38.1 universal jar, registered as `universal` in `scripts/build-variants.py`):
+```bash
+python scripts/build-variants.py
+# Builds 2 artifacts in dist/, both for every OS:
+#   TBA-2.0.12.mrpack                        Modrinth, Prism and the server
+#   TBA-2.0.12.zip                           CurseForge app
+```
+
+For multi-platform releases (StreamCraft 0.7.26 to 0.38.0, one jar per OS):
 ```bash
 python scripts/build-variants.py
 # Builds 8 artifacts in dist/:
@@ -100,7 +108,13 @@ Single variant:
 gh release create v0.9.20 TBA-0.9.20.mrpack TBA-0.9.20.zip --title "v0.9.20" --notes "Release notes here"
 ```
 
-Multi-platform (all 8 artifacts):
+Single pack (2.0.12+):
+```bash
+gh release create v2.0.12 dist/TBA-2.0.12.mrpack dist/TBA-2.0.12.zip --title "v2.0.12" --notes "Release notes here"
+```
+Then publish with `scripts/publish-curseforge.py` (primary file only) and `scripts/publish-modrinth.py`.
+
+Multi-platform (all 8 artifacts, 2.0.11 and older):
 ```bash
 gh release create v0.9.20 dist/TBA-0.9.20*.{mrpack,zip} --title "v0.9.20" --notes "Release notes here"
 ```
@@ -114,11 +128,11 @@ python server-config.py update-pack 0.9.20
 ```
 
 This command:
-- Reads the local `dist/TBA-0.9.20-linux.mrpack` (or repo root `TBA-0.9.20.mrpack` for legacy single-variant releases)
+- Reads the local `dist/TBA-0.9.20-linux.mrpack`; when there is no `-linux` file (2.0.12+, one pack for every OS, or legacy single-variant releases) it uses the unsuffixed `TBA-<v>.mrpack`
 - Calculates SHA512 hash and file size
 - Updates `modpack-info.json` on the server via SFTP
 
-The server runs on Linux, so `update-pack` defaults to `--variant linux`. The Linux variant bundles the Linux StreamCraft JAR; using any other variant on the server would crash StreamCraft on startup.
+The server runs on Linux, so `update-pack` defaults to `--variant linux` for releases with per-OS packs (their Linux variant bundles the Linux StreamCraft JAR; any other variant would crash StreamCraft on startup). From 2.0.12 the single pack's universal StreamCraft jar covers Linux, and the server never loads client natives anyway.
 
 ### Step 7: Restart Server
 

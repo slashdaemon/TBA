@@ -465,6 +465,10 @@ file = "config/dustydecorations-client.toml"
 hash = "afa9239cb398ea84156cff797a94179cdd0f7bffe688b371bd2ec74d67bf39b8"
 
 [[files]]
+file = "config/everycomp-hazardous.toml"
+hash = "ef4eaaaddd211aa360196534ade89fa4d418efdfb269b0dbf366cd9cdbb0cab8"
+
+[[files]]
 file = "config/fetzis_asian_deco/fetzis-asian-deco-config.json"
 hash = "38a0c151dd48aed356762cf14e44a31e6ca7d62d550727a7f805a42a7aa69f43"
 
@@ -474,11 +478,15 @@ hash = "fbd08cbb8fbc7606ccbec8ab7e084678ee433051c5329dad365a50cc0ba506c3"
 
 [[files]]
 file = "config/iris.properties"
-hash = "4c1db6342f58aa3cf2c078d00c1a844353924c883e9115f9cf8d03ca47041d81"
+hash = "1e268961ae9da29151548e41b576c3c3c4b6537c19d6864793c405548820a76c"
 
 [[files]]
 file = "config/roughlyenoughitems/config.json5"
 hash = "91b2befef86d7e0fc556590192736ba9bdb38224f20b85a036fccf5809b16c76"
+
+[[files]]
+file = "config/stonezone-hazardous.toml"
+hash = "f2d58a771c4ef68fb37d0b8cdc6255b2d878b2be1201c5b962072475eaeaa3b4"
 
 [[files]]
 file = "config/streamcraft/config.properties"
@@ -683,7 +691,7 @@ metafile = true
 
 [[files]]
 file = "mods/core-curriculum.pw.toml"
-hash = "c3f3f066119a6b00e37b28907e25cb4d17cbf3755297580e73dce0f4ddd47fa4"
+hash = "83095fb174b007a943ee85e7d10c8a7d1a2868599403822804c7ae9ede62daf3"
 metafile = true
 
 [[files]]
@@ -794,6 +802,11 @@ metafile = true
 [[files]]
 file = "mods/even-more-instruments.pw.toml"
 hash = "3e87755cbac2d521007cd3069e92207e968faa2192cfa58092d3affc0139d48a"
+metafile = true
+
+[[files]]
+file = "mods/every-compat.pw.toml"
+hash = "40e9cf73e5ad676b662e4e171844f512cb151f523a90f77906a5c7c3305cf965"
 metafile = true
 
 [[files]]
@@ -1302,13 +1315,18 @@ hash = "96e36c447f00cf42622a78091883f054ec8ff708b285ef1351668cb00f081804"
 metafile = true
 
 [[files]]
+file = "mods/stone-zone.pw.toml"
+hash = "f74b27baeee82b245fc0eb9de47797959da728eb13ec859464074e3872e5a9db"
+metafile = true
+
+[[files]]
 file = "mods/storage-drawers.pw.toml"
 hash = "33822a5309142bb24557f5d4c7763009321e917881cbe4fecdc570a64c7ebf0a"
 metafile = true
 
 [[files]]
 file = "mods/streamcraft-live.pw.toml"
-hash = "d24041b9a9a866be0850c2f379a8a6dfb13d8d338da07862342617b5c7b48729"
+hash = "d1056ec2c497ce6b9f3158bfeb30c2278d215f6d8994f8e2de826da11dd6cea8"
 metafile = true
 
 [[files]]

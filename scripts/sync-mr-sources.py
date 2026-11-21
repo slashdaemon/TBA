@@ -15,7 +15,7 @@ override and add it to ALLOWED_OVERRIDES in audit-artifacts.py with a reason.
 
 Each generated file records the canonical sha1 it was made from (`# canonical-sha1 = ...`);
 build-variants.py refuses to build when that no longer matches (re-run this script after
-`packwiz update`). StreamCraft is skipped: build-variants.py handles its per-OS files.
+`packwiz update`). StreamCraft is skipped: build-variants.py writes its entry per store from STREAMCRAFT_REGISTRY.
 
 Usage: py -3 scripts/sync-mr-sources.py            (writes scripts/mr-sources/, prints a report)
        py -3 scripts/sync-mr-sources.py --check    (exit 1 if mr-sources/ is missing or stale)

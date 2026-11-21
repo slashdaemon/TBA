@@ -22,7 +22,7 @@ TBA (TheBlock.Academy) is a NeoForge 1.21.1 modpack (Fabric through 1.0.7; 2.0.0
 ./packwiz.exe curseforge export           # Creates .zip for CurseForge App
 
 # Build + publish a release (multi-platform — see Deployment Workflow)
-python scripts/build-variants.py                              # Build 8 artifacts → dist/
+python scripts/build-variants.py                              # Build TBA-X.Y.Z.{mrpack,zip} → dist/ (one pack for every OS since 2.0.12)
 python scripts/publish-modrinth.py   --version X.Y.Z --changelog-file docs/release-notes-vX.Y.Z.md
 python scripts/publish-curseforge.py --version X.Y.Z --changelog-file docs/release-notes-vX.Y.Z.md
 # Add --dry-run to either publish script to preview metadata without uploading.
@@ -130,9 +130,21 @@ makes every entry a store reference in each store's own export:
   stray root files, non-Modrinth download hosts and secrets.
 - **Shaders and resource packs are store entries too** (`cf install` / `mr install`), never raw
   zips committed to `shaderpacks/` or `resourcepacks/`.
-- **Platform variants:** Modrinth gets the Windows `.mrpack` only (Content Rule 5.7: one pack per
-  version; `publish-modrinth.py` enforces it). CurseForge gets Windows as the primary file plus
-  Linux/macOS as additional files. GitHub releases carry all 8.
+- **One pack per store (2.0.12+):** StreamCraft 0.38.1's store primary is a universal jar (Windows
+  x64 + Linux x64 + Mac Apple Silicon natives), registered as `universal` in `STREAMCRAFT_REGISTRY`,
+  so the build makes one `TBA-X.Y.Z.mrpack` and one `.zip` for every OS. Modrinth gets that
+  `.mrpack` (Content Rule 5.7: one pack per version), CurseForge gets the `.zip` as the only file,
+  GitHub releases carry 2 files, and `update-pack` / the testkit fall back to the unsuffixed file.
+  Mac Intel and Linux arm64 are not covered (StreamCraft's additional files; TBA doesn't ship
+  them). Registry entries without `universal` (StreamCraft ≤0.38.0) still build the 8 per-OS files.
+  The default shader is the same for all OSes now, so shaders ship **off** (Solas, the preselected
+  pack, does not run on macOS).
+- **Every Compat (Wood Good) + Stone Zone (2.0.12+)** generate blocks at startup from the installed
+  mods. Two skip lists ship in `config/`: `everycomp-hazardous.toml` (`[module] blacklist`) and
+  `stonezone-hazardous.toml` (`[stonetype] blacklist`). They change the block registry, so client
+  and server must match: change them only in a pack release. Adding a mod with woods or stones
+  adds blocks automatically; check the log for "models could not be loaded" and extend the lists.
+  Benchmark and reasoning: `docs/every-compat.md`.
 - Repo files that must not ship go in `.packwizignore` (packwiz exports untracked files too).
 
 ## Default Keybinds (`options.txt`)

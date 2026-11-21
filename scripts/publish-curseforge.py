@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
-Publish all 4 platform variants of TBA to CurseForge as a single modpack version.
+Publish TBA to CurseForge as one modpack version.
 
-Reads .zip files from dist/ produced by scripts/build-variants.py and uploads them
-to the TBA modpack project (1414683): the windows variant as the primary file,
-then linux / macos-arm64 / macos-x86_64 linked as additional files via
-parentFileID — mirroring the per-platform layout publish-modrinth.py uses on
-Modrinth, and matching the manual upload convention prior releases followed.
+Reads dist/TBA-<version>.zip produced by scripts/build-variants.py and uploads it to the TBA
+modpack project (1414683) as the primary file. Since 2.0.12 (StreamCraft 0.38.1's universal jar)
+that one file works on every OS, and it is the only file: the CurseForge app installs only a
+modpack's primary file anyway.
+
+Older releases built per-OS packs (TBA-<version>-linux/-macos-arm64/-macos-x86_64.zip). When those
+exist in dist/ they are still uploaded as additional files linked via parentFileID.
 
 Usage:
     # Dry-run to inspect metadata before publishing
@@ -80,7 +82,8 @@ def _pack_loader_name() -> str:
 
 LOADER_NAME = _pack_loader_name()
 
-# Windows is canonical (no classifier in filename); other platforms get a suffix.
+# The unsuffixed file ("windows" here, for history) is the primary and required. The per-OS files
+# only exist for releases before 2.0.12; they are uploaded as additional files when present.
 PLATFORMS = ["windows", "linux", "macos-arm64", "macos-x86_64"]
 PLATFORM_LABEL = {
     "windows":      "Windows",
@@ -246,14 +249,14 @@ def main() -> int:
         print(f"ERR dist dir not found: {dist}")
         return 1
 
-    # Verify all 4 files exist before doing anything.
+    # The primary must exist; legacy per-OS files are picked up when present.
     files: list[tuple[str, Path]] = []
     missing: list[str] = []
     for plat in PLATFORMS:
         path = dist / filename_for(args.version, plat)
         if path.exists():
             files.append((plat, path))
-        else:
+        elif plat == "windows":
             missing.append(path.name)
     if missing:
         print(f"ERR missing artifacts in {dist}:")

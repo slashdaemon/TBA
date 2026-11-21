@@ -1,0 +1,22 @@
+{
+ "t": 1795188839.32742,
+ "avail_mb": 2101,
+ "client": {
+  "heap_total_mb": 7428,
+  "heap_used_mb": 5246,
+  "metaspace_mb": 381,
+  "raw": "",
+  "private_mb": 13664,
+  "ws_mb": 10028,
+  "pid": 52540
+ },
+ "server": {
+  "heap_total_mb": 4300,
+  "heap_used_mb": 2903,
+  "metaspace_mb": 294,
+  "raw": "",
+  "private_mb": 5210,
+  "ws_mb": 4831,
+  "pid": 47480
+ }
+}

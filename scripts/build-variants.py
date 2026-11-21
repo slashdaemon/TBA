@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
 """
-Build per-platform TBA modpack variants.
+Build the TBA modpack files for both stores.
 
-StreamCraft ships platform-specific JARs (Windows, Linux, macOS-arm64,
-macOS-x86_64) because of native LiveKit FFI / JavaCV / JNA dependencies.
-Packwiz pins one CurseForge file ID per mod, so each platform needs its
-own modpack export with the matching StreamCraft JAR.
+Since TBA 2.0.12 (StreamCraft 0.38.1) there is ONE pack per store: StreamCraft's store primary is a
+universal jar carrying the Windows x64, Linux x64 and Mac Apple Silicon natives and picking its own
+at runtime, so one .mrpack and one .zip work on every OS:
+    dist/TBA-<version>.mrpack   (Modrinth, Prism, the server via mrpack4server)
+    dist/TBA-<version>.zip      (CurseForge app)
+
+Older StreamCraft versions shipped one jar per OS (native LiveKit FFI / JavaCV / JNA), and packwiz
+pins one file per mod, so those registry entries still build one pack per platform:
+    dist/TBA-<version>[-<platform>].{mrpack,zip}
 
 Usage:
-    python scripts/build-variants.py                       # build all platforms
-    python scripts/build-variants.py --platform windows    # one platform
+    python scripts/build-variants.py                       # build (universal, or all platforms)
+    python scripts/build-variants.py --platform windows    # one platform (per-OS StreamCraft only)
     python scripts/build-variants.py --version 1.0.4       # override pack.toml
-    python scripts/build-variants.py --streamcraft 0.7.26+mc1.21.1
-
-Output: dist/TBA-<version>[-<platform>].{mrpack,zip}
+    python scripts/build-variants.py --streamcraft 0.38.1+mc1.21.1-neoforge
 """
 
 from __future__ import annotations
 
 import argparse
-import re
 import shutil
 import subprocess
 import sys
@@ -32,12 +34,10 @@ STREAMCRAFT_TOML = REPO_ROOT / "mods" / "streamcraft-live.pw.toml"
 PACK_TOML = REPO_ROOT / "pack.toml"
 DIST = REPO_ROOT / "dist"
 
-# Windows is canonical (no classifier in filename); other platforms get a suffix.
+# Per-OS StreamCraft (before 0.38.1): Windows is canonical (no classifier in the file name), the other
+# platforms get a suffix. A registry version with a "universal" entry builds one unsuffixed pack.
 PLATFORMS = ["windows", "linux", "macos-arm64", "macos-x86_64"]
-# Default Iris shader per platform (config/iris.properties shaderPack). Solas does not run on macOS,
-# so the Mac packs default to BSL; every other platform keeps the canonical file's value.
-IRIS_PROPERTIES = REPO_ROOT / "config" / "iris.properties"
-SHADER_OVERRIDES = {"macos-arm64": "BSL_v10.0.zip", "macos-x86_64": "BSL_v10.0.zip"}
+UNIVERSAL = "universal"
 
 
 @dataclass(frozen=True)
@@ -254,6 +254,20 @@ STREAMCRAFT_REGISTRY: dict[str, dict[str, StreamCraftFile]] = {
             mr_sha512="8abed778ba1b408ec638e81426940169c6de1ce020680c1932013949980302e8138bed4d3a1baf7baff0dae7e6b0fb6c3b03cc82bf786aa2aa54d37893e6cd6c",
         ),
     },
+    # Universal jar (Windows x64 + Linux x64 + Mac Apple Silicon natives), the store PRIMARY on both
+    # stores, byte-identical (same sha1). One TBA pack per store from here on (TBA 2.0.12).
+    # Mac Intel / Linux arm64 have their own additional files (CF 9719366 / 9719365, same Modrinth
+    # version); TBA does not ship them.
+    "0.38.1+mc1.21.1-neoforge": {
+        UNIVERSAL: StreamCraftFile(
+            filename="streamcraft-0.38.1-mc1.21.1-neoforge-cf.jar",
+            sha1="99039fe0f1b58f1f3ea8b7716661dbd9474daab0",
+            cf_file_id=9719364,
+            mr_url=f"{MR_SC_BASE}/aTjANHGG/streamcraft-0.38.1%2Bmc1.21.1-neoforge.jar",
+            mr_filename="streamcraft-0.38.1+mc1.21.1-neoforge.jar",
+            mr_sha512="00fd42b5c180e7eb197f67f0dde8d56f46d2e08273cc7a92d2008dea6294c8334aed624225d34f4c5c23e4b232f3762d9aa26558ae4774be5845bb12256d106c",
+        ),
+    },
 }
 
 
@@ -402,6 +416,10 @@ def export_for_store(store: str) -> None:
         run([str(PACKWIZ), "refresh"])
 
 
+def suffix_for(platform: str) -> str:
+    return "" if platform in ("windows", UNIVERSAL) else f"-{platform}"
+
+
 def build_one(platform: str, pack_version: str, sc_version: str) -> None:
     if platform not in STREAMCRAFT_REGISTRY[sc_version]:
         raise RuntimeError(
@@ -409,24 +427,14 @@ def build_one(platform: str, pack_version: str, sc_version: str) -> None:
             f"Available: {sorted(STREAMCRAFT_REGISTRY[sc_version])}"
         )
 
-    suffix = "" if platform == "windows" else f"-{platform}"
+    suffix = suffix_for(platform)
     sc_file = STREAMCRAFT_REGISTRY[sc_version][platform]
 
     print(f"\n=== Building {platform} (StreamCraft {sc_file.filename}) ===")
-    iris_canonical = IRIS_PROPERTIES.read_bytes()
-    shader = SHADER_OVERRIDES.get(platform)
-    try:
-        if shader:
-            IRIS_PROPERTIES.write_bytes(
-                re.sub(rb"(?m)^shaderPack=[^\r\n]*", b"shaderPack=" + shader.encode("utf-8"), iris_canonical)
-            )
-            print(f"  (default shader: {shader})")
-        write_streamcraft_toml(sc_file, "modrinth")
-        export_for_store("modrinth")
-        write_streamcraft_toml(sc_file, "curseforge")
-        export_for_store("curseforge")
-    finally:
-        IRIS_PROPERTIES.write_bytes(iris_canonical)
+    write_streamcraft_toml(sc_file, "modrinth")
+    export_for_store("modrinth")
+    write_streamcraft_toml(sc_file, "curseforge")
+    export_for_store("curseforge")
 
     # Packwiz writes <pack-name>-<version>.{mrpack,zip} to repo root.
     src_mrpack = REPO_ROOT / f"TBA-{pack_version}.mrpack"
@@ -446,7 +454,7 @@ def main() -> int:
     parser.add_argument(
         "--platform",
         choices=PLATFORMS,
-        help="Build only this platform (default: all four).",
+        help="Build only this platform (per-OS StreamCraft versions only; default: all four).",
     )
     parser.add_argument(
         "--version",
@@ -474,7 +482,14 @@ def main() -> int:
         )
         return 1
 
-    platforms = [args.platform] if args.platform else PLATFORMS
+    if UNIVERSAL in STREAMCRAFT_REGISTRY[sc_version]:
+        if args.platform:
+            print(f"error: StreamCraft {sc_version} is one universal jar; there are no per-platform packs",
+                  file=sys.stderr)
+            return 1
+        platforms = [UNIVERSAL]
+    else:
+        platforms = [args.platform] if args.platform else PLATFORMS
     # Skip platforms missing from this StreamCraft version's registry, with a warning.
     available = []
     for p in platforms:
@@ -491,6 +506,15 @@ def main() -> int:
     print(f"Platforms to build: {', '.join(available)}")
 
     check_layers()
+    if platforms == [UNIVERSAL]:
+        # Per-OS files of this version from an earlier build would shadow the single pack
+        # (update-pack and the testkit prefer "-linux" etc. when present).
+        for p in PLATFORMS[1:]:
+            for ext in ("mrpack", "zip"):
+                stale = DIST / f"TBA-{pack_version}-{p}.{ext}"
+                if stale.exists():
+                    stale.unlink()
+                    print(f"  removed stale per-OS build {stale.name}")
     original_toml = STREAMCRAFT_TOML.read_text(encoding="utf-8")
     try:
         for platform in available:
@@ -501,7 +525,7 @@ def main() -> int:
         print(f"\nRestored {STREAMCRAFT_TOML.name} to original.")
 
     # Store-compliance gate over everything just built.
-    built = [DIST / f"TBA-{pack_version}{'' if p == 'windows' else '-' + p}.{ext}"
+    built = [DIST / f"TBA-{pack_version}{suffix_for(p)}.{ext}"
              for p in available for ext in ("mrpack", "zip")]
     gate = subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "audit-artifacts.py"),
                            *map(str, built)], cwd=REPO_ROOT)

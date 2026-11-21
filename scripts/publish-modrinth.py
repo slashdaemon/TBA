@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Publish TBA to Modrinth: the Windows .mrpack only.
+Publish TBA to Modrinth: the one TBA-X.Y.Z.mrpack.
 
-Modrinth modpack versions carry ONE .mrpack. Attaching the macOS/Linux variants as extra
-files to the same version is what got TheBlockSurvival rejected (Content Rule 5.7,
-"Unsupported project"), so this script uploads only TBA-X.Y.Z.mrpack. The per-OS variants
-ship on GitHub releases (CurseForge keeps them as additional files; publish-curseforge.py).
+Modrinth modpack versions carry ONE .mrpack. Attaching other packs as extra files to the same
+version is what got TheBlockSurvival rejected (Content Rule 5.7, "Unsupported project"), so this
+script uploads only TBA-X.Y.Z.mrpack. Since 2.0.12 that file works on every OS (StreamCraft
+0.38.1's universal jar); before that it was the Windows pack, and the per-OS packs shipped on
+GitHub releases only.
 
 The file must pass scripts/audit-artifacts.py (no bundled store-hosted content) or the
 script refuses to upload. The loader is read from pack.toml.
@@ -48,7 +49,7 @@ PROJECT_SLUG = "theblockacademy"
 # Game versions this build is compatible with. TBA targets 1.21.1 only.
 GAME_VERSIONS = ["1.21.1"]
 
-# Modrinth gets the Windows .mrpack only (see module docstring; never add the others here).
+# Modrinth gets the unsuffixed .mrpack only (see module docstring; never add others here).
 PLATFORMS = ["windows"]
 
 

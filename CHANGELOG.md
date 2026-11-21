@@ -6,6 +6,43 @@ problems on the same Minecraft and NeoForge versions; a minor release (2.x.0) ch
 version or needs a fresh world; a major release changes the loader or starts a new era of the server.
 
 
+## [2.0.12] - 2026-11-21
+
+### Added
+- **Every Compat (Wood Good) and Every Compat (Stone Zone).** About 1,350 new blocks: Macaw's doors,
+  trapdoors, windows, fences, bridges, roofs and furniture, Handcrafted furniture, Woodworks, Storage
+  Drawers and Create blocks in the pack's modded woods (and some modded stones), so builds can match
+  materials across mods. We tested the full set first (about 5,000 blocks, about 1.3 GB more memory per player) and
+  ship a trimmed setup instead: no Chipped variants, and no variants from stones whose models broke.
+  Measured cost: about 0.85 GB more memory per player and about 2 seconds of server start (slightly
+  less now: two more stone sources were dropped after the benchmark). Details in
+  `docs/every-compat.md`.
+
+### Fixed
+- **Macs no longer crash a few seconds after joining.** Core Curriculum 0.2.4 → 0.2.5 turns Distant
+  Horizons off on macOS, where it crashed the game in about half of our test sessions with shaders off.
+  On a Mac you won't see far-off terrain until the Distant Horizons team fixes the crash; a short chat
+  message tells you when this happens, and your own Distant Horizons settings are never changed.
+  Windows and Linux are unchanged. To keep Distant Horizons on anyway on a Mac, set
+  `macos.distantHorizons=unchanged` in `config/corecurriculum-client.properties`.
+
+### Changed
+- **One download for every computer.** The CurseForge app, Modrinth and Prism now install the same
+  pack on Windows, Linux and Apple Silicon Macs. There are no more `-linux` / `-macos-*` files. Before
+  this, store installs on a Mac or Linux got the Windows StreamCraft.
+- **StreamCraft 0.34.1-tba1 → 0.38.1**, the official store release (it includes the Discover crash
+  fix that 0.34.1-tba1 carried).
+- **Shaders are off by default.** One pack for every OS means one default shader, and Solas does not
+  run on macOS. Turn shaders on in Options → Video Settings → Shader Packs. Solas is preselected; on
+  a Mac pick BSL. Updating the pack may switch shaders off for you too.
+
+### Known issues
+- **Intel Macs:** the pack's StreamCraft covers Windows, Linux (x64) and Apple Silicon. On an Intel Mac,
+  StreamCraft shows which file you need: the `mac-x64` file on StreamCraft's CurseForge/Modrinth page,
+  placed in the instance's `mods` folder in place of the pack's StreamCraft jar.
+
+**Mods:** 183
+
 ## [2.0.11] - 2026-11-19
 
 ### Fixed

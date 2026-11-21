@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.11
+# TBA (TheBlock.Academy) v2.0.12
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**179 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**183 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -43,6 +43,7 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Chipped** - 11,000+ decorative block variants with connected textures
 - **Handcrafted** - 250+ furniture pieces (fantasy, steampunk, medieval styles)
 - **Macaw's Suite** - Doors, Windows, Bridges, Roofs, Fences, Trapdoors, Furniture, Lights
+- **Every Compat (Wood Good + Stone Zone)** - Macaw's, Handcrafted, Woodworks, Storage Drawers and Create blocks in the pack's modded woods and stones (about 1,350 blocks; see [docs/every-compat.md](docs/every-compat.md))
 - **Excessive Building** - 100+ vanilla-style blocks (mosaic wood, vertical stairs), hammer/wrench tools
 - **Adorn** - Furniture (chairs, sofas, tables, shelves, kitchen blocks)
 - **Supplementaries** - Jars, signs, clocks, pulleys, cages, and 100+ decorative/utility items
@@ -146,7 +147,7 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **Discord bridge** - Chat ↔ server, player events, and `/register` whitelist run via slashAI (`@DeanBot` client) + the theblockacademy backend; not a mod in this pack
 
 ### Bundled Shaders
-- **BSL v10.0** - High visual quality (enabled by default)
+- **BSL v10.0** - High visual quality (works on macOS)
 - **Complementary Reimagined r5.6.1** - Vanilla-enhanced aesthetic with "Potato" to "Ultra" presets
 - **Photon v1.2a** - Gameplay-focused with semi-realistic style and colored lighting
 - **Solas Shader v3.1c** - Fantasy stylized with colored lighting and fancy visuals
@@ -155,11 +156,11 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 ### Default Settings
 The modpack comes pre-configured with sensible defaults:
 - GUI Scale: 3x
-- Render Distance: 32 (max)
-- Simulation Distance: 32 (max)
+- Render Distance: 12
+- Simulation Distance: 10
 - Auto-Jump: Off
 - Dark Loading Screen: On
-- Shaders: BSL v10.0 enabled
+- Shaders: off (turn on in Video Settings → Shader Packs; Solas is preselected, Mac players pick BSL)
 - JourneyMap minimap: Hidden by default (press J to open full map)
 
 ## Quick Start
@@ -313,11 +314,12 @@ The modpack has two exports for different purposes:
 
 | Export | Format | For |
 |--------|--------|-----|
-| `TBA-X.Y.Z[-platform].zip` | CurseForge | CurseForge App users |
-| `TBA-X.Y.Z[-platform].mrpack` | Modrinth | Prism Launcher + Server |
+| `TBA-X.Y.Z.zip` | CurseForge | CurseForge App users |
+| `TBA-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server |
 
-Each comes in four platform variants (Windows = no suffix, `-linux`, `-macos-arm64`, `-macos-x86_64`)
-because StreamCraft ships per-platform native libraries. The server uses `-linux`.
+Since 2.0.12 one file of each works on every OS: StreamCraft's universal jar carries the Windows,
+Linux and Apple Silicon natives. Releases 2.0.11 and older came in four platform variants
+(Windows = no suffix, `-linux`, `-macos-arm64`, `-macos-x86_64`); the server used `-linux`.
 
 **Server-only mods** (included in `.mrpack`, excluded from `.zip`):
 - **Advanced Backups** - Scheduled on-server backups

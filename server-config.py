@@ -964,19 +964,31 @@ def update_modpack_info(version, production=False, variant="linux"):
         version: The version string (e.g., "0.9.54")
         production: If True, update Bloom.host server. If False (default), update LocalServer.
         variant: Platform variant ("windows", "linux", "macos-arm64", "macos-x86_64").
-                 Default "linux" — the server runs Linux, so that's the JAR it needs.
-                 "windows" maps to the no-suffix canonical filename.
+                 Default "linux" — for releases with per-OS packs (before 2.0.12) the server runs
+                 the Linux one. "windows" maps to the no-suffix canonical filename.
+                 Since 2.0.12 there is one pack for every OS (StreamCraft 0.38.1 universal jar):
+                 when no "-<variant>" file exists locally, the unsuffixed TBA-<v>.mrpack is used.
     """
     import hashlib
     import tempfile
 
     target_name = "Bloom.host (production)" if production else "LocalServer"
+
+    def _local(sfx):
+        for d in (os.path.join(SCRIPT_DIR, "dist"), SCRIPT_DIR):  # repo root: pre-build-variants releases
+            f = os.path.join(d, f"TBA-{version}{sfx}.mrpack")
+            if os.path.exists(f):
+                return f
+        return None
+
     suffix = "" if variant == "windows" else f"-{variant}"
+    mrpack_file = _local(suffix)
+    if mrpack_file is None and suffix and _local(""):
+        suffix, variant = "", "single pack (all OSes)"
+        mrpack_file = _local("")
+    if mrpack_file is None:
+        mrpack_file = os.path.join(SCRIPT_DIR, "dist", f"TBA-{version}{suffix}.mrpack")
     github_url = f"https://github.com/slashdaemon/TBA/releases/download/v{version}/TBA-{version}{suffix}.mrpack"
-    mrpack_file = os.path.join(SCRIPT_DIR, "dist", f"TBA-{version}{suffix}.mrpack")
-    if not os.path.exists(mrpack_file):
-        # Fall back to repo root for back-compat with releases built before scripts/build-variants.py.
-        mrpack_file = os.path.join(SCRIPT_DIR, f"TBA-{version}{suffix}.mrpack")
 
     console.print(Panel(
         f"[bold]Updating modpack to v{version}[/bold]\n"
@@ -2429,8 +2441,8 @@ if __name__ == "__main__":
             console.print("  python server-config.py cmd <cmd>    # Send console command")
             console.print("")
             console.print("[yellow]Deployment:[/yellow]")
-            console.print("  python server-config.py update-pack <version>                       # Update LocalServer (Linux variant)")
-            console.print("  python server-config.py update-pack <version> -p                    # Update production (Bloom.host, Linux variant)")
+            console.print("  python server-config.py update-pack <version>                       # Update LocalServer (single pack; Linux variant before 2.0.12)")
+            console.print("  python server-config.py update-pack <version> -p                    # Update production (Bloom.host)")
             console.print("  python server-config.py update-pack <version> --variant windows     # Override variant (rare)")
             console.print("  python server-config.py verify-mods <version>       # Verify mods on production match mrpack")
             console.print("  python server-config.py verify-mods <version> -l    # Verify mods on LocalServer")

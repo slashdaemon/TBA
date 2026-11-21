@@ -1,0 +1,31 @@
+{
+ "boot": {
+  "wall_s": 52.1,
+  "log_first": "[20Nov2026 06:27:26.246]",
+  "log_done": "[20Nov2026 06:28:02.001]",
+  "modernfix": [
+   "[20Nov2026 06:27:58.410] [main/WARN] [ModernFix/]: Initial datapack load took 7.876 s",
+   "[20Nov2026 06:28:03.205] [Server thread/WARN] [ModernFix/]: Dedicated server took 46.843 seconds to load"
+  ],
+  "idle": {
+   "t": 1795184941.274521,
+   "avail_mb": 13246,
+   "server": {
+    "heap_total_mb": 2976,
+    "heap_used_mb": 1775,
+    "metaspace_mb": 270,
+    "raw": "",
+    "private_mb": 3764,
+    "ws_mb": 3683,
+    "pid": 21336
+   }
+  }
+ },
+ "client_rc": 1,
+ "client_wall_s": 328.2,
+ "inworld": {
+  "t": 1795185190.84749,
+  "avail_mb": 16930
+ },
+ "join_seen_s": 166.5
+}
