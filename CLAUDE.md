@@ -45,26 +45,30 @@ python server-config.py backup list       # List backups
 # 1. Make changes (add/update/remove mods)
 ./packwiz.exe cf install <mod-slug> -y
 
-# 2. Bump version in pack.toml
+py -3 scripts/sync-mr-sources.py   # after any add/update/remove
 
-# 3. Export
-./packwiz.exe modrinth export
+# 2. Bump version in pack.toml; update the release files (table below)
+
+# 3. Build (audit-artifacts.py gates it) and validate with the tba-testkit skill
+python scripts/build-variants.py   # dist/TBA-X.Y.Z.{mrpack,zip}, one pack for every OS
 
 # 4. Commit and push
 git add -A && git commit -m "vX.Y.Z - description" && git push
 
-# 5. Create GitHub release
-gh release create vX.Y.Z TBA-X.Y.Z.mrpack --title "vX.Y.Z"
+# 5. GitHub release (2 files) + store publish
+gh release create vX.Y.Z dist/TBA-X.Y.Z.mrpack dist/TBA-X.Y.Z.zip --title "vX.Y.Z" --notes "changelog"
+python scripts/publish-modrinth.py   --version X.Y.Z --changelog-file docs/release-notes-vX.Y.Z.md
+python scripts/publish-curseforge.py --version X.Y.Z --changelog-file docs/release-notes-vX.Y.Z.md
 
-# 6. Update server (LocalServer first, then production)
-python server-config.py update-pack X.Y.Z       # LocalServer
+# 6. Update server (LocalServer first, then production ONLY with explicit owner approval)
+python server-config.py update-pack X.Y.Z       # LocalServer (the default)
 python server-config.py update-pack X.Y.Z -p    # Production
 
 # 7. Restart server
 python server-config.py restart
 ```
 
-**⚠️ Never skip `update-pack`** - the server will fail without the updated hash in `modpack-info.json`.
+**⚠️ Never skip `update-pack`** - the server will fail without the updated hash in `modpack-info.json`. Without `-p` it only updates LocalServer.
 
 ## Architecture
 
@@ -165,6 +169,30 @@ from the pack, conflicts in the effective map, and stale entries.
 | `CHANGELOG.md` | Version entry with changes and mod count |
 | `README.md` | Version in title, mod list if changed |
 | `docs/CREDITS.md` | New mod entries with donate links |
+
+## After the Release (other repos)
+
+1. **Discord #server-releases** (`1453800829986279554`) via the slashAI MCP `send_message` (fix later with `edit_message`). CurseForge first, direct download links, changes grouped by version:
+   ```
+   **TBA vX.Y.Z**
+
+   [Brief description of the update theme]
+
+   **New Mods (vX.Y.Z)**
+   • **ModName** - Description
+
+   **Fixes/Changes (vX.Y.Z)**
+   • Description of fix or change
+
+   **⚠️ Please update your modpack** to avoid connection errors.
+
+   **Downloads:**
+   • CurseForge App: https://github.com/slashdaemon/TBA/releases/download/vX.Y.Z/TBA-X.Y.Z.zip
+   • Prism Launcher: https://github.com/slashdaemon/TBA/releases/download/vX.Y.Z/TBA-X.Y.Z.mrpack
+   ```
+2. **Update the #join-creative post's download links** right after `gh release create`.
+3. **theblockacademy website:** `src/pages/SupportModDevs.tsx` (mod arrays, header count/date), `AboutTheServer.tsx` and `HowToJoin.tsx` (`modpackUrl`, instance paths), `Index.tsx` (version display/link). Commit as "Update to TBA vX.Y.Z".
+4. **slashAI facts:** if anything a member could ask about changed (how to join, pack version policy, Roll Call, lessons, a server address), update `slashAI/src/community_facts.py` in the same session and ship a slashAI patch. In the 2026-11 growth week stale facts meant nobody could answer the join steps or "when do classes start?".
 
 ## Credentials
 
