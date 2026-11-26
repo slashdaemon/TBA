@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** November 20, 2026
-**Modpack Version:** 2.0.12 (183 mods total, NeoForge 1.21.1)
+**Last Updated:** November 25, 2026
+**Modpack Version:** 2.0.13 (184 mods total, NeoForge 1.21.1)
 
 ---
 
@@ -183,6 +183,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [FallingTree](https://www.curseforge.com/minecraft/mc-mods/falling-tree) | RakSrinpsern | 1.21.1.11 | - |
 | [Fast Item Frames](https://www.curseforge.com/minecraft/mc-mods/fast-item-frames) | Fuzss | 21.1.6 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [FastQuit-Forge](https://modrinth.com/mod/fastquit-forge) | KalebLangley | 3.0.1+1.21.1 | - |
+| [Font Hinting Guard](https://github.com/slashdaemon/fonthintguard) | Slash | 1.0.0 | - |
 | [InvMove](https://www.curseforge.com/minecraft/mc-mods/invmove) | PieKing1215 | 0.9.3 | - |
 | [Leaves Be Gone](https://www.curseforge.com/minecraft/mc-mods/leaves-be-gone) | Fuzss | 21.1.1 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Mighty Mail](https://www.curseforge.com/minecraft/mc-mods/mighty-mail) | MrCrayfish | 1.1.4 | [Patreon](https://www.patreon.com/mrcrayfish) |

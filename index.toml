@@ -860,6 +860,10 @@ hash = "f036ac9607aa549e9c5db74aeed5fbfa4c2f28571693db43e305f567f69d7755"
 metafile = true
 
 [[files]]
+file = "mods/fonthintguard-1.0.0-neoforge-1.21.1.jar"
+hash = "d187db6eda80f06ac60c6fbce1afbf462b31753a2eb2c4eca0f4333ab3e23619"
+
+[[files]]
 file = "mods/framework.pw.toml"
 hash = "dd0153bc05a3ffc8592dfaf35b4e8014127e6e1b352d7c18462d49a1ed7a5035"
 metafile = true

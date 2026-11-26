@@ -30,11 +30,13 @@ ALLOWED_OVERRIDES = {
         "ModernPSX-*.zip": "Modern PSX shaders, Modrinth-only, MIT",
         "jakes-build-tools-*.jar": "Jake's Build Tools, mod jar Modrinth-only (CurseForge hosts only the data pack zip); JBT License B.4 allows public modpacks with credit",
         "disable_front_camera-*.jar": "disable front camera, Modrinth-only, MIT",
+        "fonthintguard-*-neoforge-*.jar": "Font Hinting Guard (ours, MIT), security mitigation, deliberately not store-hosted",
     },
     "modrinth": {
         "framework-neoforge-*.jar": "Framework (MrCrayfish), CurseForge-only, LGPL-2.1",
         "mighty_mail-neoforge-*.jar": "Mighty Mail (MrCrayfish), CurseForge-only, MIT",
         "corecurriculum-*-neoforge-*.jar": "Core Curriculum (ours, All Rights Reserved; we hold the rights), Modrinth project in review",
+        "fonthintguard-*-neoforge-*.jar": "Font Hinting Guard (ours, MIT), security mitigation, deliberately not store-hosted",
     },
 }
 # Keys deliberately shared by several bindings: each works in a different context (a modifier

@@ -2,7 +2,7 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v2.0.12
+# TBA (TheBlock.Academy) v2.0.13
 
 A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -95,6 +95,7 @@ A curated NeoForge 1.21.1 modpack (with Create) for The Block Academy CMP, built
 - **WTHIT** - Block/entity tooltips (what am I looking at?)
 - **AppleSkin** - Food/hunger visualization
 - **Shulker Box Tooltip** / **Easy Shulker Boxes** - See and manage shulker box contents from your inventory
+- **Font Hinting Guard** - Blocks malicious fonts in resource packs (FreeType hinting bug); ours, bundled in the pack
 - **ClickThrough Plus** - Open chests through signs and item frames
 - **Overflowing Bars** - Compact health and armor bars beyond vanilla
 - **Scholar** - Two-page book editing and nicer books
@@ -333,7 +334,7 @@ These run on the server only — players don't need them installed.
 
 | Side | Mods |
 |------|------|
-| **Client-only** | Sodium, Iris and other rendering/visual/audio/UI mods (47) |
+| **Client-only** | Sodium, Iris and other rendering/visual/audio/UI mods, Font Hinting Guard (57) |
 | **Server-only** | Advanced Backups, Chunky |
 | **Both** | Everything else |
 

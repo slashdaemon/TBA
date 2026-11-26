@@ -150,6 +150,10 @@ makes every entry a store reference in each store's own export:
   adds blocks automatically; check the log for "models could not be loaded" and extend the lists.
   Benchmark and reasoning: `docs/every-compat.md`.
 - Repo files that must not ship go in `.packwizignore` (packwiz exports untracked files too).
+- **The one deliberate exception: Font Hinting Guard** (ours, MIT, `Projects/fonthintguard`). Owner
+  decision 2026-11-25: a security mitigation, not published to either store. Its jar sits as a raw
+  file in `mods/` (no `.pw.toml`), both exports bundle it from `overrides/mods/`, and it's in
+  `ALLOWED_OVERRIDES` for both stores. To update it, replace the jar with the new GitHub release.
 
 ## Default Keybinds (`options.txt`)
 
